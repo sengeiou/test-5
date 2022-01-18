@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mtp">
+	<error name="MTP_ERROR_COMM_ERROR">
+		<value>TIZEN_ERROR_MTP | 0x01</value>
+		<msg>MTP communication error</msg>
+	</error>
+	<error name="MTP_ERROR_CONTROLLER">
+		<value>TIZEN_ERROR_MTP | 0x02</value>
+		<msg>MTP controller error</msg>
+	</error>
+	<error name="MTP_ERROR_NO_DEVICE">
+		<value>TIZEN_ERROR_MTP | 0x03</value>
+		<msg>MTP have not any device</msg>
+	</error>
+	<error name="MTP_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_MTP | 0x04</value>
+		<msg>MTP is not initialized</msg>
+	</error>
+	<error name="MTP_ERROR_NOT_ACTIVATED">
+		<value>TIZEN_ERROR_MTP | 0x05</value>
+		<msg>MTP is not activated</msg>
+	</error>
+	<error name="MTP_ERROR_NOT_COMM_INITIALIZED">
+		<value>TIZEN_ERROR_MTP | 0x06</value>
+		<msg>MTP communication is not initialized</msg>
+	</error>
+	<error name="MTP_ERROR_PLUGIN_FAIL">
+		<value>TIZEN_ERROR_MTP | 0x07</value>
+		<msg>MTP Plugin failed</msg>
+	</error>
+</package>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/pim/contacts-service">
+	<error name="CONTACTS_ERROR_DB_LOCKED">
+		<value>TIZEN_ERROR_CONTACTS | 0x81</value>
+		<msg>Database table locked or file locked</msg>
+	</error>
+	<error name="CONTACTS_ERROR_DB">
+		<value>TIZEN_ERROR_CONTACTS | 0x9F</value>
+		<msg>Unknown DB error</msg>
+	</error>
+	<error name="CONTACTS_ERROR_IPC_NOT_AVALIABLE">
+		<value>TIZEN_ERROR_CONTACTS | 0xB1</value>
+		<msg>IPC server is not available</msg>
+	</error>
+	<error name="CONTACTS_ERROR_IPC">
+		<value>TIZEN_ERROR_CONTACTS | 0xBF</value>
+		<msg>Unknown IPC error</msg>
+	</error>
+	<error name="CONTACTS_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_CONTACTS | 0xEF</value>
+		<msg>Internal system module error</msg>
+	</error>
+	<error name="CONTACTS_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_CONTACTS | 0xFF</value>
+		<msg>Implementation Error, Temporary Use</msg>
+	</error>
+</package>
+

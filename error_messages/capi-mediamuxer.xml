@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediamuxer">
+	<error name="MEDIAMUXER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_MEDIA_MUXER | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="MEDIAMUXER_ERROR_INVALID_PATH">
+		<value>TIZEN_ERROR_MEDIA_MUXER | 0x02</value>
+		<msg>Invalid path</msg>
+	</error>
+	<error name="MEDIAMUXER_ERROR_RESOURCE_LIMIT">
+		<value>TIZEN_ERROR_MEDIA_MUXER | 0x03</value>
+		<msg>Resource limit</msg>
+	</error>
+</package>

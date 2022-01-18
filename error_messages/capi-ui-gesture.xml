@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/gesture">
+	<error name="HAND_GESTURE_ERROR_ALREADY_STARTED">
+		<value>TIZEN_ERROR_GESTURE | 0x01</value>
+		<msg>Hand gesture recognition is already started.</msg>
+	</error>
+	<error name="HAND_GESTURE_ERROR_NOT_STARTED">
+		<value>TIZEN_ERROR_GESTURE | 0x02</value>
+		<msg>Hand gesture recognition is not started.</msg>
+	</error>
+	<error name="HAND_GESTURE_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_GESTURE | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>

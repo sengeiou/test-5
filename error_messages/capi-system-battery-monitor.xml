@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/batterymonitor">
+	<error name="BATTERY_MONITOR_ERROR_RECORD_NOT_FOUND">
+		<value>TIZEN_ERROR_BATTERY_MONITOR | 0x01</value>
+		<msg>Related record does not exist</msg>
+	</error>
+	<error name="BATTERY_MONITOR_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_BATTERY_MONITOR | 0x02</value>
+		<msg>DB operation failed</msg>
+	</error>
+	<error name="BATTERY_MONITOR_ERROR_DB_NOT_OPENED">
+		<value>TIZEN_ERROR_BATTERY_MONITOR | 0x03</value>
+		<msg>DB is not connected</msg>
+	</error>
+	<error name="BATTERY_MONITOR_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_BATTERY_MONITOR | 0x04</value>
+		<msg>Internal error for generic use</msg>
+	</error>
+</package>
+

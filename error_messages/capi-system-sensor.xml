@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/sensor">
+	<error name="SENSOR_ERROR_NOT_NEED_CALIBRATION">
+		<value>TIZEN_ERROR_SENSOR | 0x03</value>
+		<msg>Sensor doesn't need calibration</msg>
+	</error>
+	<error name="SENSOR_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_SENSOR | 0x06</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="SENSOR_ERROR_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_SENSOR | 0x07</value>
+		<msg>This sensor is supported, but currently not available</msg>
+	</error>
+</package>
+

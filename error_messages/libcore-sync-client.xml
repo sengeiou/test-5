@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/account/sync-manager">
+	<error name="SYNC_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_SYNC_MANAGER | 0x01</value>
+		<msg>System error</msg>
+	</error>
+	<error name="SYNC_ERROR_SYNC_ADAPTER_NOT_FOUND">
+		<value>TIZEN_ERROR_SYNC_MANAGER | 0x02</value>
+		<msg>Sync adapter is not registered</msg>
+	</error>
+</package>
+

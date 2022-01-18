@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/security/device-certificate-manager">
+	<error name="DCM_ERROR_SOCKET">
+		<value>TIZEN_ERROR_DEVICE_CERTIFICATE_MANAGER | 0x01</value>
+		<msg>Socket error between client and Device Certificate Manager</msg>
+	</error>
+</package>

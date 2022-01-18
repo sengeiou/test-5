@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/location-manager">
+	<error name="LOCATIONS_ERROR_INCORRECT_METHOD">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x01</value>
+		<msg>Location manager contains incorrect method for a given call</msg>
+	</error>
+	<error name="LOCATIONS_ERROR_NETWORK_FAILED">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x02</value>
+		<msg>Network unavailable</msg>
+	</error>
+	<error name="LOCATIONS_ERROR_SERVICE_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x03</value>
+		<msg>Location service is not available</msg>
+	</error>
+	<error name="LOCATIONS_ERROR_GPS_SETTING_OFF">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x04</value>
+		<msg>GPS/WPS setting is not enabled</msg>
+	</error>
+	<error name="LOCATIONS_ERROR_SECURITY_RESTRICTED">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x05</value>
+		<msg>Restricted by security system policy</msg>
+	</error>
+	<error name="LOCATION_BOUNDS_ERROR_INCORRECT_TYPE">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x21</value>
+		<msg>Incorrect bounds type for a given call</msg>
+	</error>
+	<error name="LOCATION_BOUNDS_ERROR_IS_ADDED">
+		<value>TIZEN_ERROR_LOCATION_MANAGER | 0x22</value>
+		<msg>Cannot remove bounds handle from location manager</msg>
+	</error>
+</package>
+

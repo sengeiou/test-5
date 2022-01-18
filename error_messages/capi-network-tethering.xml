@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/tethering">
+	<error name="TETHERING_ERROR_NOT_ENABLED">
+		<value>TIZEN_ERROR_TETHERING | 0x0501</value>
+		<msg>Not enabled</msg>
+	</error>
+	<error name="TETHERING_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_TETHERING | 0x0502</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>
+

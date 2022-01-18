@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/convergence/service-adaptor">
+	<error name="SERVICE_ADAPTOR_ERROR_IPC_UNSTABLE">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x01</value>
+		<msg>IPC Connection unstabled</msg>
+	</error>
+	<error name="SERVICE_ADAPTOR_ERROR_PLUGIN_FAILED">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x02</value>
+		<msg>The error occured from Plugin</msg>
+	</error>
+	<error name="SERVICE_ADAPTOR_ERROR_NOT_AUTHORIZED">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x03</value>
+		<msg>Need Autholization </msg>
+	</error>
+	<error name="SERVICE_ADAPTOR_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x04</value>
+		<msg>The handle state is invalid for processing API</msg>
+	</error>
+	<error name="SERVICE_ADAPTOR_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x05</value>
+		<msg>Internal system module error</msg>
+	</error>
+	<error name="SERVICE_ADAPTOR_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_SERVICE_ADAPTOR | 0x06</value>
+		<msg>Implementation Error</msg>
+	</error>
+
+</package>
+

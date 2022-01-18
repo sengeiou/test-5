@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/component-manager">
+	<error name="COMPONENT_MANAGER_ERROR_NO_SUCH_COMPONENT">
+		<value>TIZEN_ERROR_COMPONENT_MANAGER | 0x01</value>
+		<msg>No such component</msg>
+	</error>
+	<error name="COMPONENT_MANAGER_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_COMPONENT_MANAGER | 0x03</value>
+		<msg>Database error</msg>
+	</error>
+	<error name="COMPONENT_MANAGER_ERROR_INVALID_APPLICATION">
+		<value>TIZEN_ERROR_COMPONENT_MANAGER | 0x04</value>
+		<msg>Invalid application ID</msg>
+	</error>
+	<error name="COMPONENT_MANAGER_ERROR_NO_RUNNING">
+		<value>TIZEN_ERROR_COMPONENT_MANAGER | 0x05</value>
+		<msg>Component is not running</msg>
+	</error>
+	<error name="COMPONENT_MANAGER_ERROR_LABEL_NOT_FOUND">
+		<value>TIZEN_ERROR_COMPONENT_MANAGER | 0x06</value>
+		<msg>Label not found</msg>
+	</error>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/account/liboauth2">
+	<error name="OAUTH2_ERROR_PARSE_FAILED">
+		<value>TIZEN_ERROR_ACCOUNT_OAUTH | 0x01</value>
+		<msg>Response parse failed</msg>
+	</error>
+	<error name="OAUTH2_ERROR_NETWORK_ERROR">
+		<value>TIZEN_ERROR_ACCOUNT_OAUTH | 0x02</value>
+		<msg>Network error</msg>
+	</error>
+	<error name="OAUTH2_ERROR_SERVER">
+		<value>TIZEN_ERROR_ACCOUNT_OAUTH | 0x03</value>
+		<msg>Server error</msg>
+	</error>
+	<error name="OAUTH2_ERROR_USER_CANCELLED">
+		<value>TIZEN_ERROR_ACCOUNT_OAUTH | 0x04</value>
+		<msg>User cancelled the operation</msg>
+	</error>
+	<error name="OAUTH2_ERROR_VALUE_NOT_FOUND">
+		<value>TIZEN_ERROR_ACCOUNT_OAUTH | 0x05</value>
+		<msg>Value not found</msg>
+	</error>
+</package>
+

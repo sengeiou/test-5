@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/security/key-manager">
+	<error name="CKMC_ERROR_SOCKET">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x01</value>
+		<msg>Socket error between client and Central Key Manager</msg>
+	</error>
+	<error name="CKMC_ERROR_BAD_REQUEST">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x02</value>
+		<msg>Invalid request from client</msg>
+	</error>
+	<error name="CKMC_ERROR_BAD_RESPONSE">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x03</value>
+		<msg>Invalid response from Central Key Manager</msg>
+	</error>
+	<error name="CKMC_ERROR_SEND_FAILED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x04</value>
+		<msg>Transmitting request failed</msg>
+	</error>
+	<error name="CKMC_ERROR_RECV_FAILED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x05</value>
+		<msg>Receiving response failed</msg>
+	</error>
+	<error name="CKMC_ERROR_AUTHENTICATION_FAILED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x06</value>
+		<msg>Optional password which used when saving is incorrect</msg>
+	</error>
+	<error name="CKMC_ERROR_BUFFER_TOO_SMALL">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x07</value>
+		<msg>The output buffer size which is passed as parameter is too small</msg>
+	</error>
+	<error name="CKMC_ERROR_SERVER_ERROR">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x08</value>
+		<msg>Central Key Manager has been failed for some reason</msg>
+	</error>
+	<error name="CKMC_ERROR_DB_LOCKED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x09</value>
+		<msg>The database was not unlocked - user did not login</msg>
+	</error>
+	<error name="CKMC_ERROR_DB_ERROR">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0A</value>
+		<msg>An internal error inside the database</msg>
+	</error>
+	<error name="CKMC_ERROR_DB_ALIAS_EXISTS">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0B</value>
+		<msg>Provided alias already exists in the database</msg>
+	</error>
+	<error name="CKMC_ERROR_DB_ALIAS_UNKNOWN">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0C</value>
+		<msg>No data for given alias</msg>
+	</error>
+	<error name="CKMC_ERROR_VERIFICATION_FAILED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0D</value>
+		<msg>CA certificate(s) were unknown and chain could not be created</msg>
+	</error>
+	<error name="CKMC_ERROR_INVALID_FORMAT">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0E</value>
+		<msg>A provided file or binary has not a valid format</msg>
+	</error>
+	<error name="CKMC_ERROR_FILE_ACCESS_DENIED">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x0F</value>
+		<msg>A provided file doesn't exist or cannot be accessed in the file system</msg>
+	</error>
+	<error name="CKMC_ERROR_NOT_EXPORTABLE">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x10</value>
+		<msg>The data is saved as unexportable so it cannot be leaked</msg>
+	</error>
+	<error name="CKMC_ERROR_FILE_SYSTEM">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0x11</value>
+		<msg>Save key/certificate/pkcs12 failed because of file system error</msg>
+	</error>
+	<error name="CKMC_ERROR_UNKNOWN">
+		<value>TIZEN_ERROR_KEY_MANAGER | 0xFF</value>
+		<msg>The error with unknown reason</msg>
+	</error>
+</package>

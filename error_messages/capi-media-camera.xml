@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/camera">
+	<error name="CAMERA_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_CAMERA | 0x02</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="CAMERA_ERROR_DEVICE">
+		<value>TIZEN_ERROR_CAMERA | 0x04</value>
+		<msg>Device error</msg>
+	</error>
+	<error name="CAMERA_ERROR_SOUND_POLICY">
+		<value>TIZEN_ERROR_CAMERA | 0x06</value>
+		<msg>Blocked by Audio Session Manager</msg>
+	</error>
+	<error name="CAMERA_ERROR_SECURITY_RESTRICTED">
+		<value>TIZEN_ERROR_CAMERA | 0x07</value>
+		<msg>Restricted by security system policy</msg>
+	</error>
+	<error name="CAMERA_ERROR_DEVICE_BUSY">
+		<value>TIZEN_ERROR_CAMERA | 0x08</value>
+		<msg>The device is using another application or working on some operation</msg>
+	</error>
+	<error name="CAMERA_ERROR_DEVICE_NOT_FOUND">
+		<value>TIZEN_ERROR_CAMERA | 0x09</value>
+		<msg>No camera device </msg>
+	</error>
+	<error name="CAMERA_ERROR_SOUND_POLICY_BY_CALL">
+		<value>TIZEN_ERROR_CAMERA | 0x0a</value>
+		<msg>Blocked by Audio Session Manager - CALL</msg>
+	</error>
+	<error name="CAMERA_ERROR_SOUND_POLICY_BY_ALARM">
+		<value>TIZEN_ERROR_CAMERA | 0x0b</value>
+		<msg>Blocked by Audio Session Manager - ALARM</msg>
+	</error>
+	<error name="CAMERA_ERROR_ESD">
+		<value>TIZEN_ERROR_CAMERA | 0x0c</value>
+		<msg>ESD situation</msg>
+	</error>
+	<error name="CAMERA_ERROR_RESOURCE_CONFLICT">
+		<value>TIZEN_ERROR_CAMERA | 0x0d</value>
+		<msg>Blocked by resource conflict</msg>
+	</error>
+	<error name="CAMERA_ERROR_SERVICE_DISCONNECTED">
+		<value>TIZEN_ERROR_CAMERA | 0x0e</value>
+		<msg>Socket connection lost</msg>
+	</error>
+</package>
+

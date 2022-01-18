@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/nsd">  <!-- git path -->
+	<error name="DNSSD_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_DNSSD | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="DNSSD_ERROR_ALREADY_REGISTERED">
+		<value>TIZEN_ERROR_DNSSD | 0x02</value>
+		<msg>Already registered</msg>
+	</error>
+	<error name="DNSSD_ERROR_NAME_CONFLICT">
+		<value>TIZEN_ERROR_DNSSD | 0x03</value>
+		<msg>Name conflict</msg>
+	</error>
+	<error name="DNSSD_ERROR_SERVICE_NOT_RUNNING">
+		<value>TIZEN_ERROR_DNSSD | 0x04</value>
+		<msg>Background daemon not running</msg>
+	</error>
+	<error name="DNSSD_ERROR_SERVICE_NOT_FOUND">
+		<value>TIZEN_ERROR_DNSSD | 0x05</value>
+		<msg>Service not found</msg>
+	</error>
+	<error name="DNSSD_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_DNSSD | 0x06</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>
+

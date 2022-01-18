@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediacodec">
+	<error name="MEDIACODEC_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_INVALID_INBUFFER">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x02</value>
+		<msg>Invalid input buffer</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_INVALID_OUTBUFFER">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x03</value>
+		<msg>Invalid output buffer</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x04</value>
+		<msg>Invalid output buffer</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x05</value>
+		<msg>Internal error</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_INVALID_STREAM">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x06</value>
+		<msg>Not initialized mediacodec</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_CODEC_NOT_FOUND">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x07</value>
+		<msg>Cannot find codec</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_DECODE">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x08</value>
+		<msg>Error while decoding data</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_NO_FREE_SPACE">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x09</value>
+		<msg>Out of storage</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_STREAM_NOT_FOUND">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0a</value>
+		<msg>Cannot find stream</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_NOT_SUPPORTED_FORMAT">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0b</value>
+		<msg>Not supported format </msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_BUFFER_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0c</value>
+		<msg>Not available buffer</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_OVERFLOW_INBUFFER">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0d</value>
+		<msg>Overflow input buffer</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_RESOURCE_OVERLOADED">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0e</value>
+		<msg>Exceed the instance limit</msg>
+	</error>
+	<error name="MEDIACODEC_ERROR_RESOURCE_CONFLICT">
+		<value>TIZEN_ERROR_MEDIACODEC | 0x0f</value>
+		<msg>Interrupted by a resource conflict</msg>
+	</error>
+</package>
+

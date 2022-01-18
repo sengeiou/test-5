@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/appfw/badge">
+	<error name="BADGE_ERROR_FROM_DB">
+		<value>TIZEN_ERROR_BADGE | 0x01</value>
+		<msg>Error from DB</msg>
+	</error>
+	<error name="BADGE_ERROR_ALREADY_EXIST">
+		<value>TIZEN_ERROR_BADGE | 0x02</value>
+		<msg>Already exist</msg>
+	</error>
+	<error name="BADGE_ERROR_FROM_DBUS">
+		<value>TIZEN_ERROR_BADGE | 0x03</value>
+		<msg>Error from DBus</msg>
+	</error>
+	<error name="BADGE_ERROR_NOT_EXIST">
+		<value>TIZEN_ERROR_BADGE | 0x04</value>
+		<msg>Not exist</msg>
+	</error>
+	<error name="BADGE_ERROR_SERVICE_NOT_READY">
+		<value>TIZEN_ERROR_BADGE | 0x05</value>
+		<msg>Error service not ready</msg>
+	</error>
+	<error name="BADGE_ERROR_INVALID_PACKAGE">
+		<value>TIZEN_ERROR_BADGE | 0x06</value>
+		<msg>The caller application is not signed with the certificate of the badge owner</msg>
+	</error>
+</package>

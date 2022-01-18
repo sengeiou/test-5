@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/player">
+	<error name="PLAYER_ERROR_SEEK_FAILED">
+		<value>TIZEN_ERROR_PLAYER | 0x21</value>
+		<msg>Seek operation failure</msg>
+	</error>
+	<error name="PLAYER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_PLAYER | 0x22</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_SUPPORTED_FILE">
+		<value>TIZEN_ERROR_PLAYER | 0x23</value>
+		<msg>File format not supported</msg>
+	</error>
+	<error name="PLAYER_ERROR_INVALID_URI">
+		<value>TIZEN_ERROR_PLAYER | 0x24</value>
+		<msg>Invalid URI</msg>
+	</error>
+	<error name="PLAYER_ERROR_SOUND_POLICY">
+		<value>TIZEN_ERROR_PLAYER | 0x25</value>
+		<msg>Sound policy error </msg>
+	</error>
+	<error name="PLAYER_ERROR_CONNECTION_FAILED">
+		<value>TIZEN_ERROR_PLAYER | 0x26</value>
+		<msg>Streaming connection failed</msg>
+	</error>
+	<error name="PLAYER_ERROR_VIDEO_CAPTURE_FAILED">
+		<value>TIZEN_ERROR_PLAYER | 0x27</value>
+		<msg>Video capture failed</msg>
+	</error>
+	<error name="PLAYER_ERROR_DRM_EXPIRED">
+		<value>TIZEN_ERROR_PLAYER | 0x28</value>
+		<msg>Expired license</msg>
+	</error>
+	<error name="PLAYER_ERROR_DRM_NO_LICENSE">
+		<value>TIZEN_ERROR_PLAYER | 0x29</value>
+		<msg>No license </msg>
+	</error>
+	<error name="PLAYER_ERROR_DRM_FUTURE_USE">
+		<value>TIZEN_ERROR_PLAYER | 0x2a</value>
+		<msg>License for future use</msg>
+	</error>
+	<error name="PLAYER_ERROR_DRM_NOT_PERMITTED">
+		<value>TIZEN_ERROR_PLAYER | 0x2b</value>
+		<msg>Format not permitted</msg>
+	</error>
+	<error name="PLAYER_ERROR_RESOURCE_LIMIT">
+		<value>TIZEN_ERROR_PLAYER | 0x2c</value>
+		<msg>Resource limit</msg>
+	</error>
+	<error name="PLAYER_ERROR_SERVICE_DISCONNECTED">
+		<value>TIZEN_ERROR_PLAYER | 0x2d</value>
+		<msg>Socket connection lost</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_SUPPORTED_AUDIO_CODEC">
+		<value>TIZEN_ERROR_PLAYER | 0x2e</value>
+		<msg>Not supported audio codec but video can be played</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_SUPPORTED_VIDEO_CODEC">
+		<value>TIZEN_ERROR_PLAYER | 0x2f</value>
+		<msg>Not supported video codec but audio can be played</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_SUPPORTED_SUBTITLE">
+		<value>TIZEN_ERROR_PLAYER | 0x30</value>
+		<msg>Not supported subtitle format</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_SUPPORTED_FORMAT">
+		<value>TIZEN_ERROR_PLAYER | 0x31</value>
+		<msg>Not supported format</msg>
+	</error>
+	<error name="PLAYER_ERROR_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_PLAYER | 0x32</value>
+		<msg>Not available operation</msg>
+	</error>
+</package>
+

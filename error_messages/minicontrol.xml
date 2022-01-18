@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="apps/core/preloaded/minicontrol">
+	<error name="MINICONTROL_ERROR_IPC_FAILURE">
+		<value>TIZEN_ERROR_MINICONTROL | 0x02</value>
+		<msg> IPC error</msg>
+	</error>
+	<error name="MINICONTROL_ERROR_ELM_FAILURE">
+		<value>TIZEN_ERROR_MINICONTROL | 0x03</value>
+		<msg> Some error occued on elementary</msg>
+	</error>
+</package>

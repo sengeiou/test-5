@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/appfw/widget-service">
+	<error name="WIDGET_ERROR_FAULT">
+		<value>TIZEN_ERROR_WIDGET | 0x0001</value>
+		<msg>Fault - Unable to recover from the error</msg>
+	</error>
+	<error name="WIDGET_ERROR_ALREADY_EXIST">
+		<value>TIZEN_ERROR_WIDGET | 0x0002</value>
+		<msg>Already exists</msg>
+	</error>
+	<error name="WIDGET_ERROR_ALREADY_STARTED">
+		<value>TIZEN_ERROR_WIDGET | 0x0004</value>
+		<msg>Operation is already started</msg>
+	</error>
+	<error name="WIDGET_ERROR_NOT_EXIST">
+		<value>TIZEN_ERROR_WIDGET | 0x0008</value>
+		<msg>Not exists</msg>
+	</error>
+	<error name="WIDGET_ERROR_DISABLED">
+		<value>TIZEN_ERROR_WIDGET | 0x00010</value>
+		<msg>Disabled</msg>
+	</error>
+	<error name="WIDGET_ERROR_MAX_EXCEEDED">
+		<value>TIZEN_ERROR_WIDGET | 0x00011</value>
+		<msg>Maximum number of instances exceeded</msg>
+	</error>
+</package>
+
+

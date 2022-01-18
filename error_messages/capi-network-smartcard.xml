@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/smartcard">
+	<error name="SMARTCARD_ERROR_GENERAL">
+		<value>TIZEN_ERROR_SMARTCARD | 0x01</value>
+		<msg>A general error occurred</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_NO_SUCH_ELEMENT">
+		<value>TIZEN_ERROR_SMARTCARD | 0x02</value>
+		<msg>No such element error</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_ILLEGAL_STATE">
+		<value>TIZEN_ERROR_SMARTCARD | 0x03</value>
+		<msg>Illegal state of execution error</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_ILLEGAL_REFERENCE">
+		<value>TIZEN_ERROR_SMARTCARD | 0x04</value>
+		<msg>Illegal reference</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_OPERATION_NOT_SUPPORTED">
+		<value>TIZEN_ERROR_SMARTCARD | 0x05</value>
+		<msg>Operation not supported from SE</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_CHANNEL_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_SMARTCARD | 0x06</value>
+		<msg>No channel available</msg>
+	</error>
+	<error name="SMARTCARD_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_SMARTCARD | 0x07</value>
+		<msg>Smartcard service not initialized</msg>
+	</error>
+</package>

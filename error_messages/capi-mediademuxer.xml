@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediademuxer">
+	<error name="MEDIADEMUXER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_MEDIA_DEMUXER | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="MEDIADEMUXER_ERROR_INVALID_PATH">
+		<value>TIZEN_ERROR_MEDIA_DEMUXER | 0x02</value>
+		<msg>Invalid path</msg>
+	</error>
+	<error name="MEDIADEMUXER_ERROR_RESOURCE_LIMIT">
+		<value>TIZEN_ERROR_MEDIA_DEMUXER | 0x03</value>
+		<msg>Resource limit</msg>
+	</error>
+	<error name="MEDIADEMUXER_ERROR_SEEK_FAILED">
+		<value>TIZEN_ERROR_MEDIA_DEMUXER | 0x04</value>
+		<msg>Seek operation failure</msg>
+	</error>
+	<error name="MEDIADEMUXER_ERROR_DRM_NOT_PERMITTED">
+		<value>TIZEN_ERROR_MEDIA_DEMUXER | 0x05</value>
+		<msg>Not permitted format</msg>
+	</error>
+</package>
+

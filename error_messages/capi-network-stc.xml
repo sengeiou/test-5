@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/smart-traffic-control">
+	<error name="STC_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_STC | 0x01</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="STC_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_STC | 0x02</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="STC_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_STC | 0x03</value>
+		<msg>Already initialized</msg>
+	</error>
+	<error name="STC_ERROR_IN_PROGRESS">
+		<value>TIZEN_ERROR_STC | 0x04</value>
+		<msg>In progress</msg>
+	</error>
+</package>
+

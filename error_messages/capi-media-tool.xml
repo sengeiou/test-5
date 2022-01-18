@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediatool">
+	<error name="MEDIA_PACKET_ERROR_NO_AVAILABLE_PACKET">
+		<value>TIZEN_ERROR_MEDIA_TOOL | 0x01</value>
+		<msg>No available packet</msg>
+	</error>
+</package>
+

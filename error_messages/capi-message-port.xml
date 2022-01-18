@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/appfw/message-port">
+	<error name="MESSAGE_PORT_ERROR_PORT_NOT_FOUND">
+		<value>TIZEN_ERROR_MESSAGE_PORT | 0x01</value>
+		<msg>The message port of the remote application is not found</msg>
+	</error>
+	<error name="MESSAGE_PORT_ERROR_CERTIFICATE_NOT_MATCH">
+		<value>TIZEN_ERROR_MESSAGE_PORT | 0x02</value>
+		<msg>The remote application is not signed with the same certificate</msg>
+	</error>
+	<error name="MESSAGE_PORT_ERROR_MAX_EXCEEDED">
+		<value>TIZEN_ERROR_MESSAGE_PORT | 0x03</value>
+		<msg>The size of the message has exceeded the maximum limit</msg>
+	</error>
+	<error name="MESSAGE_PORT_ERROR_RESOURCE_UNAVAILABLE">
+		<value>TIZEN_ERROR_MESSAGE_PORT | 0x04</value>
+		<msg>Resource is temporarily unavailable</msg>
+	</error>
+</package>
+

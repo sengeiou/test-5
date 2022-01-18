@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/context">
+	<error name="CONTEXT_HISTORY_ERROR_OUT_OF_RANGE">
+		<value>TIZEN_ERROR_CONTEXT | 0x03</value>
+		<msg>Out of range</msg>
+	</error>
+	<error name="CONTEXT_HISTORY_ERROR_OPERATION_FAILED">  <!-- CONTEXT_TRIGGER_ERROR_OPERATION_FAILED has same value -->
+		<value>TIZEN_ERROR_CONTEXT | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_RULE_ENABLED">
+		<value>TIZEN_ERROR_CONTEXT | 0x05</value>
+		<msg>Rule is enabled</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_RULE_NOT_ENABLED">
+		<value>TIZEN_ERROR_CONTEXT | 0x06</value>
+		<msg>Rule is not enabled</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_INVALID_RULE">
+		<value>TIZEN_ERROR_CONTEXT | 0x07</value>
+		<msg>Invalid rule</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_RULE_NOT_EXIST">
+		<value>TIZEN_ERROR_CONTEXT | 0x08</value>
+		<msg>Rule does not exist</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_DATA_EXIST">
+		<value>TIZEN_ERROR_CONTEXT | 0x09</value>
+		<msg>Data exist</msg>
+	</error>
+	<error name="CONTEXT_TRIGGER_ERROR_INVALID_DATA">
+		<value>TIZEN_ERROR_CONTEXT | 0x0a</value>
+		<msg>Invalid data</msg>
+	</error>
+</package>
+

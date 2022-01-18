@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediavision">
+	<error name="MEDIA_VISION_ERROR_NOT_SUPPORTED_FORMAT">
+		<value>TIZEN_ERROR_MEDIA_VISION | 0x01</value>
+		<msg>Not supported format</msg>
+	</error>
+	<error name="MEDIA_VISION_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_MEDIA_VISION | 0x02</value>
+		<msg>Internal error</msg>
+	</error>
+	<error name="MEDIA_VISION_ERROR_INVALID_DATA">
+		<value>TIZEN_ERROR_MEDIA_VISION | 0x03</value>
+		<msg>Invalid data</msg>
+	</error>
+	<error name="MEDIA_VISION_ERROR_INVALID_PATH">
+		<value>TIZEN_ERROR_MEDIA_VISION | 0x04</value>
+		<msg>Invalid path</msg>
+	</error>
+	<error name="MEDIA_VISION_ERROR_NOT_SUPPORTED_ENGINE">
+		<value>TIZEN_ERROR_MEDIA_VISION | 0x05</value>
+		<msg>Not supported engine</msg>
+	</error>
+</package>
+

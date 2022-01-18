@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediastreamer">
+	<error name="MEDIA_STREAMER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_MEDIA_STREAMER | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="MEDIA_STREAMER_ERROR_CONNECTION_FAILED">
+		<value>TIZEN_ERROR_MEDIA_STREAMER | 0x02</value>
+		<msg>Connection failed</msg>
+	</error>
+	<error name="MEDIA_STREAMER_ERROR_RESOURCE_CONFLICT">
+		<value>TIZEN_ERROR_MEDIA_STREAMER | 0x03</value>
+		<msg>Resource conflict</msg>
+	</error>
+	<error name="MEDIA_STREAMER_ERROR_SEEK_FAILED">
+		<value>TIZEN_ERROR_MEDIA_STREAMER | 0x04</value>
+		<msg>Seek operation failure</msg>
+	</error>
+</package>
+

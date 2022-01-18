@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/usb-host">  <!-- git path -->
+	<error name="USB_HOST_ERROR_NOT_FOUND">  <!-- The name of error enumerator -->
+		<value>TIZEN_ERROR_USB_HOST | 0x01</value>  <!-- The value of error enumerator. -->
+		<msg>Entity not found</msg>  <!-- The message of error enumerator -->
+	</error>
+	<error name="USB_HOST_ERROR_OVERFLOW">
+		<value>TIZEN_ERROR_USB_HOST | 0x02</value>
+		<msg>Overflow</msg>
+	</error>
+	<error name="USB_HOST_ERROR_DEVICE_NOT_OPENED">
+		<value>TIZEN_ERROR_USB_HOST | 0x03</value>
+		<msg>Device is not opened</msg>
+	</error>
+</package>
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/geofence-manager">
+	<error name="GEOFENCE_MANAGER_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x01</value>
+		<msg>Geofence Manager is not initialized</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_INVALID_ID">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x02</value>
+		<msg>Invalid Geofence ID</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_EXCEPTION">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x03</value>
+		<msg>exception is occurred</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_ALREADY_STARTED">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x04</value>
+		<msg>Geofence is already started</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_TOO_MANY_GEOFENCE">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x05</value>
+		<msg>Too many Geofence</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_IPC">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x06</value>
+		<msg>Error occurred in GPS/Wi-Fi/BT</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_DATABASE">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x07</value>
+		<msg>DB error occurred in the server side</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_PLACE_ACCESS_DENIED">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x08</value>
+		<msg>Access to specified place is denied</msg>
+	</error>
+	<error name="GEOFENCE_MANAGER_ERROR_GEOFENCE_ACCESS_DENIED">
+		<value>TIZEN_ERROR_GEOFENCE_MANAGER | 0x09</value>
+		<msg>Access to specified geofence is denied</msg>
+	</error>
+</package>
+

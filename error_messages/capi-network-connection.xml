@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/connection">
+	<error name="CONNECTION_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_CONNECTION | 0x0401</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="CONNECTION_ERROR_ITERATOR_END">
+		<value>TIZEN_ERROR_CONNECTION | 0x0402</value>
+		<msg>End of iteration</msg>
+	</error>
+	<error name="CONNECTION_ERROR_NO_CONNECTION">
+		<value>TIZEN_ERROR_CONNECTION | 0x0403</value>
+		<msg>There is no connection</msg>
+	</error>
+	<error name="CONNECTION_ERROR_ALREADY_EXISTS">
+		<value>TIZEN_ERROR_CONNECTION | 0x0404</value>
+		<msg>Already exists</msg>
+	</error>
+	<error name="CONNECTION_ERROR_OPERATION_ABORTED">
+		<value>TIZEN_ERROR_CONNECTION | 0x0405</value>
+		<msg>Operation is aborted</msg>
+	</error>
+	<error name="CONNECTION_ERROR_DHCP_FAILED">
+		<value>TIZEN_ERROR_CONNECTION | 0x0406</value>
+		<msg>DHCP failed</msg>
+	</error>
+	<error name="CONNECTION_ERROR_INVALID_KEY">
+		<value>TIZEN_ERROR_CONNECTION | 0x0407</value>
+		<msg>Invalid key</msg>
+	</error>
+	<error name="CONNECTION_ERROR_NO_REPLY">
+		<value>TIZEN_ERROR_CONNECTION | 0x0408</value>
+		<msg>No reply</msg>
+	</error>
+	<error name="CONNECTION_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_CONNECTION | 0x0409</value>
+		<msg>Already initialized</msg>
+	</error>
+	<error name="CONNECTION_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_CONNECTION | 0x040A</value>
+		<msg>Not initialized</msg>
+	</error>
+</package>
+

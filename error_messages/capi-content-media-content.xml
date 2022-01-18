@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/media-content">
+	<error name="MEDIA_CONTENT_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_MEDIA_CONTENT | 0x01</value>
+		<msg>DB operation failed </msg>
+	</error>
+	<error name="MEDIA_CONTENT_ERROR_DB_BUSY">
+		<value>TIZEN_ERROR_MEDIA_CONTENT | 0x02</value>
+		<msg>DB operation BUSY</msg>
+	</error>
+	<error name="MEDIA_CONTENT_ERROR_NETWORK">
+		<value>TIZEN_ERROR_MEDIA_CONTENT | 0x03</value>
+		<msg>Network Fail</msg>
+	</error>
+	<error name="MEDIA_CONTENT_ERROR_UNSUPPORTED_CONTENT">
+		<value>TIZEN_ERROR_MEDIA_CONTENT | 0x04</value>
+		<msg>Unsupported content</msg>
+	</error>
+</package>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/uifw/autofill">
+	<error name="AUTOFILL_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0001</value>
+		<msg>Not initializated</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0002</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_AUTHENTICATION_FAILED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0003</value>
+		<msg>Authentication failed</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_COMMIT_FAILED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0004</value>
+		<msg>These values can not be saved</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_FILL_RESPONSE_FAILED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0005</value>
+		<msg>Failed to create required values</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_SERVICE_NOT_CONNECTED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0006</value>
+		<msg>Unable to connect to Autofill Service</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_SERVICE_NOT_ALLOWED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0007</value>
+		<msg>Autofill Service is not allowed</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_SERVICE_NOT_ACTIVATED">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0008</value>
+		<msg>Autofill Service is not activated</msg>
+	</error>
+	<error name="AUTOFILL_ERROR_SAVED_VALUES_NOT_FOUND">
+		<value>TIZEN_ERROR_AUTOFILL | 0x0009</value>
+		<msg>Could not find saved values</msg>
+	</error>
+</package>

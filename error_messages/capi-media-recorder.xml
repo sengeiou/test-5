@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/recorder">
+	<error name="RECORDER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_RECORDER | 0x12</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="RECORDER_ERROR_DEVICE">
+		<value>TIZEN_ERROR_RECORDER | 0x14</value>
+		<msg>Device error</msg>
+	</error>
+	<error name="RECORDER_ERROR_SOUND_POLICY">
+		<value>TIZEN_ERROR_RECORDER | 0x16</value>
+		<msg>Blocked by Audio Session Manager</msg>
+	</error>
+	<error name="RECORDER_ERROR_SECURITY_RESTRICTED">
+		<value>TIZEN_ERROR_RECORDER | 0x17</value>
+		<msg>Restricted by security system policy</msg>
+	</error>
+	<error name="RECORDER_ERROR_SOUND_POLICY_BY_CALL">
+		<value>TIZEN_ERROR_RECORDER | 0x18</value>
+		<msg>Blocked by Audio Session Manager - CALL</msg>
+	</error>
+	<error name="RECORDER_ERROR_SOUND_POLICY_BY_ALARM">
+		<value>TIZEN_ERROR_RECORDER | 0x19</value>
+		<msg>Blocked by Audio Session Manager - ALARM</msg>
+	</error>
+	<error name="RECORDER_ERROR_ESD">
+		<value>TIZEN_ERROR_RECORDER | 0x1a</value>
+		<msg>ESD situation</msg>
+	</error>
+	<error name="RECORDER_ERROR_OUT_OF_STORAGE">
+		<value>TIZEN_ERROR_RECORDER | 0x1b</value>
+		<msg>Out of storage</msg>
+	</error>
+	<error name="RECORDER_ERROR_RESOURCE_CONFLICT">
+		<value>TIZEN_ERROR_RECORDER | 0x1c</value>
+		<msg>Blocked by resource conflict</msg>
+	</error>
+	<error name="RECORDER_ERROR_SERVICE_DISCONNECTED">
+		<value>TIZEN_ERROR_RECORDER | 0x1d</value>
+		<msg>Socket connection lost</msg>
+	</error>
+</package>

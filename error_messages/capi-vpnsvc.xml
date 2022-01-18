@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/vpn-service">
+	<error name="VPNSVC_ERROR_IPC_FAILED">
+		<value>TIZEN_ERROR_VPNSVC | 0x02</value>
+		<msg>Failed to communicate with server</msg>
+	</error>
+</package>
+

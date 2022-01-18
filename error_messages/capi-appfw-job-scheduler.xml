@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/job-scheduler">
+	<error name="JOB_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_JOB_SCHEDULER | 0x21</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="JOB_ERROR_NO_SUCH_JOB">
+		<value>TIZEN_ERROR_JOB_SCHEDULER | 0x22</value>
+		<msg>No such job</msg>
+	</error>
+	<error name="JOB_ERROR_ALREADY_EXIST">
+		<value>TIZEN_ERROR_JOB_SCHEDULER | 0x23</value>
+		<msg>Already exist</msg>
+	</error>
+</package>

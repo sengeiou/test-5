@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/pim/calendar-service">
+	<error name="CALENDAR_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_CALENDAR | 0x02</value>
+		<msg>No access to the database</msg>
+	</error>
+	<error name="CALENDAR_ERROR_ITERATOR_END">
+		<value>TIZEN_ERROR_CALENDAR | 0x04</value>
+		<msg>Iterator is on the last position</msg>
+	</error>
+	<error name="CALENDAR_ERROR_DB_RECORD_NOT_FOUND">
+		<value>TIZEN_ERROR_CALENDAR | 0x05</value>
+		<msg>Database not found</msg>
+	</error>
+	<error name="CALENDAR_ERROR_IPC">
+		<value>TIZEN_ERROR_CALENDAR | 0xBF</value>
+		<msg>Unknown IPC error</msg>
+	</error>
+	<error name="CALENDAR_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_CALENDAR | 0xEF</value>
+		<msg>Error from another modules</msg>
+	</error>
+</package>
+

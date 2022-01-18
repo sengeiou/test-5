@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/wav-player">
+	<error name="WAV_PLAYER_ERROR_FORMAT_NOT_SUPPORTED">
+		<value>TIZEN_ERROR_WAV_PLAYER | 0x01</value>
+		<msg>Format not supported</msg>
+	</error>
+	<error name="WAV_PLAYER_ERROR_NOT_SUPPORTED_TYPE">
+		<value>TIZEN_ERROR_WAV_PLAYER | 0x02</value>
+		<msg>Not supported</msg>
+	</error>
+</package>
+

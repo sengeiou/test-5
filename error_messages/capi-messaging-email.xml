@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/email">
+	<error name="EMAILS_ERROR_SERVER_NOT_READY">
+		<value>TIZEN_ERROR_EMAIL_SERVICE | 0x200</value>
+		<msg>Server not ready</msg>
+	</error>
+	<error name="EMAILS_ERROR_COMMUNICATION_WITH_SERVER_FAILED">
+		<value>TIZEN_ERROR_EMAIL_SERVICE | 0x201</value>
+		<msg>Communication with server failed</msg>
+	</error>
+	<error name="EMAILS_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_EMAIL_SERVICE | 0x202</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="EMAILS_ERROR_ACCOUNT_NOT_FOUND">
+		<value>TIZEN_ERROR_EMAIL_SERVICE | 0x203</value>
+		<msg>Email account not found</msg>
+	</error>
+	<error name="EMAILS_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_EMAIL_SERVICE | 0x204</value>
+		<msg>Email database failed</msg>
+	</error>
+</package>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/telephony/phonenumber-utils">
+	<error name="PHONE_NUMBER_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_PHONENUMBER_UTILS | 0xEF</value>
+		<msg>Internal error</msg>
+	</error>
+	<error name="PHONE_NUMBER_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_PHONENUMBER_UTILS | 0x02</value>
+		<msg>No access to the database</msg>
+	</error>
+	<error name="PHONE_NUMBER_ERROR_IPC">
+		<value>TIZEN_ERROR_PHONENUMBER_UTILS | 0xBF</value>
+		<msg>Unknown IPC error</msg>
+	</error>
+</package>
+

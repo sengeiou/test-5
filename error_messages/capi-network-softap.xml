@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/softap">
+	<error name="SOFTAP_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_SOFTAP | 0x01</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="SOFTAP_ERROR_ALREADY_ENABLED">
+		<value>TIZEN_ERROR_SOFTAP | 0x02</value>
+		<msg>Already enabled</msg>
+	</error>
+</package>
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/account/fido-client">
+	<error name="FIDO_ERROR_USER_ACTION_IN_PROGRESS">
+		<value>TIZEN_ERROR_FIDO | 0x01</value>
+		<msg>User action is in progress.</msg>
+	</error>
+	<error name="FIDO_ERROR_USER_CANCELLED">
+		<value>TIZEN_ERROR_FIDO | 0x02</value>
+		<msg>User has canceled the operation.</msg>
+	</error>
+	<error name="FIDO_ERROR_UNSUPPORTED_VERSION">
+		<value>TIZEN_ERROR_FIDO | 0x03</value>
+		<msg>UAF message's version is not supported.</msg>
+	</error>
+	<error name="FIDO_ERROR_NO_SUITABLE_AUTHENTICATOR">
+		<value>TIZEN_ERROR_FIDO | 0x04</value>
+		<msg>No suitable authenticators found.</msg>
+	</error>
+	<error name="FIDO_ERROR_PROTOCOL_ERROR">
+		<value>TIZEN_ERROR_FIDO | 0x05</value>
+		<msg>Protocol error, the interaction may have timed out, or the UAF message is malformed.</msg>
+	</error>
+	<error name="FIDO_ERROR_UNTRUSTED_FACET_ID">
+		<value>TIZEN_ERROR_FIDO | 0x06</value>
+		<msg>The caller's id is not allowed to use this operation.</msg>
+	</error>
+</package>
+

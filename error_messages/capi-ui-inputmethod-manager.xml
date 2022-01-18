@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/inputmethod-manager">
+	<error name="IME_MANAGER_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_IME | 0x0010</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/motion">
+	<error name="ACTIVITY_ERROR_ALREADY_STARTED">
+		<value>TIZEN_ERROR_CONTEXT | 0x01</value>
+		<msg>Recognition is already started</msg>
+	</error>
+	<error name="ACTIVITY_ERROR_NOT_STARTED">
+		<value>TIZEN_ERROR_CONTEXT | 0x02</value>
+		<msg>Recognition is not started</msg>
+	</error>
+	<error name="ACTIVITY_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_CONTEXT | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>
+

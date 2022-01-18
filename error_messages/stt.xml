@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/uifw/stt">
+	<error name="STT_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_STT | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="STT_ERROR_INVALID_LANGUAGE">
+		<value>TIZEN_ERROR_STT | 0x02</value>
+		<msg>Invalid language</msg>
+	</error>
+	<error name="STT_ERROR_ENGINE_NOT_FOUND">
+		<value>TIZEN_ERROR_STT | 0x03</value>
+		<msg>No available engine</msg>
+	</error>
+	<error name="STT_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_STT | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="STT_ERROR_NOT_SUPPORTED_FEATURE">
+		<value>TIZEN_ERROR_STT | 0x05</value>
+		<msg>Not supported feature of current engine</msg>
+	</error>
+	<error name="STT_ERROR_RECORDING_TIMED_OUT">
+		<value>TIZEN_ERROR_STT | 0x06</value>
+		<msg>Recording timed out</msg>
+	</error>
+	<error name="STT_ERROR_NO_SPEECH">
+		<value>TIZEN_ERROR_STT | 0x07</value>
+		<msg>No speech while recording</msg>
+	</error>
+	<error name="STT_ERROR_IN_PROGRESS_TO_READY">
+		<value>TIZEN_ERROR_STT | 0x08</value>
+		<msg>Progress to ready is not finished</msg>
+	</error>
+	<error name="STT_ERROR_IN_PROGRESS_TO_RECORDING">
+		<value>TIZEN_ERROR_STT | 0x09</value>
+		<msg>Progress to recording is not finished</msg>
+	</error>
+	<error name="STT_ERROR_IN_PROGRESS_TO_PROCESSING">
+		<value>TIZEN_ERROR_STT | 0x10</value>
+		<msg>Progress to processing is not finished</msg>
+	</error>
+	<error name="STT_ERROR_SERVICE_RESET">
+		<value>TIZEN_ERROR_STT | 0x11</value>
+		<msg>Service reset</msg>
+	</error>
+
+</package>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/maps-service">
+	<error name="MAPS_ERROR_SERVICE_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_MAPS_SERVICE | 0x01</value>
+		<msg>Service unavailable</msg>
+	</error>
+	<error name="MAPS_ERROR_NOT_FOUND">
+		<value>TIZEN_ERROR_MAPS_SERVICE | 0x02</value>
+		<msg>Result not found</msg>
+	</error>
+</package>
+

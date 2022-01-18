@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/app-manager">
+	<error name="APP_MANAGER_ERROR_NO_SUCH_APP">
+		<value>TIZEN_ERROR_APPLICATION_MANAGER | 0x01</value>
+		<msg>No such application</msg>
+	</error>
+	<error name="APP_MANAGER_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_APPLICATION_MANAGER | 0x03</value>
+		<msg>Database error</msg>
+	</error>
+	<error name="APP_MANAGER_ERROR_INVALID_PACKAGE">
+		<value>TIZEN_ERROR_APPLICATION_MANAGER | 0x04</value>
+		<msg>Invalid package name</msg>
+	</error>
+	<error name="APP_MANAGER_ERROR_APP_NO_RUNNING">
+		<value>TIZEN_ERROR_APPLICATION_MANAGER | 0x05</value>
+		<msg>App is not running</msg>
+	</error>
+	<error name="APP_MANAGER_ERROR_REQUEST_FAILED">
+		<value>TIZEN_ERROR_APPLICATION_MANAGER | 0x06</value>
+		<msg>Internal aul request error</msg>
+	</error>
+</package>

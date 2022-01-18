@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/inputmethod">
+	<error name="IME_ERROR_NO_CALLBACK_FUNCTION">
+		<value>TIZEN_ERROR_IME | 0x0001</value>
+		<msg>Necessary callback function is not set</msg>
+	</error>
+	<error name="IME_ERROR_NOT_RUNNING">
+		<value>TIZEN_ERROR_IME | 0x0002</value>
+		<msg>IME main loop isn't started yet </msg>
+	</error>
+	<error name="IME_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_IME | 0x0003</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>

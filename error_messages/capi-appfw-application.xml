@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/application">
+	<error name="APP_ERROR_INVALID_CONTEXT">
+		<value>TIZEN_ERROR_APPLICATION | 0x01</value>
+		<msg>Invalid application context</msg>
+	</error>
+	<error name="ALARM_ERROR_INVALID_TIME">
+		<value>TIZEN_ERROR_APPLICATION | 0x05</value>
+		<msg>Invalid time</msg>
+	</error>
+	<error name="ALARM_ERROR_INVALID_DATE">
+		<value>TIZEN_ERROR_APPLICATION | 0x06</value>
+		<msg>Invalid date</msg>
+	</error>
+	<error name="ALARM_ERROR_CONNECTION_FAIL">
+		<value>TIZEN_ERROR_APPLICATION | 0x07</value>
+		<msg>The alarm service connection failed</msg>
+	</error>
+	<error name="ALARM_ERROR_NOT_PERMITTED_APP">
+		<value>TIZEN_ERROR_APPLICATION | 0x08</value>
+		<msg>Application is not permitted</msg>
+	</error>
+	<error name="APP_CONTROL_ERROR_APP_NOT_FOUND">
+		<value>TIZEN_ERROR_APPLICATION | 0x21</value>
+		<msg>The application is not found</msg>
+	</error>
+	<error name="APP_CONTROL_ERROR_INVALID_DATA_TYPE">
+		<value>TIZEN_ERROR_APPLICATION | 0x22</value>
+		<msg>Invalid data type</msg>
+	</error>
+	<error name="APP_CONTROL_ERROR_LAUNCH_REJECTED">
+		<value>TIZEN_ERROR_APPLICATION | 0x23</value>
+		<msg>The application cannot be launched now</msg>
+	</error>
+	<error name="APP_CONTROL_ERROR_LAUNCH_FAILED">
+		<value>TIZEN_ERROR_APPLICATION | 0x24</value>
+		<msg>Internal launch error</msg>
+	</error>
+	<error name="PREFERENCE_ERROR_NO_KEY">
+		<value>TIZEN_ERROR_APPLICATION | 0x30</value>
+		<msg>Required key not available</msg>
+	</error>
+</package>

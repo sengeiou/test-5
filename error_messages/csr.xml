@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/upstream/csr-framework">
+	<error name="CSR_ERROR_SOCKET">
+		<value>TIZEN_ERROR_CSR | 0x01</value>
+		<msg>Socket error between client and server</msg>
+	</error>
+	<error name="CSR_ERROR_INVALID_HANDLE">
+		<value>TIZEN_ERROR_CSR | 0x02</value>
+		<msg>The given handle is invalid</msg>
+	</error>
+	<error name="CSR_ERROR_SERVER">
+		<value>TIZEN_ERROR_CSR | 0x03</value>
+		<msg>Server has been failed for some reason</msg>
+	</error>
+	<error name="CSR_ERROR_NO_TASK">
+		<value>TIZEN_ERROR_CSR | 0x04</value>
+		<msg>No Task exists</msg>
+	</error>
+	<error name="CSR_ERROR_DB">
+		<value>TIZEN_ERROR_CSR | 0x05</value>
+		<msg>DB transaction error</msg>
+	</error>
+	<error name="CSR_ERROR_REMOVE_FAILED">
+		<value>TIZEN_ERROR_CSR | 0x06</value>
+		<msg>Removing file or application is failed</msg>
+	</error>
+	<error name="CSR_ERROR_USER_RESPONSE_FAILED">
+		<value>TIZEN_ERROR_CSR | 0x07</value>
+		<msg>Getting user response is failed</msg>
+	</error>
+	<error name="CSR_ERROR_FILE_DO_NOT_EXIST">
+		<value>TIZEN_ERROR_CSR | 0x08</value>
+		<msg>File not exist</msg>
+	</error>
+	<error name="CSR_ERROR_FILE_CHANGED">
+		<value>TIZEN_ERROR_CSR | 0x09</value>
+		<msg>File changed after detection</msg>
+	</error>
+	<error name="CSR_ERROR_FILE_SYSTEM">
+		<value>TIZEN_ERROR_CSR | 0x10</value>
+		<msg>File type is invalid</msg>
+	</error>
+	<error name="CSR_ERROR_ENGINE_PERMISSION">
+		<value>TIZEN_ERROR_CSR | 0x11</value>
+		<msg>Insufficient permission of engine</msg>
+	</error>
+	<error name="CSR_ERROR_ENGINE_NOT_EXIST">
+		<value>TIZEN_ERROR_CSR | 0x12</value>
+		<msg>No engine exists</msg>
+	</error>
+	<error name="CSR_ERROR_ENGINE_DISABLED">
+		<value>TIZEN_ERROR_CSR | 0x13</value>
+		<msg>Engine is in disabled state</msg>
+	</error>
+	<error name="CSR_ERROR_ENGINE_NOT_ACTIVATED">
+		<value>TIZEN_ERROR_CSR | 0x14</value>
+		<msg>Engine is not activated</msg>
+	</error>
+	<error name="CSR_ERROR_ENGINE_INTERNAL">
+		<value>TIZEN_ERROR_CSR | 0x19</value>
+		<msg>Engine internal error</msg>
+	</error>
+	<error name="CSR_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_CSR | 0xFF</value>
+		<msg>System error</msg>
+	</error>
+</package>
+

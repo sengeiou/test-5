@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/security/privilege-info">
+	<error name="PRVINFO_ERROR_NO_MATCHING_PRIVILEGE">
+		<value>TIZEN_ERROR_PRIVILEGE_INFORMATION | 0x01</value>
+		<msg>Unknown privilege </msg>
+	</error>
+</package>

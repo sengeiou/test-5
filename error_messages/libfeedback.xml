@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/system/libsvi">
+	<error name="FEEDBACK_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_FEEDBACK | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+</package>

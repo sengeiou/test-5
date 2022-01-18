@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/efl-util">
+	<error name="EFL_UTIL_ERROR_NOT_SUPPORTED_WINDOW_TYPE">
+		<value>TIZEN_ERROR_EFL_UTIL | 0x01</value>
+		<msg>Window type not supported</msg>
+	</error>
+	<error name="EFL_UTIL_ERROR_SCREENSHOT_INIT_FAIL">
+		<value>TIZEN_ERROR_EFL_UTIL | 0x02</value>
+		<msg>Screenshot initialization fail</msg>
+	</error>
+	<error name="EFL_UTIL_ERROR_SCREENSHOT_EXECUTION_FAIL">
+		<value>TIZEN_ERROR_EFL_UTIL | 0x03</value>
+		<msg>Screenshot execution fail</msg>
+	</error>
+	<error name="EFL_UTIL_ERROR_NO_RESOURCE_AVAILABLE">
+		<value>TIZEN_ERROR_EFL_UTIL | 0x04</value>
+		<msg>Resource is not available</msg>
+	</error>
+</package>
+

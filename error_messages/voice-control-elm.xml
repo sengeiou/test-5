@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/uifw/voice-control-elm">
+	<error name="VC_ELM_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_VOICE_CONTROL | 0x021</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="VC_ELM_ERROR_INVALID_LANGUAGE">
+		<value>TIZEN_ERROR_VOICE_CONTROL | 0x022</value>
+		<msg>Invalid language</msg>
+	</error>
+	<error name="VC_ELM_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_VOICE_CONTROL | 0x023</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="VC_ELM_ERROR_OPERATION_REJECTED">
+		<value>TIZEN_ERROR_VOICE_CONTROL | 0x024</value>
+		<msg>Operation rejected</msg>
+	</error>
+</package>
+

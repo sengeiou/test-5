@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/intelligent-network-monitoring">
+	<error name="INM_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_INM | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="INM_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_INM | 0x02</value>
+		<msg>Already initialized</msg>
+	</error>
+	<error name="INM_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_INM | 0x03</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="INM_ERROR_DATA_NOT_FOUND">
+		<value>TIZEN_ERROR_INM | 0x04</value>
+		<msg>Data not found</msg>
+	</error>
+</package>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/asp">
+	<error name="ASP_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_ASP | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="ASP_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_ASP | 0x02</value>
+		<msg>Already initialized</msg>
+	</error>
+	<error name="ASP_ERROR_COMMUNICATION_FAILED">
+		<value>TIZEN_ERROR_ASP | 0x03</value>
+		<msg>I/O error</msg>
+	</error>
+	<error name="ASP_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_ASP | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="ASP_ERROR_IN_PROGRESS">
+		<value>TIZEN_ERROR_ASP | 0x05</value>
+		<msg>In progress</msg>
+	</error>
+	<error name="ASP_ERROR_SERVICE_NOT_FOUND">
+		<value>TIZEN_ERROR_ASP | 0x06</value>
+		<msg>Service not found</msg>
+	</error>
+	<error name="ASP_ERROR_SESSION_NOT_FOUND">
+		<value>TIZEN_ERROR_ASP | 0x07</value>
+		<msg>Session not found</msg>
+	</error>
+	<error name="ASP_ERROR_NETWORK_ROLE_REJECTED">
+		<value>TIZEN_ERROR_ASP | 0x08</value>
+		<msg>Requested network role rejected</msg>
+	</error>
+</package>
+

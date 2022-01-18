@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/zigbee">
+	<error name="ZIGBEE_ERROR_INVALID_ENDPOINT">
+		<value>TIZEN_ERROR_ZIGBEE | 0x01</value>
+		<msg>Endpoint 0 is reserved for ZDP</msg>
+	</error>
+	<error name="ZIGBEE_ERROR_INVALID_ADDRESS">
+		<value>TIZEN_ERROR_ZIGBEE | 0x02</value>
+		<msg>Wrong address</msg>
+	</error>
+	<error name="ZIGBEE_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_ZIGBEE | 0x03</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>

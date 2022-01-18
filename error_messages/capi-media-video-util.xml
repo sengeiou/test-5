@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/video-util">
+	<error name="VIDEO_UTIL_ERROR_NOT_SUPPORTED_FORMAT">
+		<value>TIZEN_ERROR_VIDEO_UTIL | 0x01</value>
+		<msg>Not supported format</msg>
+	</error>
+</package>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/base/bundle">
+	<error name="BUNDLE_ERROR_KEY_EXISTS">
+		<value>TIZEN_ERROR_BUNDLE | 0x01</value>
+		<msg>Key exists</msg>
+	</error>
+	<error name="BUNDLE_ERROR_ARRAY_INDEX_OUT_OF_BOUNDS">
+		<value>TIZEN_ERROR_BUNDLE | 0x02</value>
+		<msg>The index is out of bounds of the array</msg>
+	</error>
+</package>
+

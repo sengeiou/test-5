@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/metadata-editor">
+	<error name="METADATA_EDITOR_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_METADATA_EDITOR | 0x01</value>
+		<msg>Invalid internal operation</msg>
+	</error>
+	<error name="METADATA_EDITOR_ERROR_METADATA_UPDATE_NOT_POSSIBLE">
+		<value>TIZEN_ERROR_METADATA_EDITOR | 0x02</value>
+		<msg>Update not possible</msg>
+	</error>
+</package>
+

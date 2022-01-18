@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/system/update-control">
+	<error name="UPDATE_CONTROL_ERROR_INVALID_PACKAGE">
+		<value>TIZEN_ERROR_UPDATE_CONTROL | 0x01</value>
+		<msg>Invalid package</msg>
+	</error>
+	<error name="UPDATE_CONTROL_ERROR_INVALID_URI">
+		<value>TIZEN_ERROR_UPDATE_CONTROL | 0x02</value>
+		<msg>Invalid URI</msg>
+	</error>
+	<error name="UPDATE_CONTROL_ERROR_PACKAGE_NOT_SUPPORTED">
+		<value>TIZEN_ERROR_UPDATE_CONTROL | 0x03</value>
+		<msg>Package type not supported</msg>
+	</error>
+	<error name="UPDATE_CONTROL_ERROR_SYSTEM_ERROR">
+		<value>TIZEN_ERROR_UPDATE_CONTROL | 0x04</value>
+		<msg>System error</msg>
+	</error>
+</package>
+

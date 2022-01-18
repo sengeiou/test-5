@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/notification">
+	<error name="NOTIFICATION_ERROR_FROM_DB">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x01</value>
+		<msg>Error from DB</msg>
+	</error>
+	<error name="NOTIFICATION_ERROR_ALREADY_EXIST_ID">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x02</value>
+		<msg>Already exist private ID</msg>
+	</error>
+	<error name="NOTIFICATION_ERROR_FROM_DBUS">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x03</value>
+		<msg>Error from DBus</msg>
+	</error>
+	<error name="NOTIFICATION_ERROR_NOT_EXIST_ID">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x04</value>
+		<msg>Not exist private ID </msg>
+	</error>
+	<error name="NOTIFICATION_ERROR_SERVICE_NOT_READY">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x05</value>
+		<msg>No reponse from notification service</msg>
+	</error>
+	<error name="NOTIFICATION_ERROR_MAX_EXCEEDED">
+		<value>TIZEN_ERROR_NOTIFICATION | 0x06</value>
+		<msg>Max notification count exceeded</msg>
+	</error>
+</package>
+

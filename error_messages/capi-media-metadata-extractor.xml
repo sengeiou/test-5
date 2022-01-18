@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/metadata-extractor">
+	<error name="METADATA_EXTRACTOR_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_METADATA_EXTRACTOR | 0x01</value>
+		<msg>Invalid internal operation</msg>
+	</error>
+</package>
+

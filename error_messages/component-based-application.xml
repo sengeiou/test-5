@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/component-based-application">
+	<error name="COMPONENT_ERROR_INVALID_CONTEXT">
+		<value>TIZEN_ERROR_COMPONENT | 0x01</value>
+		<msg>Invalid context parameter</msg>
+	</error>
+	<error name="COMPONENT_ERROR_NOT_FOUND">
+		<value>TIZEN_ERROR_COMPONENT | 0x02</value>
+		<msg>No such component</msg>
+	</error>
+	<error name="COMPONENT_ERROR_LAUNCH_REJECTED">
+		<value>TIZEN_ERROR_COMPONENT | 0x03</value>
+		<msg>The component application cannot be launched now</msg>
+	</error>
+	<error name="COMPONENT_ERROR_LAUNCH_FAILED">
+		<value>TIZEN_ERROR_COMPONENT | 0x04</value>
+		<msg>Internal launch error</msg>
+	</error>
+</package>
+

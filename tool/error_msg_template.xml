@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="apps/native/attach-panel">  <!-- git path -->
+	<error name="ATTACH_PANEL_ERROR_ALREADY_EXISTS">  <!-- The name of error enumerator -->
+		<value>TIZEN_ERROR_PANEL | 0x01</value>  <!-- The value of error enumerator. This value MUST be represented by error macro in tizen.h -->
+		<msg>There is already a panel in the conformant</msg>  <!-- The message of error enumerator -->
+	</error>
+	<error name="ATTACH_PANEL_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_PANEL | 0x02</value>
+		<msg>The panel is not initialized yet</msg>
+	</error>
+	<error name="ATTACH_PANEL_ERROR_UNSUPPORTED_CONTENT_CATEGORY">
+		<value>TIZEN_ERROR_PANEL | 0x03</value>
+		<msg>Not supported content category</msg>
+	</error>
+	<error name="ATTACH_PANEL_ERROR_ALREADY_DESTROYED">
+		<value>TIZEN_ERROR_PANEL | 0x05</value>
+		<msg>The panel is already removed</msg>
+	</error>
+</package>
+

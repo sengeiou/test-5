@@ -1,0 +1,13 @@
+
+# Package Information for pkg-config
+
+libdir=@LIB_INSTALL_DIR@
+includedir=@INCLUDE_INSTALL_DIR@
+
+Name: capi-base-common
+Description: Common header files of Tizen Native API
+Version: @VERSION@
+Libs: -L${libdir} @PC_LDFLAGS@
+Cflags: -I${includedir}
+
+

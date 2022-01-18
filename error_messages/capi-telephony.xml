@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/telephony">
+	<error name="TELEPHONY_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_TELEPHONY | 0x0001</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="TELEPHONY_ERROR_SIM_NOT_AVAILABLE">
+		<value>TIZEN_ERROR_TELEPHONY | 0x1001</value>
+		<msg>SIM is not available</msg>
+	</error>
+</package>
+

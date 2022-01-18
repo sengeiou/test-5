@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/generic-text-classifier">
+	<error name="GENERIC_TEXT_CLASSIFIER_ERROR_ALREADY_DONE">
+		<value>TIZEN_ERROR_GENERIC_TEXT_CLASSIFIER | 0x01</value>
+		<msg>Operation already done</msg>
+	</error>
+	<error name="GENERIC_TEXT_CLASSIFIER_ERROR_HANDLE_NOT_CREATED">
+		<value>TIZEN_ERROR_GENERIC_TEXT_CLASSIFIER | 0x02</value>
+		<msg>Handle not created</msg>
+	</error>
+	<error name="GENERIC_TEXT_CLASSIFIER_ERROR_HANDLE_NOT_VALID">
+		<value>TIZEN_ERROR_GENERIC_TEXT_CLASSIFIER | 0x03</value>
+		<msg>Wrong handle passed</msg>
+	</error>
+	<error name="GENERIC_TEXT_CLASSIFIER_ERROR_INITIALIZATION_NOT_DONE">
+		<value>TIZEN_ERROR_GENERIC_TEXT_CLASSIFIER | 0x04</value>
+		<msg>Module initialization not done</msg>
+	</error>
+	<error name="GENERIC_TEXT_CLASSIFIER_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_GENERIC_TEXT_CLASSIFIER | 0x05</value>
+		<msg>Internal error for generic use</msg>
+	</error>
+</package>
+

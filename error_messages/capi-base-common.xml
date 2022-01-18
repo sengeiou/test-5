@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/common">
+	<error name="TIZEN_ERROR_NONE">
+		<value>TIZEN_ERROR_NONE</value>
+		<msg>Successful</msg>
+	</error>
+	<error name="TIZEN_ERROR_UNKNOWN">
+		<value>TIZEN_ERROR_UNKNOWN</value>
+		<msg>Unknown error</msg>
+	</error>
+	<error name="TIZEN_ERROR_TIMED_OUT">
+		<value>TIZEN_ERROR_TIMED_OUT</value>
+		<msg>Time out</msg>
+	</error>
+	<error name="TIZEN_ERROR_NOT_SUPPORTED">
+		<value>TIZEN_ERROR_NOT_SUPPORTED</value>
+		<msg>Not supported</msg>
+	</error>
+	<error name="TIZEN_ERROR_USER_NOT_CONSENTED">
+		<value>TIZEN_ERROR_USER_NOT_CONSENTED</value>
+		<msg>Not consented</msg>
+	</error>
+	<error name="TIZEN_ERROR_DEVICE_POLICY_RESTRICTION">
+		<value>TIZEN_ERROR_DEVICE_POLICY_RESTRICTION</value>
+		<msg>Restriction by Device Policy</msg>
+	</error>
+</package>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/appfw/shortcut">
+	<error name="SHORTCUT_ERROR_NO_SPACE">
+		<value>TIZEN_ERROR_SHORTCUT | 0x0001</value>
+		<msg>There is no space to add a new shortcut</msg>
+	</error>
+	<error name="SHORTCUT_ERROR_EXIST">
+		<value>TIZEN_ERROR_SHORTCUT | 0x0002</value>
+		<msg>Shortcut is already added</msg>
+	</error>
+	<error name="SHORTCUT_ERROR_FAULT">
+		<value>TIZEN_ERROR_SHORTCUT | 0x0004</value>
+		<msg>Failed to add a shortcut. Unrecoverable error</msg>
+	</error>
+	<error name="SHORTCUT_ERROR_NOT_EXIST">
+		<value>TIZEN_ERROR_SHORTCUT | 0x0008</value>
+		<msg>Not exist shortcut</msg>
+	</error>
+	<error name="SHORTCUT_ERROR_COMM">
+		<value>TIZEN_ERROR_SHORTCUT | 0x0040</value>
+		<msg>Connection is not established. or there is a problem in the communication</msg>
+	</error>
+</package>

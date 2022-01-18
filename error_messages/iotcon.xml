@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/iot/iotcon">
+	<error name="IOTCON_ERROR_IOTIVITY">
+		<value>TIZEN_ERROR_IOTCON | 0x01</value>
+		<msg>Internal error</msg>
+	</error>
+	<error name="IOTCON_ERROR_REPRESENTATION">
+		<value>TIZEN_ERROR_IOTCON | 0x02</value>
+		<msg>Representation errors</msg>
+	</error>
+	<error name="IOTCON_ERROR_INVALID_TYPE">
+		<value>TIZEN_ERROR_IOTCON | 0x03</value>
+		<msg>Invalid type</msg>
+	</error>
+	<error name="IOTCON_ERROR_ALREADY">
+		<value>TIZEN_ERROR_IOTCON | 0x04</value>
+		<msg>Already</msg>
+	</error>
+	<error name="IOTCON_ERROR_SYSTEM">
+		<value>TIZEN_ERROR_IOTCON | 0x06</value>
+		<msg>System errors</msg>
+	</error>
+</package>
+

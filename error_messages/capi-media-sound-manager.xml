@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/sound-manager">
+	<error name="SOUND_MANAGER_ERROR_INTERNAL">
+		<value>TIZEN_ERROR_SOUND_MANAGER | 0x01</value>
+		<msg>Internal error inside the sound system</msg>
+	</error>
+	<error name="SOUND_MANAGER_ERROR_POLICY">
+		<value>TIZEN_ERROR_SOUND_MANAGER | 0x02</value>
+		<msg>Noncompliance with the sound system policy</msg>
+	</error>
+	<error name="SOUND_MANAGER_ERROR_NO_PLAYING_SOUND">
+		<value>TIZEN_ERROR_SOUND_MANAGER | 0x03</value>
+		<msg>No playing sound</msg>
+	</error>
+	<error name="SOUND_MANAGER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_SOUND_MANAGER | 0x04</value>
+		<msg>Invalid state</msg>
+	</error>
+</package>
+

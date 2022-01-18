@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/wifi-direct">
+	<error name="WIFI_DIRECT_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_COMMUNICATION_FAILED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x02</value>
+		<msg>I/O error</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_WIFI_USED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x03</value>
+		<msg>WiFi is being used</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_MOBILE_AP_USED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x04</value>
+		<msg>Mobile AP is being used</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_CONNECTION_FAILED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x05</value>
+		<msg>Mobile AP is being used</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_AUTH_FAILED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x06</value>
+		<msg>Authentication failed</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x07</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_TOO_MANY_CLIENT">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x08</value>
+		<msg>Many client</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x09</value>
+		<msg>Already initialized client</msg>
+	</error>
+	<error name="WIFI_DIRECT_ERROR_CONNECTION_CANCELED">
+		<value>TIZEN_ERROR_WIFI_DIRECT | 0x10</value>
+		<msg>Connection canceled by local device</msg>
+	</error>
+</package>
+

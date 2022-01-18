@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/nsd">  <!-- git path -->
+	<error name="SSDP_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_SSDP | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="SSDP_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_SSDP | 0x04</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="SSDP_ERROR_SERVICE_NOT_FOUND">
+		<value>TIZEN_ERROR_SSDP | 0x05</value>
+		<msg>Service not found</msg>
+	</error>
+	<error name="SSDP_ERROR_SERVICE_ALREADY_REGISTERED">
+		<value>TIZEN_ERROR_SSDP | 0x06</value>
+		<msg>Service already registered</msg>
+	</error>
+</package>
+

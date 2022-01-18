@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/messages">
+	<error name="MESSAGES_ERROR_SERVER_NOT_READY">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x501</value>
+		<msg>Server is not read</msg>
+	</error>
+	<error name="MESSAGES_ERROR_COMMUNICATION_WITH_SERVER_FAILED">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x502</value>
+		<msg>Communication with server failed</msg>
+	</error>
+	<error name="MESSAGES_ERROR_OUT_OF_RANGE">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x503</value>
+		<msg>Index out of range</msg>
+	</error>
+	<error name="MESSAGES_ERROR_SENDING_FAILED">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x504</value>
+		<msg>Sending a message failed</msg>
+	</error>
+	<error name="MESSAGES_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x505</value>
+		<msg>Messaging operation failed</msg>
+	</error>
+	<error name="MESSAGES_ERROR_NO_SIM_CARD">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x506</value>
+		<msg>No SIM Card</msg>
+	</error>
+	<error name="MESSAGES_ERROR_NO_DATA">
+		<value>TIZEN_ERROR_MESSAGING_SERVICE | 0x507</value>
+		<msg>No data available</msg>
+	</error>
+</package>
+

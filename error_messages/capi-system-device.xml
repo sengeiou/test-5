@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/device">
+	<error name="DEVICE_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_DEVICE | 0x13</value>
+		<msg>Not initialized</msg>
+	</error>
+</package>
+

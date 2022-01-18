@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/url-download">
+	<error name="DOWNLOAD_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x21</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_CONNECTION_FAILED">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x22</value>
+		<msg>Connection failed</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_INVALID_URL">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x24</value>
+		<msg>Invalid URL</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_INVALID_DESTINATION">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x25</value>
+		<msg>Invalid destination</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_TOO_MANY_DOWNLOADS">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x26</value>
+		<msg>Too many simultaneous downloads</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_QUEUE_FULL">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x27</value>
+		<msg>Download server queue is full</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_ALREADY_COMPLETED">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x28</value>
+		<msg>The download is already completed</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_FILE_ALREADY_EXISTS">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x29</value>
+		<msg>Failed to rename the downloaded file</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_CANNOT_RESUME">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x2a</value>
+		<msg>Cannot resume</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_FIELD_NOT_FOUND">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x2b</value>
+		<msg>Specified field not found</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_TOO_MANY_REDIRECTS">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x30</value>
+		<msg>Too many redirects from HTTP response header</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_UNHANDLED_HTTP_CODE">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x31</value>
+		<msg>The download cannot handle the HTTP status value</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_REQUEST_TIMEOUT">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x32</value>
+		<msg>No action after client creates a download ID</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_RESPONSE_TIMEOUT">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x33</value>
+		<msg>No call to start API for some time although the download is created</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_SYSTEM_DOWN">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x34</value>
+		<msg>No response from client after rebooting download daemon</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_ID_NOT_FOUND">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x35</value>
+		<msg>Download ID does not exist in download service module</msg>
+	</error>
+	<error name="DOWNLOAD_ERROR_INVALID_NETWORK_TYPE">
+		<value>TIZEN_ERROR_DOWNLOAD | 0x36</value>
+		<msg>Network bonding is set but network type is not set as DOWNLOAD_NETWORK_ALL</msg>
+	</error>
+</package>
+

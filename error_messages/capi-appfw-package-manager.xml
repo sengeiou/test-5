@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/package-manager">
+	<error name="PACKAGE_MANAGER_ERROR_NO_SUCH_PACKAGE">
+		<value>TIZEN_ERROR_PACKAGE_MANAGER | 0x71</value>
+		<msg>No such package</msg>
+	</error>
+	<error name="PACKAGE_MANAGER_ERROR_SYSTEM_ERROR">
+		<value>TIZEN_ERROR_PACKAGE_MANAGER | 0x72</value>
+		<msg>Severe system error </msg>
+	</error>
+</package>
+

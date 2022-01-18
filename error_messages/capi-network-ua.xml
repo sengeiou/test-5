@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/user-awareness">
+	<error name="UA_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x01</value>
+		<msg>Not initialized</msg>
+	</error>
+	<error name="UA_ERROR_NOT_IN_PROGRESS">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x02</value>
+		<msg>Operation Not in progress</msg>
+	</error>
+	<error name="UA_ERROR_ALREADY_DONE">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x03</value>
+		<msg>Operation already done</msg>
+	</error>
+	<error name="UA_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x04</value>
+		<msg>Operation Failed</msg>
+	</error>
+	<error name="UA_ERROR_NOT_READY">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x05</value>
+		<msg>Resource not ready</msg>
+	</error>
+	<error name="UA_ERROR_NOT_ENABLED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x06</value>
+		<msg>Not enabled</msg>
+	</error>
+	<error name="UA_ERROR_NOT_FOUND">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x07</value>
+		<msg>Not found</msg>
+	</error>
+	<error name="UA_ERROR_ALREADY_REGISTERED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x08</value>
+		<msg>Already registered</msg>
+	</error>
+	<error name="UA_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x09</value>
+		<msg>DB operation failed</msg>
+	</error>
+	<error name="UA_ERROR_NOT_REGISTERED">
+		<value>TIZEN_ERROR_USER_AWARENESS | 0x0a</value>
+		<msg>Not registered</msg>
+	</error>
+</package>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/uifw/capi-ui-sticker">
+	<error name="STICKER_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_STICKER | 0x0001</value>
+		<msg>Operation failed</msg>
+	</error>
+</package>
+

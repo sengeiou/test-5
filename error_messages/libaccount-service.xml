@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/libaccount-service">
+	<error name="ACCOUNT_ERROR_DUPLICATED">
+		<value>TIZEN_ERROR_ACCOUNT | 0x01</value>
+		<msg>Same user name exists in your application</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_RECORD_NOT_FOUND">
+		<value>TIZEN_ERROR_ACCOUNT | 0x03</value>
+		<msg>Related record does not exist</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_DB_FAILED">
+		<value>TIZEN_ERROR_ACCOUNT | 0x04</value>
+		<msg>DB operation failed</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_DB_NOT_OPENED">
+		<value>TIZEN_ERROR_ACCOUNT | 0x05</value>
+		<msg>DB is not connected</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_QUERY_SYNTAX_ERROR">
+		<value>TIZEN_ERROR_ACCOUNT | 0x06</value>
+		<msg>DB query syntax error</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_ITERATOR_END">
+		<value>TIZEN_ERROR_ACCOUNT | 0x07</value>
+		<msg>terator has reached the end</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_NOTI_FAILED">
+		<value>TIZEN_ERROR_ACCOUNT | 0x08</value>
+		<msg>Notification failed</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_XML_PARSE_FAILED">
+		<value>TIZEN_ERROR_ACCOUNT | 0x0a</value>
+		<msg>XML parse failed</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_XML_FILE_NOT_FOUND">
+		<value>TIZEN_ERROR_ACCOUNT | 0x0b</value>
+		<msg>XML file does not exist</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_EVENT_SUBSCRIPTION_FAIL">
+		<value>TIZEN_ERROR_ACCOUNT | 0x0c</value>
+		<msg>Subscription failed</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_NOT_REGISTERED_PROVIDER">
+		<value>TIZEN_ERROR_ACCOUNT | 0x0d</value>
+		<msg>Account provider is not registered</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_NOT_ALLOW_MULTIPLE">
+		<value>TIZEN_ERROR_ACCOUNT | 0x0e</value>
+		<msg>Multiple accounts are not supported</msg>
+	</error>
+	<error name="ACCOUNT_ERROR_DATABASE_BUSY">
+		<value>TIZEN_ERROR_ACCOUNT | 0x10</value>
+		<msg>SQLite busy handler expired</msg>
+	</error>
+</package>
+

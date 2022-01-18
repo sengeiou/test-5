@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/audio-io">
+	<error name="AUDIO_IO_ERROR_DEVICE_NOT_OPENED">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x01</value>
+		<msg>Device open error</msg>
+	</error>
+	<error name="AUDIO_IO_ERROR_DEVICE_NOT_CLOSED">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x02</value>
+		<msg>Device close error</msg>
+	</error>
+	<error name="AUDIO_IO_ERROR_INVALID_BUFFER">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x03</value>
+		<msg>Invalid buffer pointer</msg>
+	</error>
+	<error name="AUDIO_IO_ERROR_SOUND_POLICY">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x04</value>
+		<msg>Sound policy error</msg>
+	</error>
+	<error name="AUDIO_IO_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x05</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="AUDIO_IO_ERROR_NOT_SUPPORTED_TYPE">
+		<value>TIZEN_ERROR_AUDIO_IO | 0x06</value>
+		<msg>Not supported stream type</msg>
+	</error>
+</package>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/uifw/libeom">
+	<error name="EOM_ERROR_CONNECTION_FAILURE">
+		<value>TIZEN_ERROR_EOM | 0x01</value>
+		<msg>Connection failure</msg>
+	</error>
+	<error name="EOM_ERROR_MESSAGE_SENDING_FAILURE">
+		<value>TIZEN_ERROR_EOM | 0x02</value>
+		<msg>Message sending failure</msg>
+	</error>
+	<error name="EOM_ERROR_MESSAGE_OPERATION_FAILURE">
+		<value>TIZEN_ERROR_EOM | 0x03</value>
+		<msg>Message operation failure</msg>
+	</error>
+</package>

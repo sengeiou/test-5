@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/wifi-manager">
+	<error name="WIFI_MANAGER_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x01</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_NO_CONNECTION">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x02</value>
+		<msg>There is no connected AP</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_ALREADY_EXISTS">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x03</value>
+		<msg>Already exists</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_OPERATION_ABORTED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x04</value>
+		<msg>Operation is aborted </msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_DHCP_FAILED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x05</value>
+		<msg>DHCP failed</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_INVALID_KEY">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x06</value>
+		<msg>Invalid key</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_NO_REPLY">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x07</value>
+		<msg>No reply</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_SECURITY_RESTRICTED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x08</value>
+		<msg>Restricted by security system policy</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_ALREADY_INITIALIZED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x09</value>
+		<msg>Already initialized</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_OUT_OF_RANGE">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0A</value>
+		<msg>Out of range</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_CONNECT_FAILED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0B</value>
+		<msg>Connect failed</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_LOGIN_FAILED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0C</value>
+		<msg>Login failed</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_AUTHENTICATION_FAILED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0D</value>
+		<msg>Authentication failed</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_PIN_MISSING">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0E</value>
+		<msg>PIN missing</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_WPS_OVERLAP">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x0F</value>
+		<msg>WPS overlap</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_WPS_TIMEOUT">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x10</value>
+		<msg>WPS timeout</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_WPS_WEP_PROHIBITED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x11</value>
+		<msg>WPS WEP prohibited</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_OFFLINE">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x12</value>
+		<msg>Connection Offline</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_INVALID_GATEWAY">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x13</value>
+		<msg>Invalid Gateway</msg>
+	</error>
+	<error name="WIFI_MANAGER_ERROR_NOT_INITIALIZED">
+		<value>TIZEN_ERROR_WIFI_MANAGER | 0x14</value>
+		<msg>Not initialized</msg>
+	</error>
+</package>
+

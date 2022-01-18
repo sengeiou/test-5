@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/mediastreamrecorder">
+	<error name="STREAMRECORDER_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_STREAMRECORDER | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="STREAMRECORDER_ERROR_OUT_OF_STORAGE">
+		<value>TIZEN_ERROR_STREAMRECORDER | 0x02</value>
+		<msg>Out of storage</msg>
+	</error>
+</package>

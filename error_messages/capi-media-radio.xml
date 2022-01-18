@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/radio">
+	<error name="RADIO_ERROR_INVALID_STATE">
+		<value>TIZEN_ERROR_RADIO | 0x01</value>
+		<msg>Invalid state</msg>
+	</error>
+	<error name="RADIO_ERROR_SOUND_POLICY">
+		<value>TIZEN_ERROR_RADIO | 0x02</value>
+		<msg>Sound policy error</msg>
+	</error>
+	<error name="RADIO_ERROR_NO_ANTENNA">
+		<value>TIZEN_ERROR_RADIO | 0x03</value>
+		<msg>No Antenna error</msg>
+	</error>
+</package>
+

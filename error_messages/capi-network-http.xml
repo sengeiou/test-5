@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package uri="platform/core/api/http">
+	<error name="HTTP_ERROR_OPERATION_FAILED">
+		<value>TIZEN_ERROR_HTTP | 0x01</value>
+		<msg>Operation failed</msg>
+	</error>
+	<error name="HTTP_ERROR_COULDNT_RESOLVE_HOST">
+		<value>TIZEN_ERROR_HTTP | 0x06</value>
+		<msg>Couldn't resolve host</msg>
+	</error>
+	<error name="HTTP_ERROR_COULDNT_CONNECT">
+		<value>TIZEN_ERROR_HTTP|0x07</value>
+		<msg>Couldn't Connect to host</msg>
+	</error>
+	<error name="HTTP_ERROR_OPERATION_TIMEDOUT">
+	    <value>TIZEN_ERROR_HTTP|0x28</value>
+		<msg>Timeout</msg>
+	</error>
+	<error name="HTTP_ERROR_SSL_CONNECT_ERROR">
+		<value>TIZEN_ERROR_HTTP|0x35</value>
+		<msg>SSL Error</msg>
+	</error>
+</package>
+
