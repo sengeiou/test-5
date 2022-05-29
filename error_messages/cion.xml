@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<package uri="platform/core/appfw/cion">
-	<error name="CION_ERROR_OPERATION_FAILED">
-		<value>TIZEN_ERROR_CION | 0x01</value>
-		<msg>Operation failed</msg>
-	</error>
-</package>
