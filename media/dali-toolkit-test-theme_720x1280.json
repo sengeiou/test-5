@@ -1,0 +1,15 @@
+{
+	"styles":
+	{
+		"textlabel":
+		{
+			"fontStyle":"Regular",
+			"pointSize":18
+		},
+		"testbutton":
+		{
+			"backgroundColor":[1.0,0.0,0.0,1.0],
+			"foregroundColor":[0.0,1.0,1.0,1.0]
+		}
+	}
+}

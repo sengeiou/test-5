@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-telephony-itc" version="0.1.0" api-version="6.0">
+    <label>NativeTelephonyTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native.telephony-itc" exec="/usr/apps/native-telephony-itc/bin/tct-telephony-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+	<privileges>
+    <privilege>http://tizen.org/privilege/telephony</privilege>
+    <privilege>http://tizen.org/privilege/location.coarse</privilege>
+	<privilege>http://tizen.org/privilege/network.profile</privilege>
+	<privilege>http://tizen.org/privilege/network.get</privilege>
+	<privilege>http://tizen.org/privilege/network.set</privilege>
+    </privileges>
+</manifest>

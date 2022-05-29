@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p> 1) Call with parameter :
+    <br> <input type ="text" id ="input_text"/>
+    <button id = "btn1" onclick="call_with_param()">Send</button>
+    </p> <br>
+
+    <p> 2) Call with javascript object :
+    <button id = "btn2" onclick="call_with_object()">Send</button>
+    </p> <br>
+
+    <p id="result"></p>
+
+    <script type="text/javascript">
+        function call_with_param() {
+            var input_text = document.getElementById('input_text');
+
+            // Call native function
+            window.MyJavaScriptInterface.postMessage(input_text.value);
+        }
+
+        function call_with_object() {
+            var test_object = {
+              type:"object",
+              message:"sample",
+              count:1
+            };
+            // call native function
+            window.MyJavaScriptInterface.postMessage(test_object);
+        }
+
+
+        function sendResult(param_result) {
+            console.log("Executed test script : "+param_result);
+            document.getElementById("result").innerHTML
+              = "- Message received : <BR>"+param_result;
+        }
+    </script>
+</body>
+</html>
+

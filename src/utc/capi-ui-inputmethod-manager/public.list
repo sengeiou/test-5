@@ -1,0 +1,6 @@
+﻿ime_manager_show_ime_list
+ime_manager_show_ime_selector
+ime_manager_is_ime_enabled
+ime_manager_get_active_ime
+ime_manager_get_enabled_ime_count
+ime_manager_prelaunch_ime

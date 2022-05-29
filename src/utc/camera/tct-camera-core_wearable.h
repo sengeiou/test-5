@@ -1,0 +1,820 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_CAMERA_NATIVE_H__
+#define __TCT_CAMERA_NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_media_camera_attr_startup(void);
+extern void utc_media_camera_attr_cleanup(void);
+extern void utc_media_camera_lifecycle_startup(void);
+extern void utc_media_camera_lifecycle_cleanup(void);
+extern void utc_media_camera_setting_startup(void);
+extern void utc_media_camera_setting_cleanup(void);
+
+extern int utc_media_camera_attr_set_preview_fps_n1(void);
+extern int utc_media_camera_attr_set_preview_fps_n2(void);
+extern int utc_media_camera_attr_set_preview_fps_p(void);
+extern int utc_media_camera_attr_set_image_quality_n1(void);
+extern int utc_media_camera_attr_set_image_quality_n2(void);
+extern int utc_media_camera_attr_set_image_quality_p(void);
+extern int utc_media_camera_attr_get_preview_fps_n1(void);
+extern int utc_media_camera_attr_get_preview_fps_n2(void);
+extern int utc_media_camera_attr_get_preview_fps_p1(void);
+extern int utc_media_camera_attr_get_preview_fps_p2(void);
+extern int utc_media_camera_attr_get_image_quality_n1(void);
+extern int utc_media_camera_attr_get_image_quality_n2(void);
+extern int utc_media_camera_attr_get_image_quality_p(void);
+extern int utc_media_camera_attr_set_zoom_n1(void);
+extern int utc_media_camera_attr_set_zoom_p(void);
+extern int utc_media_camera_attr_set_af_mode_n1(void);
+extern int utc_media_camera_attr_set_af_mode_n2(void);
+extern int utc_media_camera_attr_set_af_mode_p(void);
+extern int utc_media_camera_attr_set_exposure_mode_n1(void);
+extern int utc_media_camera_attr_set_exposure_mode_n2(void);
+extern int utc_media_camera_attr_set_exposure_mode_p(void);
+extern int utc_media_camera_attr_set_exposure_n1(void);
+extern int utc_media_camera_attr_set_exposure_n2(void);
+extern int utc_media_camera_attr_set_exposure_p(void);
+extern int utc_media_camera_attr_set_iso_n1(void);
+extern int utc_media_camera_attr_set_iso_n2(void);
+extern int utc_media_camera_attr_set_iso_p(void);
+extern int utc_media_camera_attr_set_brightness_n1(void);
+extern int utc_media_camera_attr_set_brightness_n2(void);
+extern int utc_media_camera_attr_set_brightness_p(void);
+extern int utc_media_camera_attr_set_contrast_n1(void);
+extern int utc_media_camera_attr_set_contrast_n2(void);
+extern int utc_media_camera_attr_set_contrast_p(void);
+extern int utc_media_camera_attr_set_whitebalance_n1(void);
+extern int utc_media_camera_attr_set_whitebalance_n2(void);
+extern int utc_media_camera_attr_set_whitebalance_p(void);
+extern int utc_media_camera_attr_get_effect_n1(void);
+extern int utc_media_camera_attr_get_effect_n2(void);
+extern int utc_media_camera_attr_get_effect_p(void);
+extern int utc_media_camera_attr_get_scene_mode_n1(void);
+extern int utc_media_camera_attr_get_scene_mode_n2(void);
+extern int utc_media_camera_attr_get_scene_mode_p(void);
+extern int utc_media_camera_attr_is_enabled_tag_n1(void);
+extern int utc_media_camera_attr_is_enabled_tag_n2(void);
+extern int utc_media_camera_attr_is_enabled_tag_p(void);
+extern int utc_media_camera_attr_get_tag_image_description_n1(void);
+extern int utc_media_camera_attr_get_tag_image_description_n2(void);
+extern int utc_media_camera_attr_get_tag_image_description_p1(void);
+extern int utc_media_camera_attr_get_tag_image_description_p2(void);
+extern int utc_media_camera_attr_get_tag_orientation_n1(void);
+extern int utc_media_camera_attr_get_tag_orientation_n2(void);
+extern int utc_media_camera_attr_get_tag_orientation_p(void);
+extern int utc_media_camera_attr_get_tag_software_n1(void);
+extern int utc_media_camera_attr_get_tag_software_n2(void);
+extern int utc_media_camera_attr_get_tag_software_p1(void);
+extern int utc_media_camera_attr_get_tag_software_p2(void);
+extern int utc_media_camera_attr_get_geotag_n1(void);
+extern int utc_media_camera_attr_get_geotag_n2(void);
+extern int utc_media_camera_attr_get_geotag_p(void);
+extern int utc_media_camera_attr_remove_geotag_n(void);
+extern int utc_media_camera_attr_remove_geotag_p(void);
+extern int utc_media_camera_attr_get_flash_mode_n1(void);
+extern int utc_media_camera_attr_get_flash_mode_n2(void);
+extern int utc_media_camera_attr_get_flash_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_af_mode_n1(void);
+extern int utc_media_camera_attr_foreach_supported_af_mode_n2(void);
+extern int utc_media_camera_attr_foreach_supported_af_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_exposure_mode_n1(void);
+extern int utc_media_camera_attr_foreach_supported_exposure_mode_n2(void);
+extern int utc_media_camera_attr_foreach_supported_exposure_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_iso_n1(void);
+extern int utc_media_camera_attr_foreach_supported_iso_n2(void);
+extern int utc_media_camera_attr_foreach_supported_iso_p(void);
+extern int utc_media_camera_attr_foreach_supported_whitebalance_n1(void);
+extern int utc_media_camera_attr_foreach_supported_whitebalance_n2(void);
+extern int utc_media_camera_attr_foreach_supported_whitebalance_p(void);
+extern int utc_media_camera_attr_foreach_supported_effect_n1(void);
+extern int utc_media_camera_attr_foreach_supported_effect_n2(void);
+extern int utc_media_camera_attr_foreach_supported_effect_p(void);
+extern int utc_media_camera_attr_foreach_supported_scene_mode_n1(void);
+extern int utc_media_camera_attr_foreach_supported_scene_mode_n2(void);
+extern int utc_media_camera_attr_foreach_supported_scene_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_flash_mode_n1(void);
+extern int utc_media_camera_attr_foreach_supported_flash_mode_n2(void);
+extern int utc_media_camera_attr_foreach_supported_flash_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_fps_n1(void);
+extern int utc_media_camera_attr_foreach_supported_fps_n2(void);
+extern int utc_media_camera_attr_foreach_supported_fps_by_resolution_n1(void);
+extern int utc_media_camera_attr_foreach_supported_fps_by_resolution_n2(void);
+extern int utc_media_camera_attr_foreach_supported_fps_p(void);
+extern int utc_media_camera_attr_foreach_supported_fps_by_resolution_p(void);
+extern int utc_media_camera_attr_get_lens_orientation_n1(void);
+extern int utc_media_camera_attr_get_lens_orientation_n2(void);
+extern int utc_media_camera_attr_get_lens_orientation_p(void);
+extern int utc_media_camera_attr_set_af_area_n1(void);
+extern int utc_media_camera_attr_set_af_area_n2(void);
+extern int utc_media_camera_attr_set_af_area_p(void);
+extern int utc_media_camera_attr_clear_af_area_n(void);
+extern int utc_media_camera_attr_clear_af_area_p(void);
+extern int utc_media_camera_attr_disable_shutter_sound_n(void);
+extern int utc_media_camera_attr_disable_shutter_sound_p(void);
+extern int utc_media_camera_attr_is_supported_anti_shake_n(void);
+extern int utc_media_camera_attr_is_supported_anti_shake_p(void);
+extern int utc_media_camera_attr_enable_anti_shake_n(void);
+extern int utc_media_camera_attr_enable_anti_shake_p(void);
+extern int utc_media_camera_attr_is_enabled_anti_shake_n1(void);
+extern int utc_media_camera_attr_is_enabled_anti_shake_n2(void);
+extern int utc_media_camera_attr_is_enabled_anti_shake_p(void);
+extern int utc_media_camera_attr_is_supported_auto_contrast_n(void);
+extern int utc_media_camera_attr_is_supported_auto_contrast_p(void);
+extern int utc_media_camera_attr_enable_auto_contrast_n(void);
+extern int utc_media_camera_attr_enable_auto_contrast_p(void);
+extern int utc_media_camera_attr_is_enabled_auto_contrast_n1(void);
+extern int utc_media_camera_attr_is_enabled_auto_contrast_n2(void);
+extern int utc_media_camera_attr_is_enabled_auto_contrast_p(void);
+extern int utc_media_camera_attr_enable_video_stabilization_n(void);
+extern int utc_media_camera_attr_enable_video_stabilization_p(void);
+extern int utc_media_camera_attr_is_enabled_video_stabilization_n1(void);
+extern int utc_media_camera_attr_is_enabled_video_stabilization_n2(void);
+extern int utc_media_camera_attr_is_enabled_video_stabilization_p(void);
+extern int utc_media_camera_attr_is_supported_video_stabilization_n(void);
+extern int utc_media_camera_attr_is_supported_video_stabilization_p(void);
+extern int utc_media_camera_attr_get_hdr_mode_n1(void);
+extern int utc_media_camera_attr_get_hdr_mode_n2(void);
+extern int utc_media_camera_attr_get_hdr_mode_p(void);
+extern int utc_media_camera_attr_set_hdr_mode_n1(void);
+extern int utc_media_camera_attr_set_hdr_mode_n2(void);
+extern int utc_media_camera_attr_set_hdr_mode_p(void);
+extern int utc_media_camera_attr_foreach_supported_stream_flip_n(void);
+extern int utc_media_camera_attr_foreach_supported_stream_flip_p(void);
+extern int utc_media_camera_attr_get_stream_flip_n(void);
+extern int utc_media_camera_attr_get_stream_flip_p(void);
+extern int utc_media_camera_attr_set_stream_flip_n1(void);
+extern int utc_media_camera_attr_set_stream_flip_n2(void);
+extern int utc_media_camera_attr_set_stream_flip_p(void);
+extern int utc_media_camera_attr_foreach_supported_stream_rotation_n(void);
+extern int utc_media_camera_attr_foreach_supported_stream_rotation_p(void);
+extern int utc_media_camera_attr_get_stream_rotation_n(void);
+extern int utc_media_camera_attr_get_stream_rotation_p(void);
+extern int utc_media_camera_attr_set_stream_rotation_n1(void);
+extern int utc_media_camera_attr_set_stream_rotation_n2(void);
+extern int utc_media_camera_attr_set_stream_rotation_p(void);
+extern int utc_media_camera_attr_foreach_supported_theater_mode_n(void);
+extern int utc_media_camera_attr_foreach_supported_theater_mode_p(void);
+extern int utc_media_camera_attr_get_theater_mode_n(void);
+extern int utc_media_camera_attr_get_theater_mode_p(void);
+extern int utc_media_camera_attr_set_theater_mode_n(void);
+extern int utc_media_camera_attr_set_theater_mode_p(void);
+extern int utc_media_camera_get_display_flip_n(void);
+extern int utc_media_camera_get_display_flip_p(void);
+extern int utc_media_camera_set_display_flip_n(void);
+extern int utc_media_camera_set_display_flip_p(void);
+extern int utc_media_camera_attr_is_supported_hdr_capture_n(void);
+extern int utc_media_camera_attr_is_supported_hdr_capture_p(void);
+extern int utc_media_camera_is_supported_face_detection_n(void);
+extern int utc_media_camera_is_supported_face_detection_p(void);
+extern int utc_media_camera_is_supported_zero_shutter_lag_n(void);
+extern int utc_media_camera_is_supported_zero_shutter_lag_p(void);
+extern int utc_media_camera_is_supported_media_packet_preview_cb_n(void);
+extern int utc_media_camera_is_supported_media_packet_preview_cb_p(void);
+extern int utc_media_camera_get_device_count_n(void);
+extern int utc_media_camera_get_device_count_p(void);
+extern int utc_media_camera_get_recommended_preview_resolution_n(void);
+extern int utc_media_camera_get_recommended_preview_resolution_p(void);
+extern int utc_media_camera_attr_enable_tag_n(void);
+extern int utc_media_camera_attr_enable_tag_p(void);
+extern int utc_media_camera_attr_get_af_mode_n(void);
+extern int utc_media_camera_attr_get_af_mode_p1(void);
+extern int utc_media_camera_attr_get_af_mode_p2(void);
+extern int utc_media_camera_attr_get_brightness_n(void);
+extern int utc_media_camera_attr_get_brightness_p(void);
+extern int utc_media_camera_attr_get_brightness_range_n(void);
+extern int utc_media_camera_attr_get_brightness_range_p(void);
+extern int utc_media_camera_attr_get_contrast_n(void);
+extern int utc_media_camera_attr_get_contrast_p(void);
+extern int utc_media_camera_attr_get_contrast_range_n(void);
+extern int utc_media_camera_attr_get_contrast_range_p(void);
+extern int utc_media_camera_attr_get_exposure_n(void);
+extern int utc_media_camera_attr_get_exposure_p(void);
+extern int utc_media_camera_attr_get_exposure_mode_n(void);
+extern int utc_media_camera_attr_get_exposure_mode_p(void);
+extern int utc_media_camera_attr_get_exposure_range_n(void);
+extern int utc_media_camera_attr_get_exposure_range_p(void);
+extern int utc_media_camera_attr_get_iso_n(void);
+extern int utc_media_camera_attr_get_iso_p(void);
+extern int utc_media_camera_attr_get_whitebalance_n(void);
+extern int utc_media_camera_attr_get_whitebalance_p(void);
+extern int utc_media_camera_attr_get_zoom_n(void);
+extern int utc_media_camera_attr_get_zoom_p(void);
+extern int utc_media_camera_attr_get_zoom_range_n(void);
+extern int utc_media_camera_attr_get_zoom_range_p(void);
+extern int utc_media_camera_attr_set_effect_n(void);
+extern int utc_media_camera_attr_set_effect_p(void);
+extern int utc_media_camera_attr_set_flash_mode_n(void);
+extern int utc_media_camera_attr_set_flash_mode_p(void);
+extern int utc_media_camera_attr_set_geotag_n(void);
+extern int utc_media_camera_attr_set_geotag_p(void);
+extern int utc_media_camera_attr_set_scene_mode_n(void);
+extern int utc_media_camera_attr_set_scene_mode_p(void);
+extern int utc_media_camera_attr_set_tag_image_description_n(void);
+extern int utc_media_camera_attr_set_tag_image_description_p(void);
+extern int utc_media_camera_attr_set_tag_orientation_n(void);
+extern int utc_media_camera_attr_set_tag_orientation_p(void);
+extern int utc_media_camera_attr_set_tag_software_n(void);
+extern int utc_media_camera_attr_set_tag_software_p(void);
+extern int utc_media_camera_attr_get_encoded_preview_bitrate_p(void);
+extern int utc_media_camera_attr_get_encoded_preview_bitrate_n(void);
+extern int utc_media_camera_attr_set_encoded_preview_bitrate_p(void);
+extern int utc_media_camera_attr_set_encoded_preview_bitrate_n(void);
+extern int utc_media_camera_attr_get_encoded_preview_gop_interval_p(void);
+extern int utc_media_camera_attr_get_encoded_preview_gop_interval_n(void);
+extern int utc_media_camera_attr_set_encoded_preview_gop_interval_p(void);
+extern int utc_media_camera_attr_set_encoded_preview_gop_interval_n(void);
+extern int utc_media_camera_attr_set_pan_p(void);
+extern int utc_media_camera_attr_set_pan_n(void);
+extern int utc_media_camera_attr_get_pan_p(void);
+extern int utc_media_camera_attr_get_pan_n1(void);
+extern int utc_media_camera_attr_get_pan_n2(void);
+extern int utc_media_camera_attr_get_pan_range_p(void);
+extern int utc_media_camera_attr_get_pan_range_n1(void);
+extern int utc_media_camera_attr_get_pan_range_n2(void);
+extern int utc_media_camera_attr_set_tilt_p(void);
+extern int utc_media_camera_attr_set_tilt_n(void);
+extern int utc_media_camera_attr_get_tilt_p(void);
+extern int utc_media_camera_attr_get_tilt_n1(void);
+extern int utc_media_camera_attr_get_tilt_n2(void);
+extern int utc_media_camera_attr_get_tilt_range_p(void);
+extern int utc_media_camera_attr_get_tilt_range_n1(void);
+extern int utc_media_camera_attr_get_tilt_range_n2(void);
+extern int utc_media_camera_attr_set_ptz_type_p(void);
+extern int utc_media_camera_attr_set_ptz_type_n(void);
+extern int utc_media_camera_attr_foreach_supported_ptz_type_p(void);
+extern int utc_media_camera_attr_foreach_supported_ptz_type_n(void);
+extern int utc_media_camera_attr_set_display_roi_area_p(void);
+extern int utc_media_camera_attr_set_display_roi_area_n(void);
+extern int utc_media_camera_attr_get_display_roi_area_p(void);
+extern int utc_media_camera_attr_get_display_roi_area_n1(void);
+extern int utc_media_camera_attr_get_display_roi_area_n2(void);
+extern int utc_media_camera_create_n(void);
+extern int utc_media_camera_create_p(void);
+extern int utc_media_camera_destroy_n(void);
+extern int utc_media_camera_destroy_p(void);
+extern int utc_media_camera_start_preview_n(void);
+extern int utc_media_camera_start_preview_p1(void);
+extern int utc_media_camera_start_preview_p2(void);
+extern int utc_media_camera_stop_preview_n(void);
+extern int utc_media_camera_stop_preview_p(void);
+extern int utc_media_camera_start_capture_n(void);
+extern int utc_media_camera_start_capture_p(void);
+extern int utc_media_camera_get_state_n(void);
+extern int utc_media_camera_get_state_p(void);
+extern int utc_media_camera_start_focusing_n(void);
+extern int utc_media_camera_start_focusing_p1(void);
+extern int utc_media_camera_start_focusing_p2(void);
+extern int utc_media_camera_cancel_focusing_n1(void);
+extern int utc_media_camera_cancel_focusing_n2(void);
+extern int utc_media_camera_cancel_focusing_p(void);
+extern int utc_media_camera_is_supported_continuous_capture_n(void);
+extern int utc_media_camera_is_supported_continuous_capture_p(void);
+extern int utc_media_camera_start_continuous_capture_n1(void);
+extern int utc_media_camera_start_continuous_capture_n2(void);
+extern int utc_media_camera_start_continuous_capture_p(void);
+extern int utc_media_camera_stop_continuous_capture_n(void);
+extern int utc_media_camera_stop_continuous_capture_p(void);
+extern int utc_media_camera_start_face_detection_n1(void);
+extern int utc_media_camera_start_face_detection_n2(void);
+extern int utc_media_camera_start_face_detection_p(void);
+extern int utc_media_camera_stop_face_detection_n(void);
+extern int utc_media_camera_change_device_p(void);
+extern int utc_media_camera_change_device_n1(void);
+extern int utc_media_camera_change_device_n2(void);
+extern int utc_media_camera_change_device_n3(void);
+extern int utc_media_camera_set_display_n1(void);
+extern int utc_media_camera_set_display_n2(void);
+extern int utc_media_camera_set_display_p(void);
+extern int utc_media_camera_set_preview_resolution_n1(void);
+extern int utc_media_camera_set_preview_resolution_n2(void);
+extern int utc_media_camera_set_preview_resolution_p(void);
+extern int utc_media_camera_set_display_rotation_n1(void);
+extern int utc_media_camera_set_display_rotation_n2(void);
+extern int utc_media_camera_set_display_rotation_p(void);
+extern int utc_media_camera_set_capture_resolution_n(void);
+extern int utc_media_camera_set_capture_resolution_p(void);
+extern int utc_media_camera_set_capture_format_n1(void);
+extern int utc_media_camera_set_capture_format_n2(void);
+extern int utc_media_camera_set_capture_format_p1(void);
+extern int utc_media_camera_set_capture_format_p2(void);
+extern int utc_media_camera_set_preview_format_n1(void);
+extern int utc_media_camera_set_preview_format_n2(void);
+extern int utc_media_camera_set_preview_format_p1(void);
+extern int utc_media_camera_set_preview_format_p2(void);
+extern int utc_media_camera_get_preview_resolution_n1(void);
+extern int utc_media_camera_get_preview_resolution_n2(void);
+extern int utc_media_camera_get_preview_resolution_p(void);
+extern int utc_media_camera_get_display_rotation_n1(void);
+extern int utc_media_camera_get_display_rotation_n2(void);
+extern int utc_media_camera_get_display_rotation_p(void);
+extern int utc_media_camera_get_capture_resolution_n1(void);
+extern int utc_media_camera_get_capture_resolution_n2(void);
+extern int utc_media_camera_get_capture_resolution_p(void);
+extern int utc_media_camera_get_preview_format_n1(void);
+extern int utc_media_camera_get_preview_format_n2(void);
+extern int utc_media_camera_get_preview_format_p(void);
+extern int utc_media_camera_set_preview_cb_n1(void);
+extern int utc_media_camera_set_preview_cb_n2(void);
+extern int utc_media_camera_set_preview_cb_p(void);
+extern int utc_media_camera_unset_preview_cb_n(void);
+extern int utc_media_camera_unset_preview_cb_p(void);
+extern int utc_media_camera_set_media_packet_preview_cb_n1(void);
+extern int utc_media_camera_set_media_packet_preview_cb_n2(void);
+extern int utc_media_camera_set_media_packet_preview_cb_p(void);
+extern int utc_media_camera_unset_media_packet_preview_cb_n(void);
+extern int utc_media_camera_unset_media_packet_preview_cb_p(void);
+extern int utc_media_camera_set_state_changed_cb_n1(void);
+extern int utc_media_camera_set_state_changed_cb_n2(void);
+extern int utc_media_camera_set_state_changed_cb_p(void);
+extern int utc_media_camera_unset_state_changed_cb_n(void);
+extern int utc_media_camera_unset_state_changed_cb_p(void);
+extern int utc_media_camera_set_focus_changed_cb_n1(void);
+extern int utc_media_camera_set_focus_changed_cb_n2(void);
+extern int utc_media_camera_set_focus_changed_cb_p(void);
+extern int utc_media_camera_unset_focus_changed_cb_n(void);
+extern int utc_media_camera_unset_focus_changed_cb_p(void);
+extern int utc_media_camera_foreach_supported_preview_resolution_n1(void);
+extern int utc_media_camera_foreach_supported_preview_resolution_n2(void);
+extern int utc_media_camera_foreach_supported_preview_resolution_p(void);
+extern int utc_media_camera_foreach_supported_capture_resolution_n1(void);
+extern int utc_media_camera_foreach_supported_capture_resolution_n2(void);
+extern int utc_media_camera_foreach_supported_capture_resolution_p(void);
+extern int utc_media_camera_foreach_supported_capture_format_n1(void);
+extern int utc_media_camera_foreach_supported_capture_format_n2(void);
+extern int utc_media_camera_foreach_supported_capture_format_p(void);
+extern int utc_media_camera_foreach_supported_preview_format_n1(void);
+extern int utc_media_camera_foreach_supported_preview_format_n2(void);
+extern int utc_media_camera_foreach_supported_preview_format_p(void);
+extern int utc_media_camera_set_display_visible_n(void);
+extern int utc_media_camera_set_display_visible_p(void);
+extern int utc_media_camera_is_display_visible_n1(void);
+extern int utc_media_camera_is_display_visible_n2(void);
+extern int utc_media_camera_is_display_visible_p(void);
+extern int utc_media_camera_set_display_mode_n1(void);
+extern int utc_media_camera_set_display_mode_n2(void);
+extern int utc_media_camera_set_display_mode_p(void);
+extern int utc_media_camera_get_display_mode_n1(void);
+extern int utc_media_camera_get_display_mode_n2(void);
+extern int utc_media_camera_get_display_mode_p(void);
+extern int utc_media_camera_get_capture_format_n1(void);
+extern int utc_media_camera_get_capture_format_n2(void);
+extern int utc_media_camera_get_capture_format_p(void);
+extern int utc_media_camera_set_error_cb_n1(void);
+extern int utc_media_camera_set_error_cb_n2(void);
+extern int utc_media_camera_set_error_cb_p(void);
+extern int utc_media_camera_unset_error_cb_n(void);
+extern int utc_media_camera_unset_error_cb_p(void);
+extern int utc_media_camera_set_interrupted_cb_n1(void);
+extern int utc_media_camera_set_interrupted_cb_n2(void);
+extern int utc_media_camera_set_interrupted_cb_p(void);
+extern int utc_media_camera_unset_interrupted_cb_n(void);
+extern int utc_media_camera_unset_interrupted_cb_p(void);
+extern int utc_media_camera_attr_set_hdr_capture_progress_cb_n1(void);
+extern int utc_media_camera_attr_set_hdr_capture_progress_cb_n2(void);
+extern int utc_media_camera_attr_set_hdr_capture_progress_cb_p(void);
+extern int utc_media_camera_attr_unset_hdr_capture_progress_cb_n(void);
+extern int utc_media_camera_attr_unset_hdr_capture_progress_cb_p(void);
+extern int utc_media_camera_get_facing_direction_p(void);
+extern int utc_media_camera_get_facing_direction_n1(void);
+extern int utc_media_camera_get_facing_direction_n2(void);
+extern int utc_media_camera_get_flash_state_p(void);
+extern int utc_media_camera_get_flash_state_n1(void);
+extern int utc_media_camera_get_flash_state_n2(void);
+extern int utc_media_camera_set_display_reuse_hint_p(void);
+extern int utc_media_camera_set_display_reuse_hint_n1(void);
+extern int utc_media_camera_set_display_reuse_hint_n2(void);
+extern int utc_media_camera_get_display_reuse_hint_p(void);
+extern int utc_media_camera_get_display_reuse_hint_n1(void);
+extern int utc_media_camera_get_display_reuse_hint_n2(void);
+extern int utc_media_camera_get_device_state_p(void);
+extern int utc_media_camera_get_device_state_n1(void);
+extern int utc_media_camera_get_device_state_n2(void);
+extern int utc_media_camera_add_device_state_changed_cb_p(void);
+extern int utc_media_camera_add_device_state_changed_cb_n1(void);
+extern int utc_media_camera_add_device_state_changed_cb_n2(void);
+extern int utc_media_camera_remove_device_state_changed_cb_p(void);
+extern int utc_media_camera_remove_device_state_changed_cb_n1(void);
+extern int utc_media_camera_remove_device_state_changed_cb_n2(void);
+extern int utc_media_camera_set_interrupt_started_cb_n1(void);
+extern int utc_media_camera_set_interrupt_started_cb_n2(void);
+extern int utc_media_camera_set_interrupt_started_cb_p(void);
+extern int utc_media_camera_unset_interrupt_started_cb_n(void);
+extern int utc_media_camera_unset_interrupt_started_cb_p(void);
+extern int utc_media_camera_attr_set_hue_n1(void);
+extern int utc_media_camera_attr_set_hue_n2(void);
+extern int utc_media_camera_attr_set_hue_p(void);
+
+testcase tc_array[] = {
+	{"utc_media_camera_attr_set_preview_fps_n1",utc_media_camera_attr_set_preview_fps_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_preview_fps_n2",utc_media_camera_attr_set_preview_fps_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_preview_fps_p",utc_media_camera_attr_set_preview_fps_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_image_quality_n1",utc_media_camera_attr_set_image_quality_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_image_quality_n2",utc_media_camera_attr_set_image_quality_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_image_quality_p",utc_media_camera_attr_set_image_quality_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_preview_fps_n1",utc_media_camera_attr_get_preview_fps_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_preview_fps_n2",utc_media_camera_attr_get_preview_fps_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_preview_fps_p1",utc_media_camera_attr_get_preview_fps_p1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_preview_fps_p2",utc_media_camera_attr_get_preview_fps_p2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_image_quality_n1",utc_media_camera_attr_get_image_quality_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_image_quality_n2",utc_media_camera_attr_get_image_quality_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_image_quality_p",utc_media_camera_attr_get_image_quality_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_zoom_n1",utc_media_camera_attr_set_zoom_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_zoom_p",utc_media_camera_attr_set_zoom_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_mode_n1",utc_media_camera_attr_set_af_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_mode_n2",utc_media_camera_attr_set_af_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_mode_p",utc_media_camera_attr_set_af_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_mode_n1",utc_media_camera_attr_set_exposure_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_mode_n2",utc_media_camera_attr_set_exposure_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_mode_p",utc_media_camera_attr_set_exposure_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_n1",utc_media_camera_attr_set_exposure_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_n2",utc_media_camera_attr_set_exposure_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_exposure_p",utc_media_camera_attr_set_exposure_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_iso_n1",utc_media_camera_attr_set_iso_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_iso_n2",utc_media_camera_attr_set_iso_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_iso_p",utc_media_camera_attr_set_iso_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_brightness_n1",utc_media_camera_attr_set_brightness_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_brightness_n2",utc_media_camera_attr_set_brightness_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_brightness_p",utc_media_camera_attr_set_brightness_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_contrast_n1",utc_media_camera_attr_set_contrast_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_contrast_n2",utc_media_camera_attr_set_contrast_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_contrast_p",utc_media_camera_attr_set_contrast_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_whitebalance_n1",utc_media_camera_attr_set_whitebalance_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_whitebalance_n2",utc_media_camera_attr_set_whitebalance_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_whitebalance_p",utc_media_camera_attr_set_whitebalance_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_effect_n1",utc_media_camera_attr_get_effect_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_effect_n2",utc_media_camera_attr_get_effect_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_effect_p",utc_media_camera_attr_get_effect_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_scene_mode_n1",utc_media_camera_attr_get_scene_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_scene_mode_n2",utc_media_camera_attr_get_scene_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_scene_mode_p",utc_media_camera_attr_get_scene_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_tag_n1",utc_media_camera_attr_is_enabled_tag_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_tag_n2",utc_media_camera_attr_is_enabled_tag_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_tag_p",utc_media_camera_attr_is_enabled_tag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_image_description_n1",utc_media_camera_attr_get_tag_image_description_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_image_description_n2",utc_media_camera_attr_get_tag_image_description_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_image_description_p1",utc_media_camera_attr_get_tag_image_description_p1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_image_description_p2",utc_media_camera_attr_get_tag_image_description_p2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_orientation_n1",utc_media_camera_attr_get_tag_orientation_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_orientation_n2",utc_media_camera_attr_get_tag_orientation_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_orientation_p",utc_media_camera_attr_get_tag_orientation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_software_n1",utc_media_camera_attr_get_tag_software_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_software_n2",utc_media_camera_attr_get_tag_software_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_software_p1",utc_media_camera_attr_get_tag_software_p1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tag_software_p2",utc_media_camera_attr_get_tag_software_p2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_geotag_n1",utc_media_camera_attr_get_geotag_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_geotag_n2",utc_media_camera_attr_get_geotag_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_geotag_p",utc_media_camera_attr_get_geotag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_remove_geotag_n",utc_media_camera_attr_remove_geotag_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_remove_geotag_p",utc_media_camera_attr_remove_geotag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_flash_mode_n1",utc_media_camera_attr_get_flash_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_flash_mode_n2",utc_media_camera_attr_get_flash_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_flash_mode_p",utc_media_camera_attr_get_flash_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_af_mode_n1",utc_media_camera_attr_foreach_supported_af_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_af_mode_n2",utc_media_camera_attr_foreach_supported_af_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_af_mode_p",utc_media_camera_attr_foreach_supported_af_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_exposure_mode_n1",utc_media_camera_attr_foreach_supported_exposure_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_exposure_mode_n2",utc_media_camera_attr_foreach_supported_exposure_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_exposure_mode_p",utc_media_camera_attr_foreach_supported_exposure_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_iso_n1",utc_media_camera_attr_foreach_supported_iso_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_iso_n2",utc_media_camera_attr_foreach_supported_iso_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_iso_p",utc_media_camera_attr_foreach_supported_iso_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_whitebalance_n1",utc_media_camera_attr_foreach_supported_whitebalance_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_whitebalance_n2",utc_media_camera_attr_foreach_supported_whitebalance_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_whitebalance_p",utc_media_camera_attr_foreach_supported_whitebalance_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_effect_n1",utc_media_camera_attr_foreach_supported_effect_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_effect_n2",utc_media_camera_attr_foreach_supported_effect_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_effect_p",utc_media_camera_attr_foreach_supported_effect_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_scene_mode_n1",utc_media_camera_attr_foreach_supported_scene_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_scene_mode_n2",utc_media_camera_attr_foreach_supported_scene_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_scene_mode_p",utc_media_camera_attr_foreach_supported_scene_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_flash_mode_n1",utc_media_camera_attr_foreach_supported_flash_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_flash_mode_n2",utc_media_camera_attr_foreach_supported_flash_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_flash_mode_p",utc_media_camera_attr_foreach_supported_flash_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_n1",utc_media_camera_attr_foreach_supported_fps_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_n2",utc_media_camera_attr_foreach_supported_fps_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_by_resolution_n1",utc_media_camera_attr_foreach_supported_fps_by_resolution_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_by_resolution_n2",utc_media_camera_attr_foreach_supported_fps_by_resolution_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_p",utc_media_camera_attr_foreach_supported_fps_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_fps_by_resolution_p",utc_media_camera_attr_foreach_supported_fps_by_resolution_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_lens_orientation_n1",utc_media_camera_attr_get_lens_orientation_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_lens_orientation_n2",utc_media_camera_attr_get_lens_orientation_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_lens_orientation_p",utc_media_camera_attr_get_lens_orientation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_area_n1",utc_media_camera_attr_set_af_area_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_area_n2",utc_media_camera_attr_set_af_area_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_af_area_p",utc_media_camera_attr_set_af_area_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_clear_af_area_n",utc_media_camera_attr_clear_af_area_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_clear_af_area_p",utc_media_camera_attr_clear_af_area_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_disable_shutter_sound_n",utc_media_camera_attr_disable_shutter_sound_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_disable_shutter_sound_p",utc_media_camera_attr_disable_shutter_sound_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_anti_shake_n",utc_media_camera_attr_is_supported_anti_shake_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_anti_shake_p",utc_media_camera_attr_is_supported_anti_shake_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_anti_shake_n",utc_media_camera_attr_enable_anti_shake_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_anti_shake_p",utc_media_camera_attr_enable_anti_shake_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_anti_shake_n1",utc_media_camera_attr_is_enabled_anti_shake_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_anti_shake_n2",utc_media_camera_attr_is_enabled_anti_shake_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_anti_shake_p",utc_media_camera_attr_is_enabled_anti_shake_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_auto_contrast_n",utc_media_camera_attr_is_supported_auto_contrast_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_auto_contrast_p",utc_media_camera_attr_is_supported_auto_contrast_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_auto_contrast_n",utc_media_camera_attr_enable_auto_contrast_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_auto_contrast_p",utc_media_camera_attr_enable_auto_contrast_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_auto_contrast_n1",utc_media_camera_attr_is_enabled_auto_contrast_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_auto_contrast_n2",utc_media_camera_attr_is_enabled_auto_contrast_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_auto_contrast_p",utc_media_camera_attr_is_enabled_auto_contrast_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_video_stabilization_n",utc_media_camera_attr_enable_video_stabilization_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_video_stabilization_p",utc_media_camera_attr_enable_video_stabilization_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_video_stabilization_n1",utc_media_camera_attr_is_enabled_video_stabilization_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_video_stabilization_n2",utc_media_camera_attr_is_enabled_video_stabilization_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_enabled_video_stabilization_p",utc_media_camera_attr_is_enabled_video_stabilization_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_video_stabilization_n",utc_media_camera_attr_is_supported_video_stabilization_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_video_stabilization_p",utc_media_camera_attr_is_supported_video_stabilization_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_hdr_mode_n1",utc_media_camera_attr_get_hdr_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_hdr_mode_n2",utc_media_camera_attr_get_hdr_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_hdr_mode_p",utc_media_camera_attr_get_hdr_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_hdr_mode_n1",utc_media_camera_attr_set_hdr_mode_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_hdr_mode_n2",utc_media_camera_attr_set_hdr_mode_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_hdr_mode_p",utc_media_camera_attr_set_hdr_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_stream_flip_n",utc_media_camera_attr_foreach_supported_stream_flip_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_stream_flip_p",utc_media_camera_attr_foreach_supported_stream_flip_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_stream_flip_n",utc_media_camera_attr_get_stream_flip_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_stream_flip_p",utc_media_camera_attr_get_stream_flip_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_flip_n1",utc_media_camera_attr_set_stream_flip_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_flip_n2",utc_media_camera_attr_set_stream_flip_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_flip_p",utc_media_camera_attr_set_stream_flip_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_stream_rotation_n",utc_media_camera_attr_foreach_supported_stream_rotation_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_stream_rotation_p",utc_media_camera_attr_foreach_supported_stream_rotation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_stream_rotation_n",utc_media_camera_attr_get_stream_rotation_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_stream_rotation_p",utc_media_camera_attr_get_stream_rotation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_rotation_n1",utc_media_camera_attr_set_stream_rotation_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_rotation_n2",utc_media_camera_attr_set_stream_rotation_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_stream_rotation_p",utc_media_camera_attr_set_stream_rotation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_theater_mode_n",utc_media_camera_attr_foreach_supported_theater_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_theater_mode_p",utc_media_camera_attr_foreach_supported_theater_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_theater_mode_n",utc_media_camera_attr_get_theater_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_theater_mode_p",utc_media_camera_attr_get_theater_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_theater_mode_n",utc_media_camera_attr_set_theater_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_theater_mode_p",utc_media_camera_attr_set_theater_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_display_flip_n",utc_media_camera_get_display_flip_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_display_flip_p",utc_media_camera_get_display_flip_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_set_display_flip_n",utc_media_camera_set_display_flip_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_set_display_flip_p",utc_media_camera_set_display_flip_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_hdr_capture_n",utc_media_camera_attr_is_supported_hdr_capture_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_is_supported_hdr_capture_p",utc_media_camera_attr_is_supported_hdr_capture_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_face_detection_n",utc_media_camera_is_supported_face_detection_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_face_detection_p",utc_media_camera_is_supported_face_detection_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_zero_shutter_lag_n",utc_media_camera_is_supported_zero_shutter_lag_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_zero_shutter_lag_p",utc_media_camera_is_supported_zero_shutter_lag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_media_packet_preview_cb_n",utc_media_camera_is_supported_media_packet_preview_cb_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_is_supported_media_packet_preview_cb_p",utc_media_camera_is_supported_media_packet_preview_cb_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_device_count_n",utc_media_camera_get_device_count_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_device_count_p",utc_media_camera_get_device_count_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_recommended_preview_resolution_n",utc_media_camera_get_recommended_preview_resolution_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_get_recommended_preview_resolution_p",utc_media_camera_get_recommended_preview_resolution_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_tag_n",utc_media_camera_attr_enable_tag_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_enable_tag_p",utc_media_camera_attr_enable_tag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_af_mode_n",utc_media_camera_attr_get_af_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_af_mode_p1",utc_media_camera_attr_get_af_mode_p1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_af_mode_p2",utc_media_camera_attr_get_af_mode_p2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_brightness_n",utc_media_camera_attr_get_brightness_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_brightness_p",utc_media_camera_attr_get_brightness_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_brightness_range_n",utc_media_camera_attr_get_brightness_range_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_brightness_range_p",utc_media_camera_attr_get_brightness_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_contrast_n",utc_media_camera_attr_get_contrast_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_contrast_p",utc_media_camera_attr_get_contrast_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_contrast_range_n",utc_media_camera_attr_get_contrast_range_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_contrast_range_p",utc_media_camera_attr_get_contrast_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_n",utc_media_camera_attr_get_exposure_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_p",utc_media_camera_attr_get_exposure_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_mode_n",utc_media_camera_attr_get_exposure_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_mode_p",utc_media_camera_attr_get_exposure_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_range_n",utc_media_camera_attr_get_exposure_range_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_exposure_range_p",utc_media_camera_attr_get_exposure_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_iso_n",utc_media_camera_attr_get_iso_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_iso_p",utc_media_camera_attr_get_iso_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_whitebalance_n",utc_media_camera_attr_get_whitebalance_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_whitebalance_p",utc_media_camera_attr_get_whitebalance_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_zoom_n",utc_media_camera_attr_get_zoom_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_zoom_p",utc_media_camera_attr_get_zoom_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_zoom_range_n",utc_media_camera_attr_get_zoom_range_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_zoom_range_p",utc_media_camera_attr_get_zoom_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_effect_n",utc_media_camera_attr_set_effect_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_effect_p",utc_media_camera_attr_set_effect_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_flash_mode_n",utc_media_camera_attr_set_flash_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_flash_mode_p",utc_media_camera_attr_set_flash_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_geotag_n",utc_media_camera_attr_set_geotag_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_geotag_p",utc_media_camera_attr_set_geotag_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_scene_mode_n",utc_media_camera_attr_set_scene_mode_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_scene_mode_p",utc_media_camera_attr_set_scene_mode_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_image_description_n",utc_media_camera_attr_set_tag_image_description_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_image_description_p",utc_media_camera_attr_set_tag_image_description_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_orientation_n",utc_media_camera_attr_set_tag_orientation_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_orientation_p",utc_media_camera_attr_set_tag_orientation_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_software_n",utc_media_camera_attr_set_tag_software_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tag_software_p",utc_media_camera_attr_set_tag_software_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_encoded_preview_bitrate_p",utc_media_camera_attr_get_encoded_preview_bitrate_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_encoded_preview_bitrate_n",utc_media_camera_attr_get_encoded_preview_bitrate_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_encoded_preview_bitrate_p",utc_media_camera_attr_set_encoded_preview_bitrate_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_encoded_preview_bitrate_n",utc_media_camera_attr_set_encoded_preview_bitrate_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_encoded_preview_gop_interval_p",utc_media_camera_attr_get_encoded_preview_gop_interval_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_encoded_preview_gop_interval_n",utc_media_camera_attr_get_encoded_preview_gop_interval_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_encoded_preview_gop_interval_p",utc_media_camera_attr_set_encoded_preview_gop_interval_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_encoded_preview_gop_interval_n",utc_media_camera_attr_set_encoded_preview_gop_interval_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_pan_p",utc_media_camera_attr_set_pan_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_pan_n",utc_media_camera_attr_set_pan_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_p",utc_media_camera_attr_get_pan_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_n1",utc_media_camera_attr_get_pan_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_n2",utc_media_camera_attr_get_pan_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_range_p",utc_media_camera_attr_get_pan_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_range_n1",utc_media_camera_attr_get_pan_range_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_pan_range_n2",utc_media_camera_attr_get_pan_range_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tilt_p",utc_media_camera_attr_set_tilt_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_tilt_n",utc_media_camera_attr_set_tilt_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_p",utc_media_camera_attr_get_tilt_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_n1",utc_media_camera_attr_get_tilt_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_n2",utc_media_camera_attr_get_tilt_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_range_p",utc_media_camera_attr_get_tilt_range_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_range_n1",utc_media_camera_attr_get_tilt_range_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_tilt_range_n2",utc_media_camera_attr_get_tilt_range_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_ptz_type_p",utc_media_camera_attr_set_ptz_type_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_ptz_type_n",utc_media_camera_attr_set_ptz_type_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_ptz_type_p",utc_media_camera_attr_foreach_supported_ptz_type_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_foreach_supported_ptz_type_n",utc_media_camera_attr_foreach_supported_ptz_type_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_display_roi_area_p",utc_media_camera_attr_set_display_roi_area_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_display_roi_area_n",utc_media_camera_attr_set_display_roi_area_n,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_display_roi_area_p",utc_media_camera_attr_get_display_roi_area_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_display_roi_area_n1",utc_media_camera_attr_get_display_roi_area_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_get_display_roi_area_n2",utc_media_camera_attr_get_display_roi_area_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_create_n",utc_media_camera_create_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_create_p",utc_media_camera_create_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_destroy_n",utc_media_camera_destroy_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_destroy_p",utc_media_camera_destroy_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_preview_n",utc_media_camera_start_preview_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_preview_p1",utc_media_camera_start_preview_p1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_preview_p2",utc_media_camera_start_preview_p2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_stop_preview_n",utc_media_camera_stop_preview_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_stop_preview_p",utc_media_camera_stop_preview_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_capture_n",utc_media_camera_start_capture_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_capture_p",utc_media_camera_start_capture_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_get_state_n",utc_media_camera_get_state_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_get_state_p",utc_media_camera_get_state_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_focusing_n",utc_media_camera_start_focusing_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_focusing_p1",utc_media_camera_start_focusing_p1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_focusing_p2",utc_media_camera_start_focusing_p2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_cancel_focusing_n1",utc_media_camera_cancel_focusing_n1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_cancel_focusing_n2",utc_media_camera_cancel_focusing_n2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_cancel_focusing_p",utc_media_camera_cancel_focusing_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_is_supported_continuous_capture_n",utc_media_camera_is_supported_continuous_capture_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_is_supported_continuous_capture_p",utc_media_camera_is_supported_continuous_capture_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_continuous_capture_n1",utc_media_camera_start_continuous_capture_n1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_continuous_capture_n2",utc_media_camera_start_continuous_capture_n2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_continuous_capture_p",utc_media_camera_start_continuous_capture_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_stop_continuous_capture_n",utc_media_camera_stop_continuous_capture_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_stop_continuous_capture_p",utc_media_camera_stop_continuous_capture_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_face_detection_n1",utc_media_camera_start_face_detection_n1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_face_detection_n2",utc_media_camera_start_face_detection_n2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_start_face_detection_p",utc_media_camera_start_face_detection_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_stop_face_detection_n",utc_media_camera_stop_face_detection_n,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_change_device_p",utc_media_camera_change_device_p,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_change_device_n1",utc_media_camera_change_device_n1,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_change_device_n2",utc_media_camera_change_device_n2,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_change_device_n3",utc_media_camera_change_device_n3,utc_media_camera_lifecycle_startup,utc_media_camera_lifecycle_cleanup},
+	{"utc_media_camera_set_display_n1",utc_media_camera_set_display_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_n2",utc_media_camera_set_display_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_p",utc_media_camera_set_display_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_resolution_n1",utc_media_camera_set_preview_resolution_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_resolution_n2",utc_media_camera_set_preview_resolution_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_resolution_p",utc_media_camera_set_preview_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_rotation_n1",utc_media_camera_set_display_rotation_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_rotation_n2",utc_media_camera_set_display_rotation_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_rotation_p",utc_media_camera_set_display_rotation_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_resolution_n",utc_media_camera_set_capture_resolution_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_resolution_p",utc_media_camera_set_capture_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_format_n1",utc_media_camera_set_capture_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_format_n2",utc_media_camera_set_capture_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_format_p1",utc_media_camera_set_capture_format_p1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_capture_format_p2",utc_media_camera_set_capture_format_p2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_format_n1",utc_media_camera_set_preview_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_format_n2",utc_media_camera_set_preview_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_format_p1",utc_media_camera_set_preview_format_p1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_format_p2",utc_media_camera_set_preview_format_p2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_resolution_n1",utc_media_camera_get_preview_resolution_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_resolution_n2",utc_media_camera_get_preview_resolution_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_resolution_p",utc_media_camera_get_preview_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_rotation_n1",utc_media_camera_get_display_rotation_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_rotation_n2",utc_media_camera_get_display_rotation_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_rotation_p",utc_media_camera_get_display_rotation_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_resolution_n1",utc_media_camera_get_capture_resolution_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_resolution_n2",utc_media_camera_get_capture_resolution_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_resolution_p",utc_media_camera_get_capture_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_format_n1",utc_media_camera_get_preview_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_format_n2",utc_media_camera_get_preview_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_preview_format_p",utc_media_camera_get_preview_format_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_cb_n1",utc_media_camera_set_preview_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_cb_n2",utc_media_camera_set_preview_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_preview_cb_p",utc_media_camera_set_preview_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_preview_cb_n",utc_media_camera_unset_preview_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_preview_cb_p",utc_media_camera_unset_preview_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_media_packet_preview_cb_n1",utc_media_camera_set_media_packet_preview_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_media_packet_preview_cb_n2",utc_media_camera_set_media_packet_preview_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_media_packet_preview_cb_p",utc_media_camera_set_media_packet_preview_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_media_packet_preview_cb_n",utc_media_camera_unset_media_packet_preview_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_media_packet_preview_cb_p",utc_media_camera_unset_media_packet_preview_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_state_changed_cb_n1",utc_media_camera_set_state_changed_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_state_changed_cb_n2",utc_media_camera_set_state_changed_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_state_changed_cb_p",utc_media_camera_set_state_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_state_changed_cb_n",utc_media_camera_unset_state_changed_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_state_changed_cb_p",utc_media_camera_unset_state_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_focus_changed_cb_n1",utc_media_camera_set_focus_changed_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_focus_changed_cb_n2",utc_media_camera_set_focus_changed_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_focus_changed_cb_p",utc_media_camera_set_focus_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_focus_changed_cb_n",utc_media_camera_unset_focus_changed_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_focus_changed_cb_p",utc_media_camera_unset_focus_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_resolution_n1",utc_media_camera_foreach_supported_preview_resolution_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_resolution_n2",utc_media_camera_foreach_supported_preview_resolution_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_resolution_p",utc_media_camera_foreach_supported_preview_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_resolution_n1",utc_media_camera_foreach_supported_capture_resolution_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_resolution_n2",utc_media_camera_foreach_supported_capture_resolution_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_resolution_p",utc_media_camera_foreach_supported_capture_resolution_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_format_n1",utc_media_camera_foreach_supported_capture_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_format_n2",utc_media_camera_foreach_supported_capture_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_capture_format_p",utc_media_camera_foreach_supported_capture_format_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_format_n1",utc_media_camera_foreach_supported_preview_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_format_n2",utc_media_camera_foreach_supported_preview_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_foreach_supported_preview_format_p",utc_media_camera_foreach_supported_preview_format_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_visible_n",utc_media_camera_set_display_visible_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_visible_p",utc_media_camera_set_display_visible_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_is_display_visible_n1",utc_media_camera_is_display_visible_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_is_display_visible_n2",utc_media_camera_is_display_visible_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_is_display_visible_p",utc_media_camera_is_display_visible_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_mode_n1",utc_media_camera_set_display_mode_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_mode_n2",utc_media_camera_set_display_mode_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_mode_p",utc_media_camera_set_display_mode_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_mode_n1",utc_media_camera_get_display_mode_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_mode_n2",utc_media_camera_get_display_mode_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_mode_p",utc_media_camera_get_display_mode_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_format_n1",utc_media_camera_get_capture_format_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_format_n2",utc_media_camera_get_capture_format_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_capture_format_p",utc_media_camera_get_capture_format_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_error_cb_n1",utc_media_camera_set_error_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_error_cb_n2",utc_media_camera_set_error_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_error_cb_p",utc_media_camera_set_error_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_error_cb_n",utc_media_camera_unset_error_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_error_cb_p",utc_media_camera_unset_error_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupted_cb_n1",utc_media_camera_set_interrupted_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupted_cb_n2",utc_media_camera_set_interrupted_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupted_cb_p",utc_media_camera_set_interrupted_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_interrupted_cb_n",utc_media_camera_unset_interrupted_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_interrupted_cb_p",utc_media_camera_unset_interrupted_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_set_hdr_capture_progress_cb_n1",utc_media_camera_attr_set_hdr_capture_progress_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_set_hdr_capture_progress_cb_n2",utc_media_camera_attr_set_hdr_capture_progress_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_set_hdr_capture_progress_cb_p",utc_media_camera_attr_set_hdr_capture_progress_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_unset_hdr_capture_progress_cb_n",utc_media_camera_attr_unset_hdr_capture_progress_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_unset_hdr_capture_progress_cb_p",utc_media_camera_attr_unset_hdr_capture_progress_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_facing_direction_p",utc_media_camera_get_facing_direction_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_facing_direction_n1",utc_media_camera_get_facing_direction_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_facing_direction_n2",utc_media_camera_get_facing_direction_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_flash_state_p",utc_media_camera_get_flash_state_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_flash_state_n1",utc_media_camera_get_flash_state_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_flash_state_n2",utc_media_camera_get_flash_state_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_reuse_hint_p",utc_media_camera_set_display_reuse_hint_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_reuse_hint_n1",utc_media_camera_set_display_reuse_hint_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_display_reuse_hint_n2",utc_media_camera_set_display_reuse_hint_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_reuse_hint_p",utc_media_camera_get_display_reuse_hint_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_reuse_hint_n1",utc_media_camera_get_display_reuse_hint_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_display_reuse_hint_n2",utc_media_camera_get_display_reuse_hint_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_device_state_p",utc_media_camera_get_device_state_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_device_state_n1",utc_media_camera_get_device_state_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_get_device_state_n2",utc_media_camera_get_device_state_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_add_device_state_changed_cb_p",utc_media_camera_add_device_state_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_add_device_state_changed_cb_n1",utc_media_camera_add_device_state_changed_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_add_device_state_changed_cb_n2",utc_media_camera_add_device_state_changed_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_remove_device_state_changed_cb_p",utc_media_camera_remove_device_state_changed_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_remove_device_state_changed_cb_n1",utc_media_camera_remove_device_state_changed_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_remove_device_state_changed_cb_n2",utc_media_camera_remove_device_state_changed_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupt_started_cb_n1",utc_media_camera_set_interrupt_started_cb_n1,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupt_started_cb_n2",utc_media_camera_set_interrupt_started_cb_n2,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_set_interrupt_started_cb_p",utc_media_camera_set_interrupt_started_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_interrupt_started_cb_n",utc_media_camera_unset_interrupt_started_cb_n,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_unset_interrupt_started_cb_p",utc_media_camera_unset_interrupt_started_cb_p,utc_media_camera_setting_startup,utc_media_camera_setting_cleanup},
+	{"utc_media_camera_attr_set_hue_n1",utc_media_camera_attr_set_hue_n1,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_hue_n2",utc_media_camera_attr_set_hue_n2,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{"utc_media_camera_attr_set_hue_p",utc_media_camera_attr_set_hue_p,utc_media_camera_attr_startup,utc_media_camera_attr_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_CAMERA_NATIVE_H__

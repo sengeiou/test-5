@@ -1,0 +1,4 @@
+cairo_evas_gl_device_create
+cairo_gl_surface_create_for_evas_gl
+cairo_evas_gl_device_get_gl
+cairo_evas_gl_device_get_context

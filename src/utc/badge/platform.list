@@ -1,0 +1,7 @@
+badge_add_deffered_task
+badge_del_deffered_task
+badge_foreach_existed
+badge_is_existing
+badge_is_service_ready
+badge_register_changed_cb
+badge_unregister_changed_cb

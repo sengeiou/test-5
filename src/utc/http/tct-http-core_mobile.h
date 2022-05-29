@@ -1,0 +1,232 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_HTTP-NATIVE_H__
+#define __TCT_HTTP-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_http_startup(void);
+extern void utc_http_cleanup(void);
+
+extern int utc_http_init_n(void);
+extern int utc_http_init_p(void);
+extern int utc_http_session_create_p(void);
+extern int utc_http_session_create_n(void);
+extern int utc_http_session_destroy_n(void);
+extern int utc_http_session_destroy_p(void);
+extern int utc_http_session_set_auto_redirection_n(void);
+extern int utc_http_session_set_auto_redirection_p(void);
+extern int utc_http_session_get_auto_redirection_n(void);
+extern int utc_http_session_get_auto_redirection_p(void);
+extern int utc_http_session_get_active_transaction_count_n(void);
+extern int utc_http_session_get_active_transaction_count_p(void);
+extern int utc_http_session_get_max_transaction_count_n(void);
+extern int utc_http_session_get_max_transaction_count_p(void);
+extern int utc_http_session_open_transaction_n(void);
+extern int utc_http_session_open_transaction_p(void);
+extern int utc_http_transaction_destroy_n(void);
+extern int utc_http_transaction_destroy_p(void);
+extern int utc_http_transaction_set_progress_cb_n(void);
+extern int utc_http_transaction_set_progress_cb_p(void);
+extern int utc_http_transaction_set_received_header_cb_n(void);
+extern int utc_http_transaction_set_received_header_cb_p(void);
+extern int utc_http_transaction_set_received_body_cb_n(void);
+extern int utc_http_transaction_set_received_body_cb_p(void);
+extern int utc_http_transaction_set_uploaded_cb_n(void);
+extern int utc_http_transaction_set_uploaded_cb_p(void);
+extern int utc_http_transaction_set_completed_cb_n(void);
+extern int utc_http_transaction_set_completed_cb_p(void);
+extern int utc_http_transaction_set_aborted_cb_n(void);
+extern int utc_http_transaction_set_aborted_cb_p(void);
+extern int utc_http_transaction_set_timeout_n(void);
+extern int utc_http_transaction_set_timeout_p(void);
+extern int utc_http_transaction_get_timeout_n(void);
+extern int utc_http_transaction_get_timeout_p(void);
+extern int utc_http_transaction_set_interface_name_n(void);
+extern int utc_http_transaction_set_interface_name_p(void);
+extern int utc_http_transaction_get_interface_name_n(void);
+extern int utc_http_transaction_get_interface_name_p(void);
+extern int utc_http_transaction_set_ready_to_write_n(void);
+extern int utc_http_transaction_set_ready_to_write_p(void);
+extern int utc_http_transaction_get_server_certificate_verification_n(void);
+extern int utc_http_transaction_get_server_certificate_verification_p(void);
+extern int utc_http_transaction_set_server_certificate_verification_n(void);
+extern int utc_http_transaction_set_server_certificate_verification_p(void);
+extern int utc_http_session_destroy_all_transactions_n(void);
+extern int utc_http_session_destroy_all_transactions_p(void);
+extern int utc_http_transaction_header_add_field_n(void);
+extern int utc_http_transaction_header_add_field_p(void);
+extern int utc_http_transaction_header_remove_field_n(void);
+extern int utc_http_transaction_header_remove_field_p(void);
+extern int utc_http_transaction_header_get_field_value_n(void);
+extern int utc_http_transaction_header_get_field_value_p(void);
+extern int utc_http_transaction_request_set_method_n(void);
+extern int utc_http_transaction_request_set_method_p(void);
+extern int utc_http_transaction_request_get_method_n(void);
+extern int utc_http_transaction_request_get_method_p(void);
+extern int utc_http_transaction_request_set_version_n(void);
+extern int utc_http_transaction_request_set_version_p(void);
+extern int utc_http_transaction_request_get_version_n(void);
+extern int utc_http_transaction_request_get_version_p(void);
+extern int utc_http_transaction_request_set_uri_n(void);
+extern int utc_http_transaction_request_set_uri_p(void);
+extern int utc_http_transaction_request_get_uri_n(void);
+extern int utc_http_transaction_request_get_uri_p(void);
+extern int utc_http_transaction_request_set_accept_encoding_n(void);
+extern int utc_http_transaction_request_set_accept_encoding_p(void);
+extern int utc_http_transaction_request_get_accept_encoding_n(void);
+extern int utc_http_transaction_request_get_accept_encoding_p(void);
+extern int utc_http_transaction_request_set_cookie_n(void);
+extern int utc_http_transaction_request_set_cookie_p(void);
+extern int utc_http_transaction_request_get_cookie_n(void);
+extern int utc_http_transaction_request_get_cookie_p(void);
+extern int utc_http_transaction_request_write_body_n(void);
+extern int utc_http_transaction_request_write_body_p(void);
+extern int utc_http_transaction_request_set_upload_file_n(void);
+extern int utc_http_transaction_request_set_upload_file_p(void);
+extern int utc_http_transaction_set_http_auth_scheme_n(void);
+extern int utc_http_transaction_set_http_auth_scheme_p(void);
+extern int utc_http_transaction_get_http_auth_scheme_n(void);
+extern int utc_http_transaction_get_http_auth_scheme_p(void);
+extern int utc_http_transaction_set_credentials_n(void);
+extern int utc_http_transaction_set_credentials_p(void);
+extern int utc_http_transaction_get_credentials_n(void);
+extern int utc_http_transaction_get_credentials_p(void);
+extern int utc_http_transaction_open_authentication_n(void);
+extern int utc_http_transaction_open_authentication_p(void);
+extern int utc_http_transaction_resume_n(void);
+extern int utc_http_transaction_pause_n(void);
+extern int utc_http_transaction_cancel_n(void);
+extern int utc_http_transaction_response_get_status_text_n(void);
+extern int utc_http_transaction_response_get_version_n(void);
+extern int utc_http_transaction_get_realm_n(void);
+extern int utc_http_deinit_n(void);
+extern int utc_http_deinit_p(void);
+extern int utc_http_transaction_submit_n1(void);
+extern int utc_http_transaction_submit_n2(void);
+extern int utc_http_transaction_submit_p(void);
+extern int utc_http_transaction_set_tcp_fastopen_n(void);
+extern int utc_http_transaction_set_tcp_fastopen_p(void);
+extern int utc_http_transaction_get_tcp_fastopen_n(void);
+extern int utc_http_transaction_get_tcp_fastopen_p(void);
+
+testcase tc_array[] = {
+	{"utc_http_init_n",utc_http_init_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_init_p",utc_http_init_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_create_p",utc_http_session_create_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_create_n",utc_http_session_create_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_destroy_n",utc_http_session_destroy_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_destroy_p",utc_http_session_destroy_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_set_auto_redirection_n",utc_http_session_set_auto_redirection_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_set_auto_redirection_p",utc_http_session_set_auto_redirection_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_auto_redirection_n",utc_http_session_get_auto_redirection_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_auto_redirection_p",utc_http_session_get_auto_redirection_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_active_transaction_count_n",utc_http_session_get_active_transaction_count_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_active_transaction_count_p",utc_http_session_get_active_transaction_count_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_max_transaction_count_n",utc_http_session_get_max_transaction_count_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_get_max_transaction_count_p",utc_http_session_get_max_transaction_count_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_open_transaction_n",utc_http_session_open_transaction_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_open_transaction_p",utc_http_session_open_transaction_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_destroy_n",utc_http_transaction_destroy_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_destroy_p",utc_http_transaction_destroy_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_progress_cb_n",utc_http_transaction_set_progress_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_progress_cb_p",utc_http_transaction_set_progress_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_received_header_cb_n",utc_http_transaction_set_received_header_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_received_header_cb_p",utc_http_transaction_set_received_header_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_received_body_cb_n",utc_http_transaction_set_received_body_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_received_body_cb_p",utc_http_transaction_set_received_body_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_uploaded_cb_n",utc_http_transaction_set_uploaded_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_uploaded_cb_p",utc_http_transaction_set_uploaded_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_completed_cb_n",utc_http_transaction_set_completed_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_completed_cb_p",utc_http_transaction_set_completed_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_aborted_cb_n",utc_http_transaction_set_aborted_cb_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_aborted_cb_p",utc_http_transaction_set_aborted_cb_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_timeout_n",utc_http_transaction_set_timeout_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_timeout_p",utc_http_transaction_set_timeout_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_timeout_n",utc_http_transaction_get_timeout_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_timeout_p",utc_http_transaction_get_timeout_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_interface_name_n",utc_http_transaction_set_interface_name_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_interface_name_p",utc_http_transaction_set_interface_name_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_interface_name_n",utc_http_transaction_get_interface_name_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_interface_name_p",utc_http_transaction_get_interface_name_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_ready_to_write_n",utc_http_transaction_set_ready_to_write_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_ready_to_write_p",utc_http_transaction_set_ready_to_write_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_server_certificate_verification_n",utc_http_transaction_get_server_certificate_verification_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_server_certificate_verification_p",utc_http_transaction_get_server_certificate_verification_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_server_certificate_verification_n",utc_http_transaction_set_server_certificate_verification_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_server_certificate_verification_p",utc_http_transaction_set_server_certificate_verification_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_destroy_all_transactions_n",utc_http_session_destroy_all_transactions_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_session_destroy_all_transactions_p",utc_http_session_destroy_all_transactions_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_add_field_n",utc_http_transaction_header_add_field_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_add_field_p",utc_http_transaction_header_add_field_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_remove_field_n",utc_http_transaction_header_remove_field_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_remove_field_p",utc_http_transaction_header_remove_field_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_get_field_value_n",utc_http_transaction_header_get_field_value_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_header_get_field_value_p",utc_http_transaction_header_get_field_value_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_method_n",utc_http_transaction_request_set_method_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_method_p",utc_http_transaction_request_set_method_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_method_n",utc_http_transaction_request_get_method_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_method_p",utc_http_transaction_request_get_method_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_version_n",utc_http_transaction_request_set_version_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_version_p",utc_http_transaction_request_set_version_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_version_n",utc_http_transaction_request_get_version_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_version_p",utc_http_transaction_request_get_version_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_uri_n",utc_http_transaction_request_set_uri_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_uri_p",utc_http_transaction_request_set_uri_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_uri_n",utc_http_transaction_request_get_uri_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_uri_p",utc_http_transaction_request_get_uri_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_accept_encoding_n",utc_http_transaction_request_set_accept_encoding_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_accept_encoding_p",utc_http_transaction_request_set_accept_encoding_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_accept_encoding_n",utc_http_transaction_request_get_accept_encoding_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_accept_encoding_p",utc_http_transaction_request_get_accept_encoding_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_cookie_n",utc_http_transaction_request_set_cookie_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_cookie_p",utc_http_transaction_request_set_cookie_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_cookie_n",utc_http_transaction_request_get_cookie_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_get_cookie_p",utc_http_transaction_request_get_cookie_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_write_body_n",utc_http_transaction_request_write_body_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_write_body_p",utc_http_transaction_request_write_body_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_upload_file_n",utc_http_transaction_request_set_upload_file_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_request_set_upload_file_p",utc_http_transaction_request_set_upload_file_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_http_auth_scheme_n",utc_http_transaction_set_http_auth_scheme_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_http_auth_scheme_p",utc_http_transaction_set_http_auth_scheme_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_http_auth_scheme_n",utc_http_transaction_get_http_auth_scheme_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_http_auth_scheme_p",utc_http_transaction_get_http_auth_scheme_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_credentials_n",utc_http_transaction_set_credentials_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_credentials_p",utc_http_transaction_set_credentials_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_credentials_n",utc_http_transaction_get_credentials_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_credentials_p",utc_http_transaction_get_credentials_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_open_authentication_n",utc_http_transaction_open_authentication_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_open_authentication_p",utc_http_transaction_open_authentication_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_resume_n",utc_http_transaction_resume_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_pause_n",utc_http_transaction_pause_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_cancel_n",utc_http_transaction_cancel_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_response_get_status_text_n",utc_http_transaction_response_get_status_text_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_response_get_version_n",utc_http_transaction_response_get_version_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_realm_n",utc_http_transaction_get_realm_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_deinit_n",utc_http_deinit_n,utc_http_startup,utc_http_cleanup},
+	{"utc_http_deinit_p",utc_http_deinit_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_submit_n1",utc_http_transaction_submit_n1,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_submit_n2",utc_http_transaction_submit_n2,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_submit_p",utc_http_transaction_submit_p,utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_tcp_fastopen_n", utc_http_transaction_set_tcp_fastopen_n, utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_set_tcp_fastopen_p", utc_http_transaction_set_tcp_fastopen_p, utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_tcp_fastopen_n", utc_http_transaction_get_tcp_fastopen_n, utc_http_startup,utc_http_cleanup},
+	{"utc_http_transaction_get_tcp_fastopen_p", utc_http_transaction_get_tcp_fastopen_p, utc_http_startup,utc_http_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_HTTP-NATIVE_H__

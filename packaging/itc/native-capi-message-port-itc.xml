@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-capi-message-port-itc" version="0.1.0" api-version="6.0">
+    <label>CoreCapiMessagePortTest</label>
+    <author email="test@samsung.com" href="www.samsung.com">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native.capi-message-port-itc" exec="/usr/apps/native-capi-message-port-itc/bin/tct-capi-message-port-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+	<privileges>
+    <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+	<privilege>http://tizen.org/privilege/packagemanager.info</privilege>
+    </privileges>
+</manifest>

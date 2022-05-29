@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-rpc-port-itc" version="0.1.0" api-version="6.5">
+    <label>NativeRPCPORTTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <service-application appid="native.rpc-port-itc" exec="/usr/apps/native-rpc-port-itc/bin/tct-rpc-port-native" nodisplay="true" multiple="false" type="capp" taskmanage="false">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </service-application>
+	<privileges>
+        <privilege>http://tizen.org/privilege/datasharing</privilege>
+        <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    </privileges>
+</manifest>

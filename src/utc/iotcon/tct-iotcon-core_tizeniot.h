@@ -1,0 +1,782 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_IOTCON-NATIVE_H__
+#define __TCT_IOTCON-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_iotcon_startup(void);
+extern void utc_iotcon_cleanup(void);
+extern void utc_iotcon_struct_startup(void);
+extern void utc_iotcon_struct_cleanup(void);
+extern void utc_iotcon_representation_startup(void);
+extern void utc_iotcon_representation_cleanup(void);
+extern void utc_iotcon_device_startup(void);
+extern void utc_iotcon_device_cleanup(void);
+extern void utc_iotcon_presence_startup(void);
+extern void utc_iotcon_presence_cleanup(void);
+extern void utc_iotcon_presence_response_startup(void);
+extern void utc_iotcon_presence_response_cleanup(void);
+extern void utc_iotcon_encap_startup(void);
+extern void utc_iotcon_encap_cleanup(void);
+extern void utc_iotcon_service_startup(void);
+extern void utc_iotcon_service_cleanup(void);
+extern void utc_iotcon_remote_resource_startup(void);
+extern void utc_iotcon_remote_resource_cleanup(void);
+extern void utc_iotcon_resource_startup(void);
+extern void utc_iotcon_resource_cleanup(void);
+
+extern int utc_iotcon_set_timeout_n(void);
+extern int utc_iotcon_set_timeout_p(void);
+extern int utc_iotcon_get_timeout_n(void);
+extern int utc_iotcon_get_timeout_p(void);
+extern int utc_iotcon_add_generated_pin_cb_n(void);
+extern int utc_iotcon_add_generated_pin_cb_p(void);
+extern int utc_iotcon_remove_generated_pin_cb_n(void);
+extern int utc_iotcon_remove_generated_pin_cb_p(void);
+extern int utc_iotcon_find_resource_n(void);
+extern int utc_iotcon_find_resource_p(void);
+extern int utc_iotcon_polling_get_interval_p(void);
+extern int utc_iotcon_polling_get_interval_n(void);
+extern int utc_iotcon_polling_set_interval_p(void);
+extern int utc_iotcon_polling_set_interval_n(void);
+extern int utc_iotcon_polling_invoke_p(void);
+extern int utc_iotcon_polling_invoke_n(void);
+extern int utc_iotcon_set_device_name_n(void);
+extern int utc_iotcon_set_device_name_p(void);
+extern int utc_iotcon_options_create_n(void);
+extern int utc_iotcon_options_create_p(void);
+extern int utc_iotcon_options_destroy_n(void);
+extern int utc_iotcon_options_destroy_p(void);
+extern int utc_iotcon_options_add_n(void);
+extern int utc_iotcon_options_add_p(void);
+extern int utc_iotcon_options_remove_n(void);
+extern int utc_iotcon_options_remove_p(void);
+extern int utc_iotcon_options_lookup_n(void);
+extern int utc_iotcon_options_lookup_p(void);
+extern int utc_iotcon_options_foreach_n(void);
+extern int utc_iotcon_options_foreach_p(void);
+extern int utc_iotcon_query_create_n(void);
+extern int utc_iotcon_query_create_p(void);
+extern int utc_iotcon_query_destroy_n(void);
+extern int utc_iotcon_query_destroy_p(void);
+extern int utc_iotcon_query_set_resource_type_n(void);
+extern int utc_iotcon_query_set_resource_type_p(void);
+extern int utc_iotcon_query_get_resource_type_n(void);
+extern int utc_iotcon_query_get_resource_type_p(void);
+extern int utc_iotcon_query_set_interface_n(void);
+extern int utc_iotcon_query_set_interface_p(void);
+extern int utc_iotcon_query_get_interface_n(void);
+extern int utc_iotcon_query_get_interface_p(void);
+extern int utc_iotcon_query_add_n(void);
+extern int utc_iotcon_query_add_p(void);
+extern int utc_iotcon_query_remove_n(void);
+extern int utc_iotcon_query_remove_p(void);
+extern int utc_iotcon_query_lookup_n(void);
+extern int utc_iotcon_query_lookup_p(void);
+extern int utc_iotcon_query_foreach_n(void);
+extern int utc_iotcon_query_foreach_p(void);
+extern int utc_iotcon_resource_types_create_n(void);
+extern int utc_iotcon_resource_types_create_p(void);
+extern int utc_iotcon_resource_types_destroy_n(void);
+extern int utc_iotcon_resource_types_destroy_p(void);
+extern int utc_iotcon_resource_types_add_n(void);
+extern int utc_iotcon_resource_types_add_p(void);
+extern int utc_iotcon_resource_types_remove_n(void);
+extern int utc_iotcon_resource_types_remove_p(void);
+extern int utc_iotcon_resource_types_foreach_n(void);
+extern int utc_iotcon_resource_types_foreach_p(void);
+extern int utc_iotcon_resource_types_clone_n(void);
+extern int utc_iotcon_resource_types_clone_p(void);
+extern int utc_iotcon_resource_interfaces_create_n(void);
+extern int utc_iotcon_resource_interfaces_create_p(void);
+extern int utc_iotcon_resource_interfaces_destroy_n(void);
+extern int utc_iotcon_resource_interfaces_destroy_p(void);
+extern int utc_iotcon_resource_interfaces_add_n(void);
+extern int utc_iotcon_resource_interfaces_add_p(void);
+extern int utc_iotcon_resource_interfaces_remove_n(void);
+extern int utc_iotcon_resource_interfaces_remove_p(void);
+extern int utc_iotcon_resource_interfaces_foreach_n(void);
+extern int utc_iotcon_resource_interfaces_foreach_p(void);
+extern int utc_iotcon_resource_interfaces_clone_n(void);
+extern int utc_iotcon_resource_interfaces_clone_p(void);
+extern int utc_iotcon_observers_create_n(void);
+extern int utc_iotcon_observer_create_p(void);
+extern int utc_iotcon_observers_destroy_n(void);
+extern int utc_iotcon_observers_destroy_p(void);
+extern int utc_iotcon_observers_add_n(void);
+extern int utc_iotcon_observers_add_p(void);
+extern int utc_iotcon_observers_remove_n(void);
+extern int utc_iotcon_observers_remove_p(void);
+extern int utc_iotcon_request_get_representation_n(void);
+extern int utc_iotcon_request_get_representation_p(void);
+extern int utc_iotcon_request_get_request_type_n(void);
+extern int utc_iotcon_request_get_request_type_p(void);
+extern int utc_iotcon_request_get_connectivity_type_n(void);
+extern int utc_iotcon_request_get_connectivity_type_p(void);
+extern int utc_iotcon_request_get_options_n(void);
+extern int utc_iotcon_request_get_options_p(void);
+extern int utc_iotcon_request_get_host_address_n(void);
+extern int utc_iotcon_request_get_host_address_p(void);
+extern int utc_iotcon_request_get_query_n(void);
+extern int utc_iotcon_request_get_query_p(void);
+extern int utc_iotcon_request_get_observe_id_n(void);
+extern int utc_iotcon_request_get_observe_id_p(void);
+extern int utc_iotcon_request_get_observe_type_n(void);
+extern int utc_iotcon_request_get_observe_type_p(void);
+extern int utc_iotcon_response_create_n(void);
+extern int utc_iotcon_response_create_p(void);
+extern int utc_iotcon_response_destroy_n(void);
+extern int utc_iotcon_response_destroy_p(void);
+extern int utc_iotcon_response_get_options_n(void);
+extern int utc_iotcon_response_get_options_p(void);
+extern int utc_iotcon_response_get_representation_n(void);
+extern int utc_iotcon_response_get_representation_p(void);
+extern int utc_iotcon_response_get_result_n(void);
+extern int utc_iotcon_response_get_result_p(void);
+extern int utc_iotcon_response_set_result_n(void);
+extern int utc_iotcon_response_set_result_p(void);
+extern int utc_iotcon_response_set_representation_n(void);
+extern int utc_iotcon_response_set_representation_p(void);
+extern int utc_iotcon_response_set_options_n(void);
+extern int utc_iotcon_response_set_options_p(void);
+extern int utc_iotcon_response_send_n(void);
+extern int utc_iotcon_response_send_p(void);
+extern int utc_iotcon_representation_create_n(void);
+extern int utc_iotcon_representation_create_p(void);
+extern int utc_iotcon_representation_destroy_n(void);
+extern int utc_iotcon_representation_destroy_p(void);
+extern int utc_iotcon_representation_clone_n(void);
+extern int utc_iotcon_representation_clone_p(void);
+extern int utc_iotcon_representation_set_uri_path_n(void);
+extern int utc_iotcon_representation_set_uri_path_p(void);
+extern int utc_iotcon_representation_get_uri_path_n(void);
+extern int utc_iotcon_representation_get_uri_path_p(void);
+extern int utc_iotcon_representation_set_resource_types_n(void);
+extern int utc_iotcon_representation_set_resource_types_p(void);
+extern int utc_iotcon_representation_get_resource_types_n(void);
+extern int utc_iotcon_representation_get_resource_types_p(void);
+extern int utc_iotcon_representation_set_resource_interfaces_n(void);
+extern int utc_iotcon_representation_set_resource_interfaces_p(void);
+extern int utc_iotcon_representation_get_resource_interfaces_n(void);
+extern int utc_iotcon_representation_get_resource_interfaces_p(void);
+extern int utc_iotcon_representation_set_attributes_n(void);
+extern int utc_iotcon_representation_set_attributes_p(void);
+extern int utc_iotcon_representation_get_attributes_n(void);
+extern int utc_iotcon_representation_get_attributes_p(void);
+extern int utc_iotcon_attributes_create_n(void);
+extern int utc_iotcon_attributes_create_p(void);
+extern int utc_iotcon_attributes_destroy_n(void);
+extern int utc_iotcon_attributes_destroy_p(void);
+extern int utc_iotcon_attributes_clone_n(void);
+extern int utc_iotcon_attributes_clone_p(void);
+extern int utc_iotcon_attributes_add_int_n(void);
+extern int utc_iotcon_attributes_add_int_p(void);
+extern int utc_iotcon_attributes_add_bool_n(void);
+extern int utc_iotcon_attributes_add_bool_p(void);
+extern int utc_iotcon_attributes_add_double_n(void);
+extern int utc_iotcon_attributes_add_double_p(void);
+extern int utc_iotcon_attributes_add_str_n(void);
+extern int utc_iotcon_attributes_add_str_p(void);
+extern int utc_iotcon_attributes_add_byte_str_n(void);
+extern int utc_iotcon_attributes_add_byte_str_p(void);
+extern int utc_iotcon_attributes_add_list_n(void);
+extern int utc_iotcon_attributes_add_list_p(void);
+extern int utc_iotcon_attributes_add_attributes_n(void);
+extern int utc_iotcon_attributes_add_attributes_p(void);
+extern int utc_iotcon_attributes_add_null_n(void);
+extern int utc_iotcon_attributes_add_null_p(void);
+extern int utc_iotcon_attributes_get_int_n(void);
+extern int utc_iotcon_attributes_get_int_p(void);
+extern int utc_iotcon_attributes_get_bool_n(void);
+extern int utc_iotcon_attributes_get_bool_p(void);
+extern int utc_iotcon_attributes_get_double_n(void);
+extern int utc_iotcon_attributes_get_double_p(void);
+extern int utc_iotcon_attributes_get_str_n(void);
+extern int utc_iotcon_attributes_get_str_p(void);
+extern int utc_iotcon_attributes_get_byte_str_n(void);
+extern int utc_iotcon_attributes_get_byte_str_p(void);
+extern int utc_iotcon_attributes_get_list_n(void);
+extern int utc_iotcon_attributes_get_list_p(void);
+extern int utc_iotcon_attributes_get_attributes_n(void);
+extern int utc_iotcon_attributes_get_attributes_p(void);
+extern int utc_iotcon_attributes_is_null_n(void);
+extern int utc_iotcon_attributes_is_null_p(void);
+extern int utc_iotcon_attributes_remove_n(void);
+extern int utc_iotcon_attributes_remove_p(void);
+extern int utc_iotcon_attributes_get_type_n(void);
+extern int utc_iotcon_attributes_get_type_p(void);
+extern int utc_iotcon_representation_add_child_n(void);
+extern int utc_iotcon_representation_add_child_p(void);
+extern int utc_iotcon_representation_remove_child_n(void);
+extern int utc_iotcon_representation_remove_child_p(void);
+extern int utc_iotcon_representation_foreach_children_n(void);
+extern int utc_iotcon_representation_foreach_children_p(void);
+extern int utc_iotcon_representation_get_child_count_n(void);
+extern int utc_iotcon_representation_get_child_count_p(void);
+extern int utc_iotcon_representation_get_nth_child_n(void);
+extern int utc_iotcon_representation_get_nth_child_p(void);
+extern int utc_iotcon_attributes_foreach_n(void);
+extern int utc_iotcon_attributes_foreach_p(void);
+extern int utc_iotcon_attributes_get_keys_count_n(void);
+extern int utc_iotcon_attributes_get_keys_count_p(void);
+extern int utc_iotcon_list_create_n(void);
+extern int utc_iotcon_list_create_p(void);
+extern int utc_iotcon_list_destroy_n(void);
+extern int utc_iotcon_list_destroy_p(void);
+extern int utc_iotcon_list_add_int_n(void);
+extern int utc_iotcon_list_add_int_p(void);
+extern int utc_iotcon_list_add_bool_n(void);
+extern int utc_iotcon_list_add_bool_p(void);
+extern int utc_iotcon_list_add_double_n(void);
+extern int utc_iotcon_list_add_double_p(void);
+extern int utc_iotcon_list_add_str_n(void);
+extern int utc_iotcon_list_add_str_p(void);
+extern int utc_iotcon_list_add_byte_str_n(void);
+extern int utc_iotcon_list_add_byte_str_p(void);
+extern int utc_iotcon_list_add_list_n(void);
+extern int utc_iotcon_list_add_list_p(void);
+extern int utc_iotcon_list_add_attributes_n(void);
+extern int utc_iotcon_list_add_attributes_p(void);
+extern int utc_iotcon_list_get_nth_int_n(void);
+extern int utc_iotcon_list_get_nth_int_p(void);
+extern int utc_iotcon_list_get_nth_bool_n(void);
+extern int utc_iotcon_list_get_nth_bool_p(void);
+extern int utc_iotcon_list_get_nth_double_n(void);
+extern int utc_iotcon_list_get_nth_double_p(void);
+extern int utc_iotcon_list_get_nth_str_n(void);
+extern int utc_iotcon_list_get_nth_str_p(void);
+extern int utc_iotcon_list_get_nth_byte_str_n(void);
+extern int utc_iotcon_list_get_nth_byte_str_p(void);
+extern int utc_iotcon_list_get_nth_list_n(void);
+extern int utc_iotcon_list_get_nth_list_p(void);
+extern int utc_iotcon_list_get_nth_attributes_n(void);
+extern int utc_iotcon_list_get_nth_attributes_p(void);
+extern int utc_iotcon_list_remove_nth_n(void);
+extern int utc_iotcon_list_remove_nth_p(void);
+extern int utc_iotcon_list_get_type_n(void);
+extern int utc_iotcon_list_get_type_p(void);
+extern int utc_iotcon_list_get_length_n(void);
+extern int utc_iotcon_list_get_length_p(void);
+extern int utc_iotcon_list_foreach_int_n(void);
+extern int utc_iotcon_list_foreach_int_p(void);
+extern int utc_iotcon_list_foreach_bool_n(void);
+extern int utc_iotcon_list_foreach_bool_p(void);
+extern int utc_iotcon_list_foreach_double_n(void);
+extern int utc_iotcon_list_foreach_double_p(void);
+extern int utc_iotcon_list_foreach_str_n(void);
+extern int utc_iotcon_list_foreach_str_p(void);
+extern int utc_iotcon_list_foreach_byte_str_n(void);
+extern int utc_iotcon_list_foreach_byte_str_p(void);
+extern int utc_iotcon_list_foreach_list_n(void);
+extern int utc_iotcon_list_foreach_list_p(void);
+extern int utc_iotcon_list_foreach_attributes_n(void);
+extern int utc_iotcon_list_foreach_attributes_p(void);
+extern int utc_iotcon_find_device_info_n(void);
+extern int utc_iotcon_find_device_info_p(void);
+extern int utc_iotcon_device_info_get_property_n(void);
+extern int utc_iotcon_device_info_get_property_p(void);
+extern int utc_iotcon_find_platform_info_n(void);
+extern int utc_iotcon_find_platform_info_p(void);
+extern int utc_iotcon_platform_info_get_property_n(void);
+extern int utc_iotcon_platform_info_get_property_p(void);
+extern int utc_iotcon_add_presence_cb_n(void);
+extern int utc_iotcon_add_presence_cb_p(void);
+extern int utc_iotcon_remove_presence_cb_n(void);
+extern int utc_iotcon_remove_presence_cb_p(void);
+extern int utc_iotcon_presence_get_host_address_n(void);
+extern int utc_iotcon_presence_get_host_address_p(void);
+extern int utc_iotcon_presence_get_connectivity_type_n(void);
+extern int utc_iotcon_presence_get_connectivity_type_p(void);
+extern int utc_iotcon_presence_get_resource_type_n(void);
+extern int utc_iotcon_presence_get_resource_type_p(void);
+extern int utc_iotcon_presence_response_get_result_n(void);
+extern int utc_iotcon_presence_response_get_trigger_n(void);
+extern int utc_iotcon_presence_response_get_host_address_n(void);
+extern int utc_iotcon_presence_response_get_connectivity_type_n(void);
+extern int utc_iotcon_presence_response_get_resource_type_n(void);
+extern int utc_iotcon_presence_start_presence_p(void);
+extern int utc_iotcon_presence_stop_presence_p(void);
+extern int utc_iotcon_presence_response_get_result_p(void);
+extern int utc_iotcon_presence_response_get_trigger_p(void);
+extern int utc_iotcon_presence_response_get_connectivity_type_p(void);
+extern int utc_iotcon_presence_response_get_resource_type_p(void);
+extern int utc_iotcon_presence_response_get_host_address_p(void);
+extern int utc_iotcon_lite_resource_create_n(void);
+extern int utc_iotcon_lite_resource_create_p(void);
+extern int utc_iotcon_lite_resource_destroy_n(void);
+extern int utc_iotcon_lite_resource_destroy_p(void);
+extern int utc_iotcon_lite_resource_update_attributes_n(void);
+extern int utc_iotcon_lite_resource_update_attributes_p(void);
+extern int utc_iotcon_lite_resource_get_attributes_n(void);
+extern int utc_iotcon_lite_resource_get_attributes_p(void);
+extern int utc_iotcon_remote_resource_start_caching_n(void);
+extern int utc_iotcon_remote_resource_start_caching_p(void);
+extern int utc_iotcon_remote_resource_stop_caching_n(void);
+extern int utc_iotcon_remote_resource_stop_caching_p(void);
+extern int utc_iotcon_remote_resource_start_monitoring_n(void);
+extern int utc_iotcon_remote_resource_start_monitoring_p(void);
+extern int utc_iotcon_remote_resource_stop_monitoring_n(void);
+extern int utc_iotcon_remote_resource_stop_monitoring_p(void);
+extern int utc_iotcon_remote_resource_get_cached_representation_n(void);
+extern int utc_iotcon_remote_resource_get_cached_representation_p(void);
+extern int utc_iotcon_initialize_p(void);
+extern int utc_iotcon_deinitialize_p(void);
+extern int utc_iotcon_remote_resource_create_n(void);
+extern int utc_iotcon_remote_resource_create_p(void);
+extern int utc_iotcon_remote_resource_destroy_n(void);
+extern int utc_iotcon_remote_resource_destroy_p(void);
+extern int utc_iotcon_remote_resource_clone_n(void);
+extern int utc_iotcon_remote_resource_clone_p(void);
+extern int utc_iotcon_remote_resource_get_n(void);
+extern int utc_iotcon_remote_resource_get_p(void);
+extern int utc_iotcon_remote_resource_put_n(void);
+extern int utc_iotcon_remote_resource_put_p(void);
+extern int utc_iotcon_remote_resource_post_n(void);
+extern int utc_iotcon_remote_resource_post_p(void);
+extern int utc_iotcon_remote_resource_post_p2(void);
+extern int utc_iotcon_remote_resource_delete_n(void);
+extern int utc_iotcon_remote_resource_delete_p(void);
+extern int utc_iotcon_remote_resource_observe_register_n(void);
+extern int utc_iotcon_remote_resource_observe_register_p(void);
+extern int utc_iotcon_remote_resource_observe_deregister_n(void);
+extern int utc_iotcon_remote_resource_observe_deregister_p(void);
+extern int utc_iotcon_remote_resource_get_uri_path_n(void);
+extern int utc_iotcon_remote_resource_get_uri_path_p(void);
+extern int utc_iotcon_remote_resource_get_host_address_n(void);
+extern int utc_iotcon_remote_resource_get_host_address_p(void);
+extern int utc_iotcon_remote_resource_get_connectivity_type_n(void);
+extern int utc_iotcon_remote_resource_get_connectivity_type_p(void);
+extern int utc_iotcon_remote_resource_get_device_id_n(void);
+extern int utc_iotcon_remote_resource_get_device_id_p(void);
+extern int utc_iotcon_remote_resource_get_device_name_n(void);
+extern int utc_iotcon_remote_resource_get_device_name_p(void);
+extern int utc_iotcon_remote_resource_get_types_n(void);
+extern int utc_iotcon_remote_resource_get_types_p(void);
+extern int utc_iotcon_remote_resource_get_interfaces_n(void);
+extern int utc_iotcon_remote_resource_get_interfaces_p(void);
+extern int utc_iotcon_remote_resource_get_options_n(void);
+extern int utc_iotcon_remote_resource_get_options_p(void);
+extern int utc_iotcon_remote_resource_get_policies_n(void);
+extern int utc_iotcon_remote_resource_get_policies_p(void);
+extern int utc_iotcon_remote_resource_set_options_n(void);
+extern int utc_iotcon_remote_resource_set_options_p(void);
+extern int utc_iotcon_remote_resource_get_checking_interval_p(void);
+extern int utc_iotcon_remote_resource_get_checking_interval_n(void);
+extern int utc_iotcon_remote_resource_set_checking_interval_p(void);
+extern int utc_iotcon_remote_resource_set_checking_interval_n(void);
+extern int utc_iotcon_resource_create_n(void);
+extern int utc_iotcon_resource_create_p(void);
+extern int utc_iotcon_resource_destroy_n(void);
+extern int utc_iotcon_resource_destroy_p(void);
+extern int utc_iotcon_resource_bind_child_resource_n(void);
+extern int utc_iotcon_resource_bind_child_resource_p(void);
+extern int utc_iotcon_resource_bind_interface_n(void);
+extern int utc_iotcon_resource_bind_interface_p(void);
+extern int utc_iotcon_resource_bind_type_n(void);
+extern int utc_iotcon_resource_bind_type_p(void);
+extern int utc_iotcon_resource_unbind_child_resource_n(void);
+extern int utc_iotcon_resource_unbind_child_resource_p(void);
+extern int utc_iotcon_resource_notify_n(void);
+extern int utc_iotcon_resource_notify_p(void);
+extern int utc_iotcon_resource_set_request_handler_n(void);
+extern int utc_iotcon_resource_set_request_handler_p(void);
+extern int utc_iotcon_resource_get_child_count_n(void);
+extern int utc_iotcon_resource_get_child_count_p(void);
+extern int utc_iotcon_resource_get_nth_child_n(void);
+extern int utc_iotcon_resource_get_nth_child_p(void);
+extern int utc_iotcon_resource_get_uri_path_n(void);
+extern int utc_iotcon_resource_get_uri_path_p(void);
+extern int utc_iotcon_resource_get_types_n(void);
+extern int utc_iotcon_resource_get_types_p(void);
+extern int utc_iotcon_resource_get_interfaces_n(void);
+extern int utc_iotcon_resource_get_interfaces_p(void);
+extern int utc_iotcon_resource_get_policies_n(void);
+extern int utc_iotcon_resource_get_policies_p(void);
+
+testcase tc_array[] = {
+	{"utc_iotcon_set_timeout_n",utc_iotcon_set_timeout_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_set_timeout_p",utc_iotcon_set_timeout_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_get_timeout_n",utc_iotcon_get_timeout_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_get_timeout_p",utc_iotcon_get_timeout_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_add_generated_pin_cb_n",utc_iotcon_add_generated_pin_cb_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_add_generated_pin_cb_p",utc_iotcon_add_generated_pin_cb_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_remove_generated_pin_cb_n",utc_iotcon_remove_generated_pin_cb_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_remove_generated_pin_cb_p",utc_iotcon_remove_generated_pin_cb_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_find_resource_n",utc_iotcon_find_resource_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_find_resource_p",utc_iotcon_find_resource_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_get_interval_p",utc_iotcon_polling_get_interval_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_get_interval_n",utc_iotcon_polling_get_interval_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_set_interval_p",utc_iotcon_polling_set_interval_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_set_interval_n",utc_iotcon_polling_set_interval_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_invoke_p",utc_iotcon_polling_invoke_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_polling_invoke_n",utc_iotcon_polling_invoke_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_set_device_name_n",utc_iotcon_set_device_name_n,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_set_device_name_p",utc_iotcon_set_device_name_p,utc_iotcon_startup,utc_iotcon_cleanup},
+	{"utc_iotcon_options_create_n",utc_iotcon_options_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_create_p",utc_iotcon_options_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_destroy_n",utc_iotcon_options_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_destroy_p",utc_iotcon_options_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_add_n",utc_iotcon_options_add_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_add_p",utc_iotcon_options_add_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_remove_n",utc_iotcon_options_remove_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_remove_p",utc_iotcon_options_remove_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_lookup_n",utc_iotcon_options_lookup_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_lookup_p",utc_iotcon_options_lookup_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_foreach_n",utc_iotcon_options_foreach_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_options_foreach_p",utc_iotcon_options_foreach_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_create_n",utc_iotcon_query_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_create_p",utc_iotcon_query_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_destroy_n",utc_iotcon_query_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_destroy_p",utc_iotcon_query_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_set_resource_type_n",utc_iotcon_query_set_resource_type_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_set_resource_type_p",utc_iotcon_query_set_resource_type_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_get_resource_type_n",utc_iotcon_query_get_resource_type_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_get_resource_type_p",utc_iotcon_query_get_resource_type_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_set_interface_n",utc_iotcon_query_set_interface_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_set_interface_p",utc_iotcon_query_set_interface_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_get_interface_n",utc_iotcon_query_get_interface_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_get_interface_p",utc_iotcon_query_get_interface_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_add_n",utc_iotcon_query_add_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_add_p",utc_iotcon_query_add_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_remove_n",utc_iotcon_query_remove_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_remove_p",utc_iotcon_query_remove_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_lookup_n",utc_iotcon_query_lookup_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_lookup_p",utc_iotcon_query_lookup_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_foreach_n",utc_iotcon_query_foreach_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_query_foreach_p",utc_iotcon_query_foreach_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_create_n",utc_iotcon_resource_types_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_create_p",utc_iotcon_resource_types_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_destroy_n",utc_iotcon_resource_types_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_destroy_p",utc_iotcon_resource_types_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_add_n",utc_iotcon_resource_types_add_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_add_p",utc_iotcon_resource_types_add_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_remove_n",utc_iotcon_resource_types_remove_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_remove_p",utc_iotcon_resource_types_remove_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_foreach_n",utc_iotcon_resource_types_foreach_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_foreach_p",utc_iotcon_resource_types_foreach_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_clone_n",utc_iotcon_resource_types_clone_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_types_clone_p",utc_iotcon_resource_types_clone_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_create_n",utc_iotcon_resource_interfaces_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_create_p",utc_iotcon_resource_interfaces_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_destroy_n",utc_iotcon_resource_interfaces_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_destroy_p",utc_iotcon_resource_interfaces_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_add_n",utc_iotcon_resource_interfaces_add_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_add_p",utc_iotcon_resource_interfaces_add_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_remove_n",utc_iotcon_resource_interfaces_remove_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_remove_p",utc_iotcon_resource_interfaces_remove_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_foreach_n",utc_iotcon_resource_interfaces_foreach_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_foreach_p",utc_iotcon_resource_interfaces_foreach_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_clone_n",utc_iotcon_resource_interfaces_clone_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_resource_interfaces_clone_p",utc_iotcon_resource_interfaces_clone_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_create_n",utc_iotcon_observers_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observer_create_p",utc_iotcon_observer_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_destroy_n",utc_iotcon_observers_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_destroy_p",utc_iotcon_observers_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_add_n",utc_iotcon_observers_add_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_add_p",utc_iotcon_observers_add_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_remove_n",utc_iotcon_observers_remove_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_observers_remove_p",utc_iotcon_observers_remove_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_representation_n",utc_iotcon_request_get_representation_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_representation_p",utc_iotcon_request_get_representation_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_request_type_n",utc_iotcon_request_get_request_type_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_request_type_p",utc_iotcon_request_get_request_type_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_connectivity_type_n",utc_iotcon_request_get_connectivity_type_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_connectivity_type_p",utc_iotcon_request_get_connectivity_type_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_options_n",utc_iotcon_request_get_options_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_options_p",utc_iotcon_request_get_options_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_host_address_n",utc_iotcon_request_get_host_address_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_host_address_p",utc_iotcon_request_get_host_address_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_query_n",utc_iotcon_request_get_query_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_query_p",utc_iotcon_request_get_query_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_observe_id_n",utc_iotcon_request_get_observe_id_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_observe_id_p",utc_iotcon_request_get_observe_id_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_observe_type_n",utc_iotcon_request_get_observe_type_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_request_get_observe_type_p",utc_iotcon_request_get_observe_type_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_create_n",utc_iotcon_response_create_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_create_p",utc_iotcon_response_create_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_destroy_n",utc_iotcon_response_destroy_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_destroy_p",utc_iotcon_response_destroy_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_options_n",utc_iotcon_response_get_options_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_options_p",utc_iotcon_response_get_options_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_representation_n",utc_iotcon_response_get_representation_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_representation_p",utc_iotcon_response_get_representation_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_result_n",utc_iotcon_response_get_result_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_get_result_p",utc_iotcon_response_get_result_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_result_n",utc_iotcon_response_set_result_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_result_p",utc_iotcon_response_set_result_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_representation_n",utc_iotcon_response_set_representation_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_representation_p",utc_iotcon_response_set_representation_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_options_n",utc_iotcon_response_set_options_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_set_options_p",utc_iotcon_response_set_options_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_send_n",utc_iotcon_response_send_n,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_response_send_p",utc_iotcon_response_send_p,utc_iotcon_struct_startup,utc_iotcon_struct_cleanup},
+	{"utc_iotcon_representation_create_n",utc_iotcon_representation_create_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_create_p",utc_iotcon_representation_create_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_destroy_n",utc_iotcon_representation_destroy_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_destroy_p",utc_iotcon_representation_destroy_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_clone_n",utc_iotcon_representation_clone_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_clone_p",utc_iotcon_representation_clone_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_uri_path_n",utc_iotcon_representation_set_uri_path_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_uri_path_p",utc_iotcon_representation_set_uri_path_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_uri_path_n",utc_iotcon_representation_get_uri_path_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_uri_path_p",utc_iotcon_representation_get_uri_path_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_resource_types_n",utc_iotcon_representation_set_resource_types_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_resource_types_p",utc_iotcon_representation_set_resource_types_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_resource_types_n",utc_iotcon_representation_get_resource_types_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_resource_types_p",utc_iotcon_representation_get_resource_types_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_resource_interfaces_n",utc_iotcon_representation_set_resource_interfaces_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_resource_interfaces_p",utc_iotcon_representation_set_resource_interfaces_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_resource_interfaces_n",utc_iotcon_representation_get_resource_interfaces_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_resource_interfaces_p",utc_iotcon_representation_get_resource_interfaces_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_attributes_n",utc_iotcon_representation_set_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_set_attributes_p",utc_iotcon_representation_set_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_attributes_n",utc_iotcon_representation_get_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_attributes_p",utc_iotcon_representation_get_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_create_n",utc_iotcon_attributes_create_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_create_p",utc_iotcon_attributes_create_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_destroy_n",utc_iotcon_attributes_destroy_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_destroy_p",utc_iotcon_attributes_destroy_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_clone_n",utc_iotcon_attributes_clone_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_clone_p",utc_iotcon_attributes_clone_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_int_n",utc_iotcon_attributes_add_int_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_int_p",utc_iotcon_attributes_add_int_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_bool_n",utc_iotcon_attributes_add_bool_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_bool_p",utc_iotcon_attributes_add_bool_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_double_n",utc_iotcon_attributes_add_double_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_double_p",utc_iotcon_attributes_add_double_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_str_n",utc_iotcon_attributes_add_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_str_p",utc_iotcon_attributes_add_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_byte_str_n",utc_iotcon_attributes_add_byte_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_byte_str_p",utc_iotcon_attributes_add_byte_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_list_n",utc_iotcon_attributes_add_list_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_list_p",utc_iotcon_attributes_add_list_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_attributes_n",utc_iotcon_attributes_add_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_attributes_p",utc_iotcon_attributes_add_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_null_n",utc_iotcon_attributes_add_null_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_add_null_p",utc_iotcon_attributes_add_null_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_int_n",utc_iotcon_attributes_get_int_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_int_p",utc_iotcon_attributes_get_int_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_bool_n",utc_iotcon_attributes_get_bool_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_bool_p",utc_iotcon_attributes_get_bool_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_double_n",utc_iotcon_attributes_get_double_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_double_p",utc_iotcon_attributes_get_double_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_str_n",utc_iotcon_attributes_get_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_str_p",utc_iotcon_attributes_get_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_byte_str_n",utc_iotcon_attributes_get_byte_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_byte_str_p",utc_iotcon_attributes_get_byte_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_list_n",utc_iotcon_attributes_get_list_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_list_p",utc_iotcon_attributes_get_list_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_attributes_n",utc_iotcon_attributes_get_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_attributes_p",utc_iotcon_attributes_get_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_is_null_n",utc_iotcon_attributes_is_null_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_is_null_p",utc_iotcon_attributes_is_null_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_remove_n",utc_iotcon_attributes_remove_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_remove_p",utc_iotcon_attributes_remove_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_type_n",utc_iotcon_attributes_get_type_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_type_p",utc_iotcon_attributes_get_type_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_add_child_n",utc_iotcon_representation_add_child_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_add_child_p",utc_iotcon_representation_add_child_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_remove_child_n",utc_iotcon_representation_remove_child_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_remove_child_p",utc_iotcon_representation_remove_child_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_foreach_children_n",utc_iotcon_representation_foreach_children_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_foreach_children_p",utc_iotcon_representation_foreach_children_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_child_count_n",utc_iotcon_representation_get_child_count_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_child_count_p",utc_iotcon_representation_get_child_count_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_nth_child_n",utc_iotcon_representation_get_nth_child_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_representation_get_nth_child_p",utc_iotcon_representation_get_nth_child_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_foreach_n",utc_iotcon_attributes_foreach_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_foreach_p",utc_iotcon_attributes_foreach_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_keys_count_n",utc_iotcon_attributes_get_keys_count_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_attributes_get_keys_count_p",utc_iotcon_attributes_get_keys_count_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_create_n",utc_iotcon_list_create_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_create_p",utc_iotcon_list_create_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_destroy_n",utc_iotcon_list_destroy_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_destroy_p",utc_iotcon_list_destroy_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_int_n",utc_iotcon_list_add_int_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_int_p",utc_iotcon_list_add_int_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_bool_n",utc_iotcon_list_add_bool_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_bool_p",utc_iotcon_list_add_bool_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_double_n",utc_iotcon_list_add_double_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_double_p",utc_iotcon_list_add_double_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_str_n",utc_iotcon_list_add_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_str_p",utc_iotcon_list_add_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_byte_str_n",utc_iotcon_list_add_byte_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_byte_str_p",utc_iotcon_list_add_byte_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_list_n",utc_iotcon_list_add_list_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_list_p",utc_iotcon_list_add_list_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_attributes_n",utc_iotcon_list_add_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_add_attributes_p",utc_iotcon_list_add_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_int_n",utc_iotcon_list_get_nth_int_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_int_p",utc_iotcon_list_get_nth_int_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_bool_n",utc_iotcon_list_get_nth_bool_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_bool_p",utc_iotcon_list_get_nth_bool_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_double_n",utc_iotcon_list_get_nth_double_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_double_p",utc_iotcon_list_get_nth_double_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_str_n",utc_iotcon_list_get_nth_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_str_p",utc_iotcon_list_get_nth_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_byte_str_n",utc_iotcon_list_get_nth_byte_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_byte_str_p",utc_iotcon_list_get_nth_byte_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_list_n",utc_iotcon_list_get_nth_list_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_list_p",utc_iotcon_list_get_nth_list_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_attributes_n",utc_iotcon_list_get_nth_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_nth_attributes_p",utc_iotcon_list_get_nth_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_remove_nth_n",utc_iotcon_list_remove_nth_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_remove_nth_p",utc_iotcon_list_remove_nth_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_type_n",utc_iotcon_list_get_type_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_type_p",utc_iotcon_list_get_type_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_length_n",utc_iotcon_list_get_length_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_get_length_p",utc_iotcon_list_get_length_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_int_n",utc_iotcon_list_foreach_int_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_int_p",utc_iotcon_list_foreach_int_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_bool_n",utc_iotcon_list_foreach_bool_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_bool_p",utc_iotcon_list_foreach_bool_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_double_n",utc_iotcon_list_foreach_double_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_double_p",utc_iotcon_list_foreach_double_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_str_n",utc_iotcon_list_foreach_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_str_p",utc_iotcon_list_foreach_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_byte_str_n",utc_iotcon_list_foreach_byte_str_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_byte_str_p",utc_iotcon_list_foreach_byte_str_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_list_n",utc_iotcon_list_foreach_list_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_list_p",utc_iotcon_list_foreach_list_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_attributes_n",utc_iotcon_list_foreach_attributes_n,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_list_foreach_attributes_p",utc_iotcon_list_foreach_attributes_p,utc_iotcon_representation_startup,utc_iotcon_representation_cleanup},
+	{"utc_iotcon_find_device_info_n",utc_iotcon_find_device_info_n,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_find_device_info_p",utc_iotcon_find_device_info_p,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_device_info_get_property_n",utc_iotcon_device_info_get_property_n,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_device_info_get_property_p",utc_iotcon_device_info_get_property_p,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_find_platform_info_n",utc_iotcon_find_platform_info_n,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_find_platform_info_p",utc_iotcon_find_platform_info_p,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_platform_info_get_property_n",utc_iotcon_platform_info_get_property_n,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_platform_info_get_property_p",utc_iotcon_platform_info_get_property_p,utc_iotcon_device_startup,utc_iotcon_device_cleanup},
+	{"utc_iotcon_add_presence_cb_n",utc_iotcon_add_presence_cb_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_add_presence_cb_p",utc_iotcon_add_presence_cb_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_remove_presence_cb_n",utc_iotcon_remove_presence_cb_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_remove_presence_cb_p",utc_iotcon_remove_presence_cb_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_host_address_n",utc_iotcon_presence_get_host_address_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_host_address_p",utc_iotcon_presence_get_host_address_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_connectivity_type_n",utc_iotcon_presence_get_connectivity_type_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_connectivity_type_p",utc_iotcon_presence_get_connectivity_type_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_resource_type_n",utc_iotcon_presence_get_resource_type_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_get_resource_type_p",utc_iotcon_presence_get_resource_type_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_result_n",utc_iotcon_presence_response_get_result_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_trigger_n",utc_iotcon_presence_response_get_trigger_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_host_address_n",utc_iotcon_presence_response_get_host_address_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_connectivity_type_n",utc_iotcon_presence_response_get_connectivity_type_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_resource_type_n",utc_iotcon_presence_response_get_resource_type_n,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_start_presence_p",utc_iotcon_presence_start_presence_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_stop_presence_p",utc_iotcon_presence_stop_presence_p,utc_iotcon_presence_startup,utc_iotcon_presence_cleanup},
+	{"utc_iotcon_presence_response_get_result_p",utc_iotcon_presence_response_get_result_p,utc_iotcon_presence_response_startup,utc_iotcon_presence_response_cleanup},
+	{"utc_iotcon_presence_response_get_trigger_p",utc_iotcon_presence_response_get_trigger_p,utc_iotcon_presence_response_startup,utc_iotcon_presence_response_cleanup},
+	{"utc_iotcon_presence_response_get_connectivity_type_p",utc_iotcon_presence_response_get_connectivity_type_p,utc_iotcon_presence_response_startup,utc_iotcon_presence_response_cleanup},
+	{"utc_iotcon_presence_response_get_resource_type_p",utc_iotcon_presence_response_get_resource_type_p,utc_iotcon_presence_response_startup,utc_iotcon_presence_response_cleanup},
+	{"utc_iotcon_presence_response_get_host_address_p",utc_iotcon_presence_response_get_host_address_p,utc_iotcon_presence_response_startup,utc_iotcon_presence_response_cleanup},
+	{"utc_iotcon_lite_resource_create_n",utc_iotcon_lite_resource_create_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_create_p",utc_iotcon_lite_resource_create_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_destroy_n",utc_iotcon_lite_resource_destroy_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_destroy_p",utc_iotcon_lite_resource_destroy_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_update_attributes_n",utc_iotcon_lite_resource_update_attributes_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_update_attributes_p",utc_iotcon_lite_resource_update_attributes_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_get_attributes_n",utc_iotcon_lite_resource_get_attributes_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_lite_resource_get_attributes_p",utc_iotcon_lite_resource_get_attributes_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_start_caching_n",utc_iotcon_remote_resource_start_caching_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_start_caching_p",utc_iotcon_remote_resource_start_caching_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_stop_caching_n",utc_iotcon_remote_resource_stop_caching_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_stop_caching_p",utc_iotcon_remote_resource_stop_caching_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_start_monitoring_n",utc_iotcon_remote_resource_start_monitoring_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_start_monitoring_p",utc_iotcon_remote_resource_start_monitoring_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_stop_monitoring_n",utc_iotcon_remote_resource_stop_monitoring_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_stop_monitoring_p",utc_iotcon_remote_resource_stop_monitoring_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_get_cached_representation_n",utc_iotcon_remote_resource_get_cached_representation_n,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_remote_resource_get_cached_representation_p",utc_iotcon_remote_resource_get_cached_representation_p,utc_iotcon_encap_startup,utc_iotcon_encap_cleanup},
+	{"utc_iotcon_initialize_p",utc_iotcon_initialize_p,utc_iotcon_service_startup,utc_iotcon_service_cleanup},
+	{"utc_iotcon_deinitialize_p",utc_iotcon_deinitialize_p,utc_iotcon_service_startup,utc_iotcon_service_cleanup},
+	{"utc_iotcon_remote_resource_create_n",utc_iotcon_remote_resource_create_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_create_p",utc_iotcon_remote_resource_create_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_destroy_n",utc_iotcon_remote_resource_destroy_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_destroy_p",utc_iotcon_remote_resource_destroy_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_clone_n",utc_iotcon_remote_resource_clone_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_clone_p",utc_iotcon_remote_resource_clone_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_n",utc_iotcon_remote_resource_get_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_p",utc_iotcon_remote_resource_get_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_put_n",utc_iotcon_remote_resource_put_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_put_p",utc_iotcon_remote_resource_put_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_post_n",utc_iotcon_remote_resource_post_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_post_p",utc_iotcon_remote_resource_post_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_post_p2",utc_iotcon_remote_resource_post_p2,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_delete_n",utc_iotcon_remote_resource_delete_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_delete_p",utc_iotcon_remote_resource_delete_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_observe_register_n",utc_iotcon_remote_resource_observe_register_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_observe_register_p",utc_iotcon_remote_resource_observe_register_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_observe_deregister_n",utc_iotcon_remote_resource_observe_deregister_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_observe_deregister_p",utc_iotcon_remote_resource_observe_deregister_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_uri_path_n",utc_iotcon_remote_resource_get_uri_path_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_uri_path_p",utc_iotcon_remote_resource_get_uri_path_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_host_address_n",utc_iotcon_remote_resource_get_host_address_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_host_address_p",utc_iotcon_remote_resource_get_host_address_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_connectivity_type_n",utc_iotcon_remote_resource_get_connectivity_type_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_connectivity_type_p",utc_iotcon_remote_resource_get_connectivity_type_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_device_id_n",utc_iotcon_remote_resource_get_device_id_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_device_id_p",utc_iotcon_remote_resource_get_device_id_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_device_name_n",utc_iotcon_remote_resource_get_device_name_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_device_name_p",utc_iotcon_remote_resource_get_device_name_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_types_n",utc_iotcon_remote_resource_get_types_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_types_p",utc_iotcon_remote_resource_get_types_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_interfaces_n",utc_iotcon_remote_resource_get_interfaces_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_interfaces_p",utc_iotcon_remote_resource_get_interfaces_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_options_n",utc_iotcon_remote_resource_get_options_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_options_p",utc_iotcon_remote_resource_get_options_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_policies_n",utc_iotcon_remote_resource_get_policies_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_policies_p",utc_iotcon_remote_resource_get_policies_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_set_options_n",utc_iotcon_remote_resource_set_options_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_set_options_p",utc_iotcon_remote_resource_set_options_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_checking_interval_p",utc_iotcon_remote_resource_get_checking_interval_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_get_checking_interval_n",utc_iotcon_remote_resource_get_checking_interval_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_set_checking_interval_p",utc_iotcon_remote_resource_set_checking_interval_p,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_remote_resource_set_checking_interval_n",utc_iotcon_remote_resource_set_checking_interval_n,utc_iotcon_remote_resource_startup,utc_iotcon_remote_resource_cleanup},
+	{"utc_iotcon_resource_create_n",utc_iotcon_resource_create_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_create_p",utc_iotcon_resource_create_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_destroy_n",utc_iotcon_resource_destroy_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_destroy_p",utc_iotcon_resource_destroy_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_child_resource_n",utc_iotcon_resource_bind_child_resource_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_child_resource_p",utc_iotcon_resource_bind_child_resource_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_interface_n",utc_iotcon_resource_bind_interface_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_interface_p",utc_iotcon_resource_bind_interface_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_type_n",utc_iotcon_resource_bind_type_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_bind_type_p",utc_iotcon_resource_bind_type_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_unbind_child_resource_n",utc_iotcon_resource_unbind_child_resource_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_unbind_child_resource_p",utc_iotcon_resource_unbind_child_resource_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_notify_n",utc_iotcon_resource_notify_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_notify_p",utc_iotcon_resource_notify_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_set_request_handler_n",utc_iotcon_resource_set_request_handler_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_set_request_handler_p",utc_iotcon_resource_set_request_handler_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_child_count_n",utc_iotcon_resource_get_child_count_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_child_count_p",utc_iotcon_resource_get_child_count_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_nth_child_n",utc_iotcon_resource_get_nth_child_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_nth_child_p",utc_iotcon_resource_get_nth_child_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_uri_path_n",utc_iotcon_resource_get_uri_path_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_uri_path_p",utc_iotcon_resource_get_uri_path_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_types_n",utc_iotcon_resource_get_types_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_types_p",utc_iotcon_resource_get_types_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_interfaces_n",utc_iotcon_resource_get_interfaces_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_interfaces_p",utc_iotcon_resource_get_interfaces_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_policies_n",utc_iotcon_resource_get_policies_n,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{"utc_iotcon_resource_get_policies_p",utc_iotcon_resource_get_policies_p,utc_iotcon_resource_startup,utc_iotcon_resource_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_IOTCON-NATIVE_H__

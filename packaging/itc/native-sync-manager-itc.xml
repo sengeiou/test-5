@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-sync-manager-itc" version="0.1.0" api-version="6.0">
+    <label>CoreSyncManagerTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <service-application appid="native.sync-manager-itc" exec="/usr/apps/native-sync-manager-itc/bin/tct-sync-manager-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+	</service-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/account.read</privilege>
+		<privilege>http://tizen.org/privilege/account.write</privilege>
+		<privilege>http://tizen.org/privilege/alarm.set</privilege>
+		<privilege>http://tizen.org/privilege/calendar.read</privilege>
+		<privilege>http://tizen.org/privilege/contact.read</privilege>
+    </privileges>
+	<account>
+		<account-provider appid="native.sync-manager-itc" providerid="http://www.tizen.org/" multiple-accounts-support="true">
+			<icon section="account">sync.png</icon>
+			<icon section="account-small">sync_small.png</icon>
+			<label>CoreSyncManagerTest</label>
+		</account-provider>
+	</account>
+</manifest>

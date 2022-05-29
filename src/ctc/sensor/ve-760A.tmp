@@ -1,0 +1,273 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#include "CTs-sensor-common.h"
+
+//Add helper function definitions here
+
+/**
+* @function 		SystemInformationErrorInfo
+* @description 	Display the details error information
+* @parameter[IN] 	pszApi	[the name of api for which error code is to be checked],
+* 			 [IN] 	nError	[the error code which has to be converted to string]
+* @return 			NA
+*
+*/
+void SystemInformationErrorInfo(char *pszApi,int nError)
+{
+	char* pszErrInfo = NULL;
+	pszErrInfo	= (char*)calloc(MEMLOG_SIZE, MEMLOG_SIZE * sizeof(char));
+	switch(nError)
+	{
+	case SYSTEM_INFO_ERROR_PERMISSION_DENIED:	strncpy(pszErrInfo,"SYSTEM_INFO_ERROR_PERMISSION_DENIED", strlen("SYSTEM_INFO_ERROR_PERMISSION_DENIED")+1);	break;
+
+	case SYSTEM_INFO_ERROR_INVALID_PARAMETER:	strncpy(pszErrInfo,"SYSTEM_INFO_ERROR_INVALID_PARAMETER", strlen("SYSTEM_INFO_ERROR_INVALID_PARAMETER")+1);	break;
+
+	case SYSTEM_INFO_ERROR_OUT_OF_MEMORY:		strncpy(pszErrInfo,"SYSTEM_INFO_ERROR_OUT_OF_MEMORY", strlen("SYSTEM_INFO_ERROR_OUT_OF_MEMORY")+1);		break;
+
+	case SYSTEM_INFO_ERROR_IO_ERROR:			strncpy(pszErrInfo,"SYSTEM_INFO_ERROR_IO_ERROR", strlen("SYSTEM_INFO_ERROR_IO_ERROR")+1);			break;
+
+	default:									strncpy(pszErrInfo,"Unknown_Error", strlen("Unknown_Error")+1);
+	}
+
+	fprintf(fpLog,"\\n[%s] %s  failed , error returned = %s.",API_NAMESPACE, pszApi,pszErrInfo);
+	free(pszErrInfo);
+	pszErrInfo = NULL;
+}
+
+/**
+* @function 			IsSupportedSensor
+* @description	 		Gets the system information if the specific key supports in device or not
+* @parameter[IN] 		pKey [the specific key]
+* @return 				true if api passed otherwise false
+*
+*/
+bool IsSupportedSensor(char *pKey)
+{
+	int nRet = SYSTEM_INFO_ERROR_NONE;
+	g_bIsSupportedSensor = false;
+	nRet = system_info_get_platform_bool(pKey, &g_bIsSupportedSensor);
+	if(nRet != SYSTEM_INFO_ERROR_NONE)
+	{
+		SystemInformationErrorInfo("system_info_get_platform_bool", nRet);
+		return false;
+	}
+	// Note: The out parameter g_bIsSupportedSensor is checked in Tc file because the TC result will depends on that value.
+	return true;
+}
+
+
+/**
+* @function 		SensorApiErrorInfo
+* @description 		Get details error message
+* @parameter[IN]	nRet	[API return Code]
+* 			[IN]	pszApi	[the name of api for which error code is to be checked] 
+* @parameter[OUT]	NA
+* @return 			NA 
+*/
+
+void SensorApiErrorInfo(char *pszApi,int nRet)
+{	
+	char *pszErrMSG=NULL;
+	pszErrMSG = (char*)calloc(MAX_BLOCK_SIZE, MEMLOG_SIZE * sizeof(char));
+	switch(nRet) 
+	{		
+	case SENSOR_ERROR_IO_ERROR  : 					strncpy(pszErrMSG,"SENSOR_ERROR_IO_ERROR", strlen("SENSOR_ERROR_IO_ERROR")+1);				break;
+
+	case SENSOR_ERROR_INVALID_PARAMETER   :			strncpy(pszErrMSG,"SENSOR_ERROR_INVALID_PARAMETER", strlen("SENSOR_ERROR_INVALID_PARAMETER")+1);		break;
+
+	case SENSOR_ERROR_OUT_OF_MEMORY :				strncpy(pszErrMSG,"SENSOR_ERROR_OUT_OF_MEMORY", strlen("SENSOR_ERROR_OUT_OF_MEMORY")+1);		break;
+
+	case SENSOR_ERROR_NOT_NEED_CALIBRATION :		strncpy(pszErrMSG,"SENSOR_ERROR_NOT_NEED_CALIBRATION", strlen("SENSOR_ERROR_NOT_NEED_CALIBRATION")+1);	break;
+
+	case SENSOR_ERROR_NOT_SUPPORTED:				strncpy(pszErrMSG,"SENSOR_ERROR_NOT_SUPPORTED", strlen("SENSOR_ERROR_NOT_SUPPORTED")+1);			break;
+
+	case SENSOR_ERROR_OPERATION_FAILED :			strncpy(pszErrMSG,"SENSOR_ERROR_OPERATION_FAILED", strlen("SENSOR_ERROR_OPERATION_FAILED")+1);		break;
+
+	case SENSOR_ERROR_PERMISSION_DENIED  :			strncpy(pszErrMSG,"SENSOR_ERROR_PERMISSION_DENIED", strlen("SENSOR_ERROR_PERMISSION_DENIED")+1);		break;
+
+	default:										strncpy(pszErrMSG,"Returned error is UNKNOWN", strlen("Returned error is UNKNOWN")+1);
+
+	}
+	fprintf (fpLog,"\\n[%s] %s is failed, error returned = %s (%d)", API_NAMESPACE, pszApi, pszErrMSG, nRet);	
+	free(pszErrMSG);
+	pszErrMSG = NULL;
+}
+
+/**
+* @function 		SensorCreate
+* @description 		check if sensor is supported and create sensor
+* @parameter[IN]	NA 
+* @parameter[OUT]	NA
+* @return 			True if sensor is  created otherwise return false. 
+*/
+
+bool  SensorCreate( )
+{
+	int nRet = SENSOR_ERROR_NONE;
+
+	nRet = sensor_create_listener(g_hSensor,&g_listener);
+	if (nRet != SENSOR_ERROR_NONE)
+	{  
+		SensorApiErrorInfo("sensor_create_listener", nRet);
+		return false;
+	}	
+
+	if(g_listener == NULL)
+	{
+		fprintf(fpLog,"\\n[%s] sensor_create_listener return Null listener ", API_NAMESPACE);	
+		return false;
+	}
+	return true;
+}
+
+/**
+* @function 		SensorCheckSupport
+* @description 		check if sensor is supported 
+* @parameter[IN]	eSensorType 
+* @parameter[OUT]	NA
+* @return 			True if sensor is supported  otherwise return false. 
+*/
+
+bool SensorCheckSupport(sensor_type_e eSensorType)
+{
+	int nRet = SENSOR_ERROR_NONE;
+	bool bIsSupported =false;
+	nRet =	sensor_is_supported(eSensorType, &bIsSupported);
+	if (nRet != SENSOR_ERROR_NONE)
+	{   
+		SensorApiErrorInfo("sensor_is_supported", nRet);
+		return false;
+	}
+
+	if (!bIsSupported)
+	{
+		fprintf(fpLog,"\\n[%s] Sensor is not supported ", API_NAMESPACE);
+		return false;
+	}
+
+	return true;
+}
+
+/**
+* @function 		SensorGetDefaultSensor
+* @description 		Gets a specific sensor handle. 
+* @parameter[IN]	eSensorType 
+* @parameter[OUT]	NA
+* @return 			True if gets a specific sensor handle otherwise return false. 
+*/
+
+bool SensorGetDefaultSensor(sensor_type_e eSensorType)
+{
+	int nRet = SENSOR_ERROR_NONE;
+
+	nRet = sensor_get_default_sensor(eSensorType, &g_hSensor);
+	if (nRet != SENSOR_ERROR_NONE)
+	{  
+		SensorApiErrorInfo("sensor_get_default_sensor", nRet);
+		return false;
+	}
+
+	if(g_hSensor == NULL)
+	{
+		fprintf(fpLog,"\\n[%s] sensor_get_default_sensor  return Null handle ", API_NAMESPACE);
+		return false;
+	}
+	return true;
+}
+
+/**
+* @function 		SensorIsStart
+* @description 		start sensor
+* @parameter[IN]	NA
+* @parameter[OUT]	NA
+* @return 			True if sensor is started otherwise return false.
+*/
+
+bool SensorIsStart()
+{
+	int nRet = SENSOR_ERROR_NONE;
+
+	nRet = sensor_listener_start(g_listener);
+	if (nRet != SENSOR_ERROR_NONE)
+	{   
+		SensorApiErrorInfo("sensor_listener_start", nRet);
+		return false;
+	}	
+	return true;
+}
+
+/**
+* @function 		SensorUnsetcb
+* @description 		Unregisters the  callback function
+* @parameter[IN]	NA
+* @parameter[OUT]	NA
+* @return 			True if Unregisters the  callback function otherwise return false.
+*/
+
+bool SensorUnsetcb()
+{
+	int nRet = SENSOR_ERROR_NONE;
+
+	nRet = sensor_listener_unset_event_cb(g_listener);
+	if (nRet != SENSOR_ERROR_NONE)
+	{
+		SensorApiErrorInfo("sensor_listener_unset_event_cb", nRet);	
+		return false;
+	}	
+	return true;
+}
+
+/**
+* @function 		SensorStop
+* @description 		stop and destroy sensor
+* @parameter[IN]	NA
+* @parameter[OUT]	NA
+* @return 			True if sensor is stop  properly otherwise return false.
+*/
+
+bool SensorStop()
+{
+	int nRet = SENSOR_ERROR_NONE;
+	nRet = sensor_listener_stop(g_listener);
+
+	if (nRet != SENSOR_ERROR_NONE)
+	{
+		SensorApiErrorInfo("sensor_listener_stop", nRet);
+		return false;
+	}
+	return true;
+}
+
+/**
+* @function 		SensorDestroy
+* @description 		Destroy sensor
+* @parameter[IN]	NA
+* @parameter[OUT]	NA
+* @return 			True if sensor is  destroyed properly otherwise return false.  
+*/
+
+bool SensorDestroy()
+{
+	int nRet = SENSOR_ERROR_NONE;
+
+	nRet = sensor_destroy_listener(g_listener);
+	if (nRet != SENSOR_ERROR_NONE)
+	{
+		SensorApiErrorInfo("sensor_destroy_listener", nRet);
+		return false;
+	}		
+	return true;
+}

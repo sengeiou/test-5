@@ -1,0 +1,91 @@
+----------------------------------------------
+License
+----------------------------------------------
+Copyright (c) 2012 Intel Corporation.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of works must retain the original copyright notice, this list
+  of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the original copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+* Neither the name of Intel Corporation nor the names of its contributors
+  may be used to endorse or promote products derived from this work without
+  specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY INTEL CORPORATION "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL INTEL CORPORATION BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Authors:
+        Yue, Jianhui <jianhuix.a.yue@intel.com>
+
+
+----------------------------------------------
+Introduction
+----------------------------------------------
+   This test suite is for Web Application Security & Privacy module testing.
+
+
+----------------------------------------------
+Test Environment
+----------------------------------------------
+Run the cases as "root" user.
+
+
+----------------------------------------------
+Installation
+----------------------------------------------
+./autogen
+./configure prefix=/usr
+make && make install
+
+
+----------------------------------------------
+Build and Run
+----------------------------------------------
+(Suppose you only get the source code which has been set up on your test device.
+ If you have obtained tct-sp02-wrt-tests RPM packages, you can go directly  to step 3 on the test device)
+
+Steps:
+    1. Prepare for building:
+       cd tct-sp02-wrt-tests
+    2. Build RPM packages:
+       ./pack.sh -t all
+    3. Install RPM on the test device:
+       rpm -ivh tct-sp02-wrt-tests-<version>-<release>.<arch>.rpm
+    4. Prepare to install widget application on the device:
+       cd /opt/tct-sp02-wrt-tests/
+    5. Install WGT on the test device:
+       pkgcmd -i -t wgt -q -p **.wgt
+    6. Check the widget info when the widget has been installed:
+       wrt-launcher -l
+    7. Launch the widget:
+       wrt-launcher -s <Application id>
+    8. Uninstall WGT from the test device:
+       pkgcmd -u -q -t wgt -n <application id>
+
+
+----------------------------------------------
+Known Issues
+----------------------------------------------
+    1. Chromium browser does not support the widget framework.
+    2. The icons which are used in the test cases are contained in the associated widget package.
+
+Note: If there is any defects in this test suite, please do not hesitate to contact us by the email jianhuix.a.yue@intel.com
+
+
+----------------------------------------------
+Todo
+----------------------------------------------
+
+

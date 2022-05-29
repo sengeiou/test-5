@@ -1,0 +1,126 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_TELEPHONY-NATIVE_H__
+#define __TCT_TELEPHONY-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void ITs_telephony_startup(void);
+extern void ITs_telephony_cleanup(void);
+extern void ITs_telephony_call_startup(void);
+extern void ITs_telephony_call_cleanup(void);
+extern void ITs_telephony_network_startup(void);
+extern void ITs_telephony_network_cleanup(void);
+extern void ITs_telephony_sim_startup(void);
+extern void ITs_telephony_sim_cleanup(void);
+
+extern int ITc_telephony_init_deinit_p(void);
+extern int ITc_telephony_set_unset_noti_cb_p(void);
+extern int ITc_telephony_modem_get_power_status_p(void);
+extern int ITc_telephony_get_state_p(void);
+extern int ITc_telephony_set_unset_state_changed_cb_p(void);
+extern int ITc_telephony_call_get_preferred_voice_subscription_p(void);
+extern int ITc_telephony_call_get_release_call_list_p(void);
+extern int ITc_telephony_call_get_handle_id_p(void);
+extern int ITc_telephony_call_get_number_p(void);
+extern int ITc_telephony_call_get_type_p(void);
+extern int ITc_telephony_call_get_status_p(void);
+extern int ITc_telephony_call_get_direction_p(void);
+extern int ITc_telephony_call_get_conference_status_p(void);
+extern int ITc_telephony_network_get_cell_id_p(void);
+extern int ITc_telephony_network_get_lac_p(void);
+extern int ITc_telephony_network_get_rssi_p(void);
+extern int ITc_telephony_network_get_roaming_status_p(void);
+extern int ITc_telephony_network_get_mcc_p(void);
+extern int ITc_telephony_network_get_mnc_p(void);
+extern int ITc_telephony_network_get_network_name_p(void);
+extern int ITc_telephony_network_get_type_p(void);
+extern int ITc_telephony_network_get_service_state_p(void);
+extern int ITc_telephony_network_get_ps_type_p(void);
+extern int ITc_telephony_network_get_network_name_option_p(void);
+extern int ITc_telephony_network_get_default_data_subscription_p(void);
+extern int ITc_telephony_network_get_default_subscription_p(void);
+extern int ITc_telephony_network_get_selection_mode_p(void);
+extern int ITc_telephony_network_get_tac_p(void);
+extern int ITc_telephony_network_get_system_id_p(void);
+extern int ITc_telephony_network_get_network_id_p(void);
+extern int ITc_telephony_network_get_base_station_id_p(void);
+extern int ITc_telephony_network_get_base_station_latitude_p(void);
+extern int ITc_telephony_network_get_base_station_longitude_p(void);
+extern int ITc_telephony_network_get_signal_strength_p(void);
+extern int ITc_telephony_sim_get_operator_p(void);
+extern int ITc_telephony_sim_get_msin_p(void);
+extern int ITc_telephony_sim_get_spn_p(void);
+extern int ITc_telephony_sim_get_subscriber_number_p(void);
+extern int ITc_telephony_sim_is_changed_p(void);
+extern int ITc_telephony_sim_get_state_p(void);
+extern int ITc_telephony_sim_get_application_list_p(void);
+extern int ITc_telephony_sim_get_subscriber_id_p(void);
+extern int ITc_telephony_sim_get_group_id1_p(void);
+extern int ITc_telephony_sim_get_call_forwarding_indicator_state_p(void);
+extern int ITc_telephony_sim_get_lock_state_p(void);
+
+testcase tc_array[] = {
+	{"ITc_telephony_init_deinit_p",ITc_telephony_init_deinit_p,ITs_telephony_startup,ITs_telephony_cleanup},
+	{"ITc_telephony_set_unset_noti_cb_p",ITc_telephony_set_unset_noti_cb_p,ITs_telephony_startup,ITs_telephony_cleanup},
+	{"ITc_telephony_modem_get_power_status_p",ITc_telephony_modem_get_power_status_p,ITs_telephony_startup,ITs_telephony_cleanup},
+	{"ITc_telephony_get_state_p",ITc_telephony_get_state_p,ITs_telephony_startup,ITs_telephony_cleanup},
+	{"ITc_telephony_set_unset_state_changed_cb_p",ITc_telephony_set_unset_state_changed_cb_p,ITs_telephony_startup,ITs_telephony_cleanup},
+	{"ITc_telephony_call_get_preferred_voice_subscription_p",ITc_telephony_call_get_preferred_voice_subscription_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_release_call_list_p",ITc_telephony_call_get_release_call_list_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_handle_id_p",ITc_telephony_call_get_handle_id_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_number_p",ITc_telephony_call_get_number_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_type_p",ITc_telephony_call_get_type_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_status_p",ITc_telephony_call_get_status_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_direction_p",ITc_telephony_call_get_direction_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_call_get_conference_status_p",ITc_telephony_call_get_conference_status_p,ITs_telephony_call_startup,ITs_telephony_call_cleanup},
+	{"ITc_telephony_network_get_cell_id_p",ITc_telephony_network_get_cell_id_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_lac_p",ITc_telephony_network_get_lac_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_rssi_p",ITc_telephony_network_get_rssi_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_roaming_status_p",ITc_telephony_network_get_roaming_status_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_mcc_p",ITc_telephony_network_get_mcc_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_mnc_p",ITc_telephony_network_get_mnc_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_network_name_p",ITc_telephony_network_get_network_name_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_type_p",ITc_telephony_network_get_type_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_service_state_p",ITc_telephony_network_get_service_state_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_ps_type_p",ITc_telephony_network_get_ps_type_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_network_name_option_p",ITc_telephony_network_get_network_name_option_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_default_data_subscription_p",ITc_telephony_network_get_default_data_subscription_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_default_subscription_p",ITc_telephony_network_get_default_subscription_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_selection_mode_p",ITc_telephony_network_get_selection_mode_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_tac_p",ITc_telephony_network_get_tac_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_system_id_p",ITc_telephony_network_get_system_id_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_network_id_p",ITc_telephony_network_get_network_id_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_base_station_id_p",ITc_telephony_network_get_base_station_id_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_base_station_latitude_p",ITc_telephony_network_get_base_station_latitude_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_base_station_longitude_p",ITc_telephony_network_get_base_station_longitude_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_network_get_signal_strength_p",ITc_telephony_network_get_signal_strength_p,ITs_telephony_network_startup,ITs_telephony_network_cleanup},
+	{"ITc_telephony_sim_get_operator_p",ITc_telephony_sim_get_operator_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_msin_p",ITc_telephony_sim_get_msin_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_spn_p",ITc_telephony_sim_get_spn_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_subscriber_number_p",ITc_telephony_sim_get_subscriber_number_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_is_changed_p",ITc_telephony_sim_is_changed_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_state_p",ITc_telephony_sim_get_state_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_application_list_p",ITc_telephony_sim_get_application_list_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_subscriber_id_p",ITc_telephony_sim_get_subscriber_id_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_group_id1_p",ITc_telephony_sim_get_group_id1_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_call_forwarding_indicator_state_p",ITc_telephony_sim_get_call_forwarding_indicator_state_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{"ITc_telephony_sim_get_lock_state_p",ITc_telephony_sim_get_lock_state_p,ITs_telephony_sim_startup,ITs_telephony_sim_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_TELEPHONY-NATIVE_H__

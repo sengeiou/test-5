@@ -1,0 +1,8 @@
+shortcut_icon_request_create
+shortcut_icon_request_data
+shortcut_icon_request_destroy
+shortcut_icon_request_send
+shortcut_icon_request_set_data
+shortcut_icon_request_set_info
+shortcut_icon_service_fini
+shortcut_icon_service_init

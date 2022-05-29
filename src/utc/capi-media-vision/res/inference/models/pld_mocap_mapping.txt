@@ -1,0 +1,15 @@
+Hips,10
+Neck,2
+Head,1
+LeftUpArm,7
+LeftLowArm,8
+LeftHand,9
+RightUpArm,4
+RightLowArm,5
+RightHand,6
+LeftUpLeg,14
+LeftLowLeg,15
+LeftFoot,16
+RightUpLeg,11
+RightLowLeg,12
+RightFoot,13

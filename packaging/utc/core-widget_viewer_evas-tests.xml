@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="core-widget_viewer_evas-tests" version="0.1.0" api-version="6.0">
+    <label>CoreWidget_viewer_evasTest</label>
+    <author email="test@tizen.org" href="www.tizen.org">test</author>
+    <description>Core API test Application</description>
+    <ui-application appid="core.widget_viewer_evas-tests" exec="/usr/apps/core-widget_viewer_evas-tests/bin/tct-widget_viewer_evas-core" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+    <privileges>
+		<privilege>http://tizen.org/privilege/widget.viewer</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    </privileges>
+
+</manifest>

@@ -1,0 +1,249 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_EFL-UTIL-NATIVE_H__
+#define __TCT_EFL-UTIL-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_efl_util_startup(void);
+extern void utc_efl_util_cleanup(void);
+
+extern int utc_efl_util_set_notification_window_level_n1(void);
+extern int utc_efl_util_set_notification_window_level_n2(void);
+extern int utc_efl_util_set_notification_window_level_n3(void);
+extern int utc_efl_util_get_notification_window_level_n1(void);
+extern int utc_efl_util_get_notification_window_level_n2(void);
+extern int utc_efl_util_set_notification_window_level_p1(void);
+extern int utc_efl_util_set_notification_window_level_p2(void);
+extern int utc_efl_util_set_notification_window_level_p3(void);
+extern int utc_efl_util_set_notification_window_level_p4(void);
+extern int utc_efl_util_set_notification_window_level_p5(void);
+extern int utc_efl_util_set_notification_window_level_p6(void);
+extern int utc_efl_util_set_notification_window_level_p7(void);
+extern int utc_efl_util_set_notification_window_level_p8(void);
+extern int utc_efl_util_get_notification_window_level_p1(void);
+extern int utc_efl_util_get_notification_window_level_p2(void);
+extern int utc_efl_util_get_notification_window_level_p3(void);
+extern int utc_efl_util_get_notification_window_level_p4(void);
+extern int utc_efl_util_get_notification_window_level_p5(void);
+extern int utc_efl_util_get_notification_window_level_p6(void);
+extern int utc_efl_util_get_notification_window_level_p7(void);
+extern int utc_efl_util_get_notification_window_level_p8(void);
+extern int utc_efl_util_set_window_opaque_state_p1(void);
+extern int utc_efl_util_set_window_opaque_state_p2(void);
+extern int utc_efl_util_set_window_opaque_state_n1(void);
+extern int utc_efl_util_set_window_opaque_state_n2(void);
+extern int utc_efl_util_set_window_screen_mode_p1(void);
+extern int utc_efl_util_set_window_screen_mode_p2(void);
+extern int utc_efl_util_set_window_screen_mode_p3(void);
+extern int utc_efl_util_set_window_screen_mode_n1(void);
+extern int utc_efl_util_set_window_screen_mode_n2(void);
+extern int utc_efl_util_get_window_screen_mode_p1(void);
+extern int utc_efl_util_get_window_screen_mode_p2(void);
+extern int utc_efl_util_get_window_screen_mode_n1(void);
+extern int utc_efl_util_get_window_screen_mode_n2(void);
+extern int utc_efl_util_set_window_brightness_p1(void);
+extern int utc_efl_util_set_window_brightness_p2(void);
+extern int utc_efl_util_set_window_brightness_n1(void);
+extern int utc_efl_util_set_window_brightness_n2(void);
+extern int utc_efl_util_get_window_brightness_p1(void);
+extern int utc_efl_util_get_window_brightness_p2(void);
+extern int utc_efl_util_get_window_brightness_p3(void);
+extern int utc_efl_util_get_window_brightness_n1(void);
+extern int utc_efl_util_get_window_brightness_n2(void);
+extern int utc_efl_util_gesture_initialize_p(void);
+extern int utc_efl_util_gesture_deinitialize_p(void);
+extern int utc_efl_util_gesture_deinitialize_n(void);
+extern int utc_efl_util_gesture_edge_swipe_new_p1(void);
+extern int utc_efl_util_gesture_edge_swipe_new_p2(void);
+extern int utc_efl_util_gesture_edge_swipe_new_p3(void);
+extern int utc_efl_util_gesture_edge_swipe_new_p4(void);
+extern int utc_efl_util_gesture_edge_swipe_new_p5(void);
+extern int utc_efl_util_gesture_edge_swipe_new_n1(void);
+extern int utc_efl_util_gesture_edge_swipe_new_n2(void);
+extern int utc_efl_util_gesture_edge_swipe_new_n3(void);
+extern int utc_efl_util_gesture_edge_swipe_size_set_p1(void);
+extern int utc_efl_util_gesture_edge_swipe_size_set_n1(void);
+extern int utc_efl_util_gesture_edge_swipe_size_set_n2(void);
+extern int utc_efl_util_gesture_edge_swipe_size_set_n3(void);
+extern int utc_efl_util_gesture_edge_swipe_size_set_n4(void);
+extern int utc_efl_util_gesture_edge_swipe_free_p1(void);
+extern int utc_efl_util_gesture_edge_swipe_free_n1(void);
+extern int utc_efl_util_gesture_edge_swipe_free_n2(void);
+extern int utc_efl_util_gesture_edge_drag_new_p1(void);
+extern int utc_efl_util_gesture_edge_drag_new_p2(void);
+extern int utc_efl_util_gesture_edge_drag_new_p3(void);
+extern int utc_efl_util_gesture_edge_drag_new_p4(void);
+extern int utc_efl_util_gesture_edge_drag_new_p5(void);
+extern int utc_efl_util_gesture_edge_drag_new_n1(void);
+extern int utc_efl_util_gesture_edge_drag_new_n2(void);
+extern int utc_efl_util_gesture_edge_drag_new_n3(void);
+extern int utc_efl_util_gesture_edge_drag_new_n4(void);
+extern int utc_efl_util_gesture_edge_drag_size_set_p1(void);
+extern int utc_efl_util_gesture_edge_drag_size_set_n1(void);
+extern int utc_efl_util_gesture_edge_drag_size_set_n2(void);
+extern int utc_efl_util_gesture_edge_drag_size_set_n3(void);
+extern int utc_efl_util_gesture_edge_drag_size_set_n4(void);
+extern int utc_efl_util_gesture_edge_drag_free_p1(void);
+extern int utc_efl_util_gesture_edge_drag_free_n1(void);
+extern int utc_efl_util_gesture_edge_drag_free_n2(void);
+extern int utc_efl_util_gesture_tap_new_p(void);
+extern int utc_efl_util_gesture_tap_new_n1(void);
+extern int utc_efl_util_gesture_tap_new_n2(void);
+extern int utc_efl_util_gesture_tap_new_n3(void);
+extern int utc_efl_util_gesture_tap_free_p1(void);
+extern int utc_efl_util_gesture_tap_free_n1(void);
+extern int utc_efl_util_gesture_tap_free_n2(void);
+extern int utc_efl_util_gesture_palm_cover_new_p(void);
+extern int utc_efl_util_gesture_palm_cover_new_n(void);
+extern int utc_efl_util_gesture_palm_cover_free_p1(void);
+extern int utc_efl_util_gesture_palm_cover_free_n1(void);
+extern int utc_efl_util_gesture_palm_cover_free_n2(void);
+extern int utc_efl_util_gesture_select_p(void);
+extern int utc_efl_util_gesture_select_n1(void);
+extern int utc_efl_util_gesture_select_n2(void);
+extern int utc_efl_util_gesture_select_n3(void);
+extern int utc_efl_util_gesture_select_n4(void);
+extern int utc_efl_util_gesture_deselect_p(void);
+extern int utc_efl_util_gesture_deselect_n1(void);
+extern int utc_efl_util_gesture_deselect_n2(void);
+extern int utc_efl_util_gesture_deselect_n3(void);
+extern int utc_efl_util_gesture_deselect_n4(void);
+extern int utc_efl_util_gesture_activate_set_on_window_p1(void);
+extern int utc_efl_util_gesture_activate_set_on_window_p2(void);
+extern int utc_efl_util_gesture_activate_set_on_window_p3(void);
+extern int utc_efl_util_gesture_activate_set_on_window_p4(void);
+extern int utc_efl_util_gesture_activate_set_on_window_p5(void);
+extern int utc_efl_util_gesture_activate_set_on_window_n1(void);
+extern int utc_efl_util_gesture_activate_set_on_window_n2(void);
+extern int utc_efl_util_gesture_activate_set_on_window_n3(void);
+
+testcase tc_array[] = {
+	{"utc_efl_util_set_notification_window_level_n1",utc_efl_util_set_notification_window_level_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_n2",utc_efl_util_set_notification_window_level_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_n3",utc_efl_util_set_notification_window_level_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_n1",utc_efl_util_get_notification_window_level_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_n2",utc_efl_util_get_notification_window_level_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p1",utc_efl_util_set_notification_window_level_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p2",utc_efl_util_set_notification_window_level_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p3",utc_efl_util_set_notification_window_level_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p4",utc_efl_util_set_notification_window_level_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p5",utc_efl_util_set_notification_window_level_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p6",utc_efl_util_set_notification_window_level_p6,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p7",utc_efl_util_set_notification_window_level_p7,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p8",utc_efl_util_set_notification_window_level_p8,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p1",utc_efl_util_get_notification_window_level_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p2",utc_efl_util_get_notification_window_level_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p3",utc_efl_util_get_notification_window_level_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p4",utc_efl_util_get_notification_window_level_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p5",utc_efl_util_get_notification_window_level_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p6",utc_efl_util_get_notification_window_level_p6,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p7",utc_efl_util_get_notification_window_level_p7,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p8",utc_efl_util_get_notification_window_level_p8,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_p1",utc_efl_util_set_window_opaque_state_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_p2",utc_efl_util_set_window_opaque_state_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_n1",utc_efl_util_set_window_opaque_state_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_n2",utc_efl_util_set_window_opaque_state_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p1",utc_efl_util_set_window_screen_mode_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p2",utc_efl_util_set_window_screen_mode_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p3",utc_efl_util_set_window_screen_mode_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_n1",utc_efl_util_set_window_screen_mode_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_n2",utc_efl_util_set_window_screen_mode_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_p1",utc_efl_util_get_window_screen_mode_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_p2",utc_efl_util_get_window_screen_mode_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_n1",utc_efl_util_get_window_screen_mode_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_n2",utc_efl_util_get_window_screen_mode_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_p1",utc_efl_util_set_window_brightness_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_p2",utc_efl_util_set_window_brightness_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_n1",utc_efl_util_set_window_brightness_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_n2",utc_efl_util_set_window_brightness_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p1",utc_efl_util_get_window_brightness_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p2",utc_efl_util_get_window_brightness_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p3",utc_efl_util_get_window_brightness_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_n1",utc_efl_util_get_window_brightness_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_n2",utc_efl_util_get_window_brightness_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+
+	{"utc_efl_util_gesture_initialize_p",utc_efl_util_gesture_initialize_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deinitialize_p",utc_efl_util_gesture_deinitialize_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deinitialize_n",utc_efl_util_gesture_deinitialize_n,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_p1",utc_efl_util_gesture_edge_swipe_new_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_p2",utc_efl_util_gesture_edge_swipe_new_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_p3",utc_efl_util_gesture_edge_swipe_new_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_p4",utc_efl_util_gesture_edge_swipe_new_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_p5",utc_efl_util_gesture_edge_swipe_new_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_n1",utc_efl_util_gesture_edge_swipe_new_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_n2",utc_efl_util_gesture_edge_swipe_new_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_new_n3",utc_efl_util_gesture_edge_swipe_new_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_size_set_p1",utc_efl_util_gesture_edge_swipe_size_set_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_size_set_n1",utc_efl_util_gesture_edge_swipe_size_set_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_size_set_n2",utc_efl_util_gesture_edge_swipe_size_set_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_size_set_n3",utc_efl_util_gesture_edge_swipe_size_set_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_size_set_n4",utc_efl_util_gesture_edge_swipe_size_set_n4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_free_p1",utc_efl_util_gesture_edge_swipe_free_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_free_n1",utc_efl_util_gesture_edge_swipe_free_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_swipe_free_n2",utc_efl_util_gesture_edge_swipe_free_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_p1",utc_efl_util_gesture_edge_drag_new_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_p2",utc_efl_util_gesture_edge_drag_new_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_p3",utc_efl_util_gesture_edge_drag_new_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_p4",utc_efl_util_gesture_edge_drag_new_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_p5",utc_efl_util_gesture_edge_drag_new_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_n1",utc_efl_util_gesture_edge_drag_new_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_n2",utc_efl_util_gesture_edge_drag_new_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_n3",utc_efl_util_gesture_edge_drag_new_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_new_n4",utc_efl_util_gesture_edge_drag_new_n4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_size_set_p1",utc_efl_util_gesture_edge_drag_size_set_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_size_set_n1",utc_efl_util_gesture_edge_drag_size_set_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_size_set_n2",utc_efl_util_gesture_edge_drag_size_set_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_size_set_n3",utc_efl_util_gesture_edge_drag_size_set_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_size_set_n4",utc_efl_util_gesture_edge_drag_size_set_n4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_free_p1",utc_efl_util_gesture_edge_drag_free_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_free_n1",utc_efl_util_gesture_edge_drag_free_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_edge_drag_free_n2",utc_efl_util_gesture_edge_drag_free_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_new_p",utc_efl_util_gesture_tap_new_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_new_n1",utc_efl_util_gesture_tap_new_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_new_n2",utc_efl_util_gesture_tap_new_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_new_n3",utc_efl_util_gesture_tap_new_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_free_p1",utc_efl_util_gesture_tap_free_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_free_n1",utc_efl_util_gesture_tap_free_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_tap_free_n2",utc_efl_util_gesture_tap_free_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_palm_cover_new_p",utc_efl_util_gesture_palm_cover_new_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_palm_cover_new_n",utc_efl_util_gesture_palm_cover_new_n,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_palm_cover_free_p1",utc_efl_util_gesture_palm_cover_free_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_palm_cover_free_n1",utc_efl_util_gesture_palm_cover_free_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_palm_cover_free_n2",utc_efl_util_gesture_palm_cover_free_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_select_p",utc_efl_util_gesture_select_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_select_n1",utc_efl_util_gesture_select_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_select_n2",utc_efl_util_gesture_select_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_select_n3",utc_efl_util_gesture_select_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_select_n4",utc_efl_util_gesture_select_n4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deselect_p",utc_efl_util_gesture_deselect_p,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deselect_n1",utc_efl_util_gesture_deselect_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deselect_n2",utc_efl_util_gesture_deselect_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deselect_n3",utc_efl_util_gesture_deselect_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_deselect_n4",utc_efl_util_gesture_deselect_n4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_p1",utc_efl_util_gesture_activate_set_on_window_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_p2",utc_efl_util_gesture_activate_set_on_window_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_p3",utc_efl_util_gesture_activate_set_on_window_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_p4",utc_efl_util_gesture_activate_set_on_window_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_p5",utc_efl_util_gesture_activate_set_on_window_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_n1",utc_efl_util_gesture_activate_set_on_window_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_n2",utc_efl_util_gesture_activate_set_on_window_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_gesture_activate_set_on_window_n3",utc_efl_util_gesture_activate_set_on_window_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_EFL-UTIL-NATIVE_H__

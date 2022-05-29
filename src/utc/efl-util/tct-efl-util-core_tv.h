@@ -1,0 +1,116 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_EFL-UTIL-NATIVE_H__
+#define __TCT_EFL-UTIL-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_efl_util_startup(void);
+extern void utc_efl_util_cleanup(void);
+
+extern int utc_efl_util_set_notification_window_level_n1(void);
+extern int utc_efl_util_set_notification_window_level_n2(void);
+extern int utc_efl_util_set_notification_window_level_n3(void);
+extern int utc_efl_util_get_notification_window_level_n1(void);
+extern int utc_efl_util_get_notification_window_level_n2(void);
+extern int utc_efl_util_set_notification_window_level_p1(void);
+extern int utc_efl_util_set_notification_window_level_p2(void);
+extern int utc_efl_util_set_notification_window_level_p3(void);
+extern int utc_efl_util_set_notification_window_level_p4(void);
+extern int utc_efl_util_set_notification_window_level_p5(void);
+extern int utc_efl_util_set_notification_window_level_p6(void);
+extern int utc_efl_util_set_notification_window_level_p7(void);
+extern int utc_efl_util_set_notification_window_level_p8(void);
+extern int utc_efl_util_get_notification_window_level_p1(void);
+extern int utc_efl_util_get_notification_window_level_p2(void);
+extern int utc_efl_util_get_notification_window_level_p3(void);
+extern int utc_efl_util_get_notification_window_level_p4(void);
+extern int utc_efl_util_get_notification_window_level_p5(void);
+extern int utc_efl_util_get_notification_window_level_p6(void);
+extern int utc_efl_util_get_notification_window_level_p7(void);
+extern int utc_efl_util_get_notification_window_level_p8(void);
+extern int utc_efl_util_set_window_opaque_state_p1(void);
+extern int utc_efl_util_set_window_opaque_state_p2(void);
+extern int utc_efl_util_set_window_opaque_state_n1(void);
+extern int utc_efl_util_set_window_opaque_state_n2(void);
+extern int utc_efl_util_set_window_screen_mode_p1(void);
+extern int utc_efl_util_set_window_screen_mode_p2(void);
+extern int utc_efl_util_set_window_screen_mode_p3(void);
+extern int utc_efl_util_set_window_screen_mode_n1(void);
+extern int utc_efl_util_set_window_screen_mode_n2(void);
+extern int utc_efl_util_get_window_screen_mode_p1(void);
+extern int utc_efl_util_get_window_screen_mode_p2(void);
+extern int utc_efl_util_get_window_screen_mode_n1(void);
+extern int utc_efl_util_get_window_screen_mode_n2(void);
+extern int utc_efl_util_set_window_brightness_p1(void);
+extern int utc_efl_util_set_window_brightness_p2(void);
+extern int utc_efl_util_set_window_brightness_n1(void);
+extern int utc_efl_util_set_window_brightness_n2(void);
+extern int utc_efl_util_get_window_brightness_p1(void);
+extern int utc_efl_util_get_window_brightness_p2(void);
+extern int utc_efl_util_get_window_brightness_p3(void);
+extern int utc_efl_util_get_window_brightness_n1(void);
+extern int utc_efl_util_get_window_brightness_n2(void);
+
+testcase tc_array[] = {
+	{"utc_efl_util_set_notification_window_level_n1",utc_efl_util_set_notification_window_level_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_n2",utc_efl_util_set_notification_window_level_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_n3",utc_efl_util_set_notification_window_level_n3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_n1",utc_efl_util_get_notification_window_level_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_n2",utc_efl_util_get_notification_window_level_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p1",utc_efl_util_set_notification_window_level_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p2",utc_efl_util_set_notification_window_level_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p3",utc_efl_util_set_notification_window_level_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p4",utc_efl_util_set_notification_window_level_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p5",utc_efl_util_set_notification_window_level_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p6",utc_efl_util_set_notification_window_level_p6,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p7",utc_efl_util_set_notification_window_level_p7,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_notification_window_level_p8",utc_efl_util_set_notification_window_level_p8,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p1",utc_efl_util_get_notification_window_level_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p2",utc_efl_util_get_notification_window_level_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p3",utc_efl_util_get_notification_window_level_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p4",utc_efl_util_get_notification_window_level_p4,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p5",utc_efl_util_get_notification_window_level_p5,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p6",utc_efl_util_get_notification_window_level_p6,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p7",utc_efl_util_get_notification_window_level_p7,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_notification_window_level_p8",utc_efl_util_get_notification_window_level_p8,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_p1",utc_efl_util_set_window_opaque_state_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_p2",utc_efl_util_set_window_opaque_state_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_n1",utc_efl_util_set_window_opaque_state_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_opaque_state_n2",utc_efl_util_set_window_opaque_state_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p1",utc_efl_util_set_window_screen_mode_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p2",utc_efl_util_set_window_screen_mode_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_p3",utc_efl_util_set_window_screen_mode_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_n1",utc_efl_util_set_window_screen_mode_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_screen_mode_n2",utc_efl_util_set_window_screen_mode_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_p1",utc_efl_util_get_window_screen_mode_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_p2",utc_efl_util_get_window_screen_mode_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_n1",utc_efl_util_get_window_screen_mode_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_screen_mode_n2",utc_efl_util_get_window_screen_mode_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_p1",utc_efl_util_set_window_brightness_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_p2",utc_efl_util_set_window_brightness_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_n1",utc_efl_util_set_window_brightness_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_set_window_brightness_n2",utc_efl_util_set_window_brightness_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p1",utc_efl_util_get_window_brightness_p1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p2",utc_efl_util_get_window_brightness_p2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_p3",utc_efl_util_get_window_brightness_p3,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_n1",utc_efl_util_get_window_brightness_n1,utc_efl_util_startup,utc_efl_util_cleanup},
+	{"utc_efl_util_get_window_brightness_n2",utc_efl_util_get_window_brightness_n2,utc_efl_util_startup,utc_efl_util_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_EFL-UTIL-NATIVE_H__

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-nnstreamer-itc" version="0.1.0" api-version="6.0">
+    <label>NativeNnstreamerTest</label>
+    <author email="test@tizen.org" href="www.tizen.org">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native-nnstreamer-itc" exec="/usr/apps/core-nnstreamer-tests/bin/tct-nnstreamer-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+	</ui-application>
+	<privileges>
+                <privilege>http://tizen.org/privilege/mediastorage</privilege>
+                <privilege>http://tizen.org/privilege/externalstorage</privilege>
+                <privilege>http://tizen.org/privilege/camera</privilege>
+                <privilege>http://tizen.org/privilege/recorder</privilege>
+    	</privileges>
+
+</manifest>
