@@ -1,9 +1,0 @@
-metadata_editor_create
-metadata_editor_set_path
-metadata_editor_get_metadata
-metadata_editor_set_metadata
-metadata_editor_update_metadata
-metadata_editor_get_picture
-metadata_editor_append_picture
-metadata_editor_remove_picture
-metadata_editor_destroy

@@ -1,6 +1,0 @@
-feedback_initialize
-feedback_deinitialize
-feedback_play
-feedback_play_type
-feedback_stop
-feedback_is_supported_pattern

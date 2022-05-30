@@ -1,9 +1,0 @@
-system_info_get_custom_bool
-system_info_get_custom_double
-system_info_get_custom_int
-system_info_get_custom_string
-system_info_get_platform_bool
-system_info_get_platform_double
-system_info_get_platform_int
-system_info_get_platform_string
-

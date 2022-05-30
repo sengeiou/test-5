@@ -1,9 +1,0 @@
-badge_get_count
-badge_get_display
-badge_new
-badge_remove
-badge_set_count
-badge_set_display
-badge_register_changed_cb
-badge_unregister_changed_cb
-badge_foreach

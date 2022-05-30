@@ -1,9 +1,0 @@
-nfc_test_sim_test
-nfc_test_ese_test
-nfc_test_prbs_test
-nfc_test_get_firmware_version
-nfc_test_set_nfcc_register
-nfc_se_open_secure_element
-nfc_se_send_apdu
-nfc_se_get_atr
-nfc_se_close_secure_element

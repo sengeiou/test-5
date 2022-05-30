@@ -1,7 +1,0 @@
-sync_adapter_set_callbacks
-sync_adapter_unset_callbacks
-sync_manager_on_demand_sync_job
-sync_manager_add_periodic_sync_job
-sync_manager_add_data_change_sync_job
-sync_manager_remove_sync_job
-sync_manager_foreach_sync_job

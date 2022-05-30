@@ -1,9 +1,0 @@
-tbm_surface_create
-tbm_surface_destroy 
-tbm_surface_get_format 
-tbm_surface_get_height
-tbm_surface_get_info
-tbm_surface_get_width 
-tbm_surface_map 
-tbm_surface_query_formats
-tbm_surface_unmap
