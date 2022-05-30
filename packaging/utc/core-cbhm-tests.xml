@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="core-cbhm-tests" version="0.1.0" api-version="6.0">
+    <label>CoreCBHMTest</label>
+    <author email="test@tizen.org" href="www.tizen.org">test</author>
+    <description>Core API test Application</description>
+    <ui-application appid="core.cbhm-tests" exec="/usr/apps/core-cbhm-tests/bin/tct-cbhm-core" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    </ui-application>
+    <background-category value="background-network"/>
+    <background-category value="download"/>
+    <background-category value="iot-communication"/>
+    <background-category value="location"/>
+    <background-category value="media"/>
+    <background-category value="sensor"/>
+</manifest>

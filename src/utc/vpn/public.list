@@ -1,0 +1,14 @@
+vpnsvc_init
+vpnsvc_deinit
+vpnsvc_protect
+vpnsvc_read
+vpnsvc_write
+vpnsvc_block_networks
+vpnsvc_unblock_networks
+vpnsvc_get_iface_fd
+vpnsvc_get_iface_index
+vpnsvc_get_iface_name
+vpnsvc_set_mtu
+vpnsvc_set_blocking
+vpnsvc_set_session
+vpnsvc_get_session

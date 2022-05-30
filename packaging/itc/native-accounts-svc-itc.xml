@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-accounts-svc-itc" version="0.1.0" api-version="6.0">
+    <label>nativeAccountsSvcTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>native API test Application</description>
+    <ui-application appid="native.accounts-svc-itc" exec="/usr/apps/native-accounts-svc-itc/bin/tct-accounts-svc-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+    <privileges>
+	<privilege>http://tizen.org/privilege/account.read</privilege>
+	<privilege>http://tizen.org/privilege/account.write</privilege>
+    </privileges>	
+    <account>
+      <account-provider appid="native.accounts-svc-itc" providerid="http://www.tizen.org/" multiple-accounts-support="true">
+        <label>AccountTest</label>  
+        <label xml:lang="en-US">English AccountTest</label>
+		<icon section="account">account.png</icon>
+		<icon section="account-small">account_small.png</icon>
+        <capability>http://tizen.org/account/capability/calendar</capability>
+        <capability>http://tizen.org/account/capability/contact</capability>
+      </account-provider> 
+    </account>	
+</manifest>

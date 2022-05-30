@@ -1,0 +1,58 @@
+{
+    "inputmetadata" :
+    {
+        "tensor_info" : [
+            {
+                "name" : "normalized_input_image_tensor",
+                "shape_type" : "NHWC",
+                "shape_dims" : [ 1, 300, 300, 3],
+                "data_type" : "FLOAT32",
+                "color_space" : "RGB888"
+            }
+        ],
+        "preprocess" : [
+            {
+                "normalization" : [
+                    {
+                        "mean" : [127.5, 127.5, 127.5],
+                        "std" : [127.5, 127.5, 127.5]
+                    }
+                ]
+            }
+        ]
+    },
+    "outputmetadata" :
+    {
+        "score" : [
+            {
+                "name" : "TFLite_Detection_PostProcess:2",
+                "index" : [-1, 1],
+                "top_number" : 5,
+                "threshold" : 0.3,
+                "score_type" : "NORMAL"
+            }
+        ],
+        "box" : [
+            {
+               "name" : "TFLite_Detection_PostProcess",
+               "index" : [-1, -1, 1],
+               "box_type" : "ORIGIN_LEFTTOP",
+               "box_order" : [1, 0, 3, 2],
+               "box_coordinate" : "RATIO",
+               "decoding_type": "BYPASS"
+            }
+        ],
+        "label" : [
+            {
+                "name" : "TFLite_Detection_PostProcess:1",
+                "index" : [-1, 1]
+            }
+        ],
+        "number" : [
+            {
+                "name" : "TFLite_Detection_PostProcess:3",
+                "index" : [1]
+            }
+        ]
+    }
+}

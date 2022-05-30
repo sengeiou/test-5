@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-vulkan-ctc" version="0.1.0" api-version="6.0">
+    <label>NativeVulkanTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native.vulkan-ctc" exec="/usr/apps/native-vulkan-ctc/bin/tct-vulkan-ctc" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    </ui-application>
+    <feature name="http://tizen.org/feature/vulkan.version.1_0">true</feature>
+</manifest>

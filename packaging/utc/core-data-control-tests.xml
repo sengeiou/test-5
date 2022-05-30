@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="core-data-control-tests" version="0.1.0" api-version="6.0">
+    <label>CoreLABELTest</label>
+    <author email="test@tizen.org" href="www.tizen.org">test</author>
+    <description>Core API test Application</description>
+    <ui-application appid="core.data-control-tests" exec="/usr/apps/core-data-control-tests/bin/tct-data-control-core" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+	<datacontrol access="ReadWrite" providerid="http://coredatacontroltests.com/datacontrol/provider/coredatacontroltests" type="Sql"/>
+        <datacontrol access="ReadWrite" providerid="http://coredatacontroltests.com/datacontrol/provider/coredatacontroltests" type="Map"/>
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/datasharing</privilege>
+        <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+    </privileges>
+</manifest>

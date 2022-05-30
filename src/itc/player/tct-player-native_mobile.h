@@ -1,0 +1,174 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_PLAYER-NATIVE_H__
+#define __TCT_PLAYER-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void ITs_player_subtitle_startup(void);
+extern void ITs_player_subtitle_cleanup(void);
+extern void ITs_player_audio_effect_startup(void);
+extern void ITs_player_audio_effect_cleanup(void);
+extern void ITs_player_stream_info_startup(void);
+extern void ITs_player_stream_info_cleanup(void);
+extern void ITs_player_startup(void);
+extern void ITs_player_cleanup(void);
+
+extern int ITc_player_set_subtitle_position_offset_p(void);
+extern int ITc_player_set_unset_subtitle_updated_cb_p(void);
+extern int ITc_player_audio_effect_equalizer_is_available_p(void);
+extern int ITc_player_audio_effect_get_equalizer_bands_count_p(void);
+extern int ITc_player_audio_effect_get_equalizer_band_frequency_range_p(void);
+extern int ITc_player_audio_effect_get_equalizer_band_frequency_p(void);
+extern int ITc_player_audio_effect_get_equalizer_level_range_p(void);
+extern int ITc_player_audio_effect_set_get_equalizer_band_level_p(void);
+extern int ITc_player_audio_effect_set_equalizer_all_bands_p(void);
+extern int ITc_player_audio_effect_equalizer_clear_p(void);
+extern int ITc_player_get_audio_stream_info_p(void);
+extern int ITc_player_set_sound_stream_info_p(void);
+extern int ITc_player_get_album_art_p(void);
+extern int ITc_player_get_codec_info_p(void);
+extern int ITc_player_get_content_info_p(void);
+extern int ITc_player_get_duration_p(void);
+extern int ITc_player_start_p(void);
+extern int ITc_player_create_destroy_p(void);
+extern int ITc_player_initialize_p(void);
+extern int ITc_player_set_unset_buffering_cb_p(void);
+extern int ITc_player_set_unset_error_cb_p(void);
+extern int ITc_player_get_streaming_download_progress_p(void);
+extern int ITc_player_set_memory_buffer_p(void);
+extern int ITc_player_set_get_audio_latency_mode_p(void);
+extern int ITc_player_set_get_volume_p(void);
+extern int ITc_player_set_looping_p(void);
+extern int ITc_player_set_mute_p(void);
+extern int ITc_player_pause_p(void);
+extern int ITc_player_set_playback_rate_p(void);
+extern int ITc_player_set_streaming_cookie_p(void);
+extern int ITc_player_set_streaming_user_agent_p(void);
+extern int ITc_player_set_unset_completed_cb_p(void);
+extern int ITc_player_set_unset_media_packet_video_frame_decoded_cb_p(void);
+extern int ITc_player_prepare_async_p(void);
+extern int ITc_player_set_get_play_position_p(void);
+extern int ITc_player_push_media_stream_p(void);
+extern int ITc_player_set_media_stream_info_p(void);
+extern int ITc_player_set_unset_media_stream_seek_cb_p(void);
+extern int ITc_player_set_get_media_stream_buffer_max_size_p(void);
+extern int ITc_player_set_get_media_stream_buffer_min_threshold_p(void);
+extern int ITc_player_get_track_count_p(void);
+extern int ITc_player_get_current_track_p(void);
+extern int ITc_player_get_track_language_code_p(void);
+extern int ITc_player_select_track_p(void);
+extern int ITc_player_set_unset_media_stream_buffer_status_cb_p(void);
+extern int ITc_player_in_set_unset_interrupted_cb_p(void);
+extern int ITc_player_set_get_adaptive_variant_limit_p(void);
+extern int ITc_player_foreach_adaptive_variant_p(void);
+extern int ITc_media_player_set_get_streaming_buffering_time_p(void);
+extern int ITc_player_set_get_replaygain_status_p(void);
+extern int ITc_player_set_get_play_position_nsec_p(void);
+extern int ITc_player_get_duration_nsec_p(void);
+extern int ITc_player_audio_pitch_set_get_enabled_p(void);
+extern int ITc_player_audio_pitch_set_get_value_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_no_sync_and_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_no_sync_and_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_no_sync_and_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_no_sync_and_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_deinterleave_p(void);
+extern int ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_no_sync_and_deinterleave_p(void);
+extern int ITc_player_audio_offload_foreach_supported_format_p(void);
+extern int ITc_player_audio_offload_set_is_enabled_p(void);
+extern int ITc_player_audio_offload_is_activated_p(void);
+extern int ITc_player_foreach_media_stream_supported_format_p(void);
+extern int ITc_player_audio_set_get_audio_codec_type_p(void);
+
+testcase tc_array[] = {
+	{"ITc_player_set_subtitle_position_offset_p",ITc_player_set_subtitle_position_offset_p,ITs_player_subtitle_startup,ITs_player_subtitle_cleanup},
+	{"ITc_player_set_unset_subtitle_updated_cb_p",ITc_player_set_unset_subtitle_updated_cb_p,ITs_player_subtitle_startup,ITs_player_subtitle_cleanup},
+	{"ITc_player_audio_effect_equalizer_is_available_p",ITc_player_audio_effect_equalizer_is_available_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_set_get_audio_codec_type_p",ITc_player_audio_set_get_audio_codec_type_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_get_equalizer_bands_count_p",ITc_player_audio_effect_get_equalizer_bands_count_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_get_equalizer_band_frequency_range_p",ITc_player_audio_effect_get_equalizer_band_frequency_range_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_get_equalizer_band_frequency_p",ITc_player_audio_effect_get_equalizer_band_frequency_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_get_equalizer_level_range_p",ITc_player_audio_effect_get_equalizer_level_range_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_set_get_equalizer_band_level_p",ITc_player_audio_effect_set_get_equalizer_band_level_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_set_equalizer_all_bands_p",ITc_player_audio_effect_set_equalizer_all_bands_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_audio_effect_equalizer_clear_p",ITc_player_audio_effect_equalizer_clear_p,ITs_player_audio_effect_startup,ITs_player_audio_effect_cleanup},
+	{"ITc_player_get_audio_stream_info_p",ITc_player_get_audio_stream_info_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_set_sound_stream_info_p",ITc_player_set_sound_stream_info_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_get_album_art_p",ITc_player_get_album_art_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_get_codec_info_p",ITc_player_get_codec_info_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_get_content_info_p",ITc_player_get_content_info_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_get_duration_p",ITc_player_get_duration_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_start_p",ITc_player_start_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_create_destroy_p",ITc_player_create_destroy_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_initialize_p",ITc_player_initialize_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_buffering_cb_p",ITc_player_set_unset_buffering_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_error_cb_p",ITc_player_set_unset_error_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_get_streaming_download_progress_p",ITc_player_get_streaming_download_progress_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_memory_buffer_p",ITc_player_set_memory_buffer_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_audio_latency_mode_p",ITc_player_set_get_audio_latency_mode_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_volume_p",ITc_player_set_get_volume_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_looping_p",ITc_player_set_looping_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_mute_p",ITc_player_set_mute_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_pause_p",ITc_player_pause_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_playback_rate_p",ITc_player_set_playback_rate_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_streaming_cookie_p",ITc_player_set_streaming_cookie_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_streaming_user_agent_p",ITc_player_set_streaming_user_agent_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_completed_cb_p",ITc_player_set_unset_completed_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_video_frame_decoded_cb_p",ITc_player_set_unset_media_packet_video_frame_decoded_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_prepare_async_p",ITc_player_prepare_async_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_play_position_p",ITc_player_set_get_play_position_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_push_media_stream_p",ITc_player_push_media_stream_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_media_stream_info_p",ITc_player_set_media_stream_info_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_media_stream_seek_cb_p",ITc_player_set_unset_media_stream_seek_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_media_stream_buffer_max_size_p",ITc_player_set_get_media_stream_buffer_max_size_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_media_stream_buffer_min_threshold_p",ITc_player_set_get_media_stream_buffer_min_threshold_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_get_track_count_p",ITc_player_get_track_count_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_get_current_track_p",ITc_player_get_current_track_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_get_track_language_code_p",ITc_player_get_track_language_code_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_select_track_p",ITc_player_select_track_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_media_stream_buffer_status_cb_p",ITc_player_set_unset_media_stream_buffer_status_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_in_set_unset_interrupted_cb_p",ITc_player_in_set_unset_interrupted_cb_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_adaptive_variant_limit_p",ITc_player_set_get_adaptive_variant_limit_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_foreach_adaptive_variant_p",ITc_player_foreach_adaptive_variant_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_get_replaygain_status_p",ITc_player_set_get_replaygain_status_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_media_player_set_get_streaming_buffering_time_p",ITc_media_player_set_get_streaming_buffering_time_p,ITs_player_stream_info_startup,ITs_player_stream_info_cleanup},
+	{"ITc_player_set_get_play_position_nsec_p",ITc_player_set_get_play_position_nsec_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_get_duration_nsec_p",ITc_player_get_duration_nsec_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_audio_pitch_set_get_enabled_p",ITc_player_audio_pitch_set_get_enabled_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_audio_pitch_set_get_value_p",ITc_player_audio_pitch_set_get_value_p,ITs_player_startup,ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_no_sync_and_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_le_no_sync_and_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_no_sync_and_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_signed_be_no_sync_and_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_no_sync_and_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_float_no_sync_and_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_no_sync_and_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_le_no_sync_and_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_no_sync_and_deinterleave_p", ITc_player_set_unset_media_packet_audio_frame_decoded_cb_unsigned_be_no_sync_and_deinterleave_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_audio_offload_foreach_supported_format_p", ITc_player_audio_offload_foreach_supported_format_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_audio_offload_set_is_enabled_p", ITc_player_audio_offload_set_is_enabled_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_audio_offload_is_activated_p", ITc_player_audio_offload_is_activated_p, ITs_player_startup, ITs_player_cleanup},
+	{"ITc_player_foreach_media_stream_supported_format_p", ITc_player_foreach_media_stream_supported_format_p, ITs_player_startup, ITs_player_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_PLAYER-NATIVE_H__

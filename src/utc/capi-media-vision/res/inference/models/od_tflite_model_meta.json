@@ -1,0 +1,47 @@
+{
+    "inputmetadata" :
+    {
+        "tensor_info" : [
+            {
+                "name" : "serving_default_images:0",
+                "shape_type" : "NHWC",
+                "shape_dims" : [ 1, 320, 320, 3],
+                "data_type" : "UINT8",
+                "color_space" : "RGB888"
+            }
+        ]
+    },
+    "outputmetadata" :
+    {
+        "score" : [
+            {
+                "name" : "StatefulPartitionedCall:1",
+                "index" : [-1, 1],
+                "threshold" : 0.01,
+                "score_type" : "NORMAL"
+            }
+        ],
+        "box" : [
+            {
+               "name" : "StatefulPartitionedCall:3",
+               "index" : [-1, -1, 1],
+               "box_type" : "ORIGIN_LEFTTOP",
+               "box_order" : [1, 0, 3, 2],
+               "box_coordinate" : "RATIO",
+               "decoding_type": "BYPASS"
+            }
+        ],
+        "label" : [
+            {
+                "name" : "StatefulPartitionedCall:2",
+                "index" : [-1, 1]
+            }
+        ],
+        "number" : [
+            {
+                "name" : "StatefulPartitionedCall:0",
+                "index" : [1]
+            }
+        ]
+    }
+}

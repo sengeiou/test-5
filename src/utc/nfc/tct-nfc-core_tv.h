@@ -1,0 +1,360 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_NFC-NATIVE_H__
+#define __TCT_NFC-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_nfc_startup(void);
+extern void utc_nfc_cleanup(void);
+extern void utc_nfc_snep_startup(void);
+extern void utc_nfc_snep_cleanup(void);
+extern void utc_ce_startup(void);
+extern void utc_ce_cleanup(void);
+extern void utc_nfc_ndef_message_startup(void);
+extern void utc_nfc_ndef_message_cleanup(void);
+extern void utc_nfc_ndef_record_startup(void);
+extern void utc_nfc_ndef_record_cleanup(void);
+extern void utc_nfc_se_hce_startup(void);
+extern void utc_nfc_se_hce_cleanup(void);
+
+extern int utc_nfc_manager_is_supported_p(void);
+extern int utc_nfc_manager_initialize_p(void);
+extern int utc_nfc_manager_deinitialize_p(void);
+extern int utc_nfc_manager_set_activation_changed_cb_p(void);
+extern int utc_nfc_manager_set_activation_changed_cb_n(void);
+extern int utc_nfc_manager_unset_activation_changed_cb_p(void);
+extern int utc_nfc_manager_unset_activation_changed_cb_n(void);
+extern int utc_nfc_manager_unset_tag_discovered_cb_p(void);
+extern int utc_nfc_manager_unset_tag_discovered_cb_n(void);
+extern int utc_nfc_manager_unset_ndef_discovered_cb_p(void);
+extern int utc_nfc_manager_unset_ndef_discovered_cb_n(void);
+extern int utc_nfc_manager_unset_p2p_target_discovered_cb_p(void);
+extern int utc_nfc_manager_unset_p2p_target_discovered_cb_n(void);
+extern int utc_nfc_manager_is_activated_p(void);
+extern int utc_nfc_manager_set_tag_discovered_cb_p(void);
+extern int utc_nfc_manager_set_tag_discovered_cb_n(void);
+extern int utc_nfc_manager_set_ndef_discovered_cb_p(void);
+extern int utc_nfc_manager_set_ndef_discovered_cb_n(void);
+extern int utc_nfc_manager_set_p2p_target_discovered_cb_p(void);
+extern int utc_nfc_manager_set_p2p_target_discovered_cb_n(void);
+extern int utc_nfc_manager_set_system_handler_enable_p1(void);
+extern int utc_nfc_manager_set_system_handler_enable_p2(void);
+extern int utc_nfc_manager_set_system_handler_enable_n(void);
+extern int utc_nfc_manager_get_se_type_p(void);
+extern int utc_nfc_manager_get_se_type_n(void);
+extern int utc_nfc_manager_set_se_type_p(void);
+extern int utc_nfc_manager_set_se_type_n(void);
+extern int utc_nfc_manager_get_cached_message_n(void);
+extern int utc_nfc_manager_get_connected_tag_n(void);
+extern int utc_nfc_manager_get_connected_target_n(void);
+extern int utc_nfc_manager_set_tag_filter_p(void);
+extern int utc_nfc_manager_set_tag_filter_n(void);
+extern int utc_nfc_manager_get_tag_filter_p(void);
+extern int utc_nfc_manager_get_tag_filter_n(void);
+extern int utc_nfc_manager_is_system_handler_enabled_p(void);
+extern int utc_nfc_manager_is_system_handler_enabled_n(void);
+extern int utc_nfc_tag_get_type_n(void);
+extern int utc_nfc_tag_is_support_ndef_n(void);
+extern int utc_nfc_tag_get_maximum_ndef_size_n(void);
+extern int utc_nfc_tag_get_ndef_size_n(void);
+extern int utc_nfc_tag_foreach_information_n(void);
+extern int utc_nfc_tag_transceive_n(void);
+extern int utc_nfc_tag_read_ndef_n(void);
+extern int utc_nfc_tag_write_ndef_n(void);
+extern int utc_nfc_tag_format_ndef_n(void);
+extern int utc_nfc_mifare_authenticate_with_keyA_n(void);
+extern int utc_nfc_mifare_authenticate_with_keyB_n(void);
+extern int utc_nfc_mifare_read_block_n(void);
+extern int utc_nfc_mifare_read_page_n(void);
+extern int utc_nfc_mifare_write_block_n(void);
+extern int utc_nfc_mifare_write_page_n(void);
+extern int utc_nfc_mifare_increment_n(void);
+extern int utc_nfc_mifare_decrement_n(void);
+extern int utc_nfc_mifare_transfer_n(void);
+extern int utc_nfc_mifare_restore_n(void);
+extern int utc_nfc_p2p_set_data_received_cb_n(void);
+extern int utc_nfc_p2p_unset_data_received_cb_n(void);
+extern int utc_nfc_p2p_send_n(void);
+extern int utc_nfc_snep_register_server_p(void);
+extern int utc_nfc_snep_register_server_n1(void);
+extern int utc_nfc_snep_register_server_n2(void);
+extern int utc_nfc_snep_unregister_server_p(void);
+extern int utc_nfc_snep_unregister_server_n(void);
+extern int utc_nfc_snep_send_client_request_n(void);
+extern int utc_nfc_snep_start_client_n(void);
+extern int utc_nfc_snep_start_server_n(void);
+extern int utc_nfc_snep_stop_service_n(void);
+extern int utc_nfc_se_enable_card_emulation_p(void);
+extern int utc_nfc_se_enable_card_emulation_n(void);
+extern int utc_nfc_se_disable_card_emulation_p(void);
+extern int utc_nfc_se_disable_card_emulation_n(void);
+extern int utc_nfc_se_get_card_emulation_mode_p(void);
+extern int utc_nfc_se_get_card_emulation_mode_n(void);
+extern int utc_nfc_se_set_preferred_handler_n(void);
+extern int utc_nfc_se_unset_preferred_handler_p(void);
+extern int utc_nfc_se_unset_preferred_handler_n(void);
+extern int utc_nfc_manager_set_se_event_cb_p(void);
+extern int utc_nfc_manager_set_se_event_cb_n(void);
+extern int utc_nfc_manager_unset_se_event_cb_p(void);
+extern int utc_nfc_manager_unset_se_event_cb_n(void);
+extern int utc_nfc_manager_set_se_transaction_event_cb_p1(void);
+extern int utc_nfc_manager_set_se_transaction_event_cb_p2(void);
+extern int utc_nfc_manager_set_se_transaction_event_cb_n1(void);
+extern int utc_nfc_manager_set_se_transaction_event_cb_n2(void);
+extern int utc_nfc_manager_set_se_transaction_event_cb_n3(void);
+extern int utc_nfc_manager_unset_se_transaction_event_cb_p(void);
+extern int utc_nfc_manager_unset_se_transaction_event_cb_n(void);
+extern int utc_nfc_manager_enable_transaction_fg_dispatch_p(void);
+extern int utc_nfc_manager_enable_transaction_fg_dispatch_n(void);
+extern int utc_nfc_manager_disable_transaction_fg_dispatch_p(void);
+extern int utc_nfc_manager_disable_transaction_fg_dispatch_n(void);
+extern int utc_nfc_ndef_message_create_p(void);
+extern int utc_nfc_ndef_message_create_n(void);
+extern int utc_nfc_ndef_message_create_from_rawdata_p(void);
+extern int utc_nfc_ndef_message_create_from_rawdata_n1(void);
+extern int utc_nfc_ndef_message_create_from_rawdata_n2(void);
+extern int utc_nfc_ndef_message_destroy_p(void);
+extern int utc_nfc_ndef_message_destroy_n(void);
+extern int utc_nfc_ndef_message_get_record_count_p(void);
+extern int utc_nfc_ndef_message_get_record_count_n1(void);
+extern int utc_nfc_ndef_message_get_record_count_n2(void);
+extern int utc_nfc_ndef_message_get_rawdata_p(void);
+extern int utc_nfc_ndef_message_get_rawdata_n(void);
+extern int utc_nfc_ndef_message_append_record_p(void);
+extern int utc_nfc_ndef_message_append_record_n(void);
+extern int utc_nfc_ndef_message_insert_record_p(void);
+extern int utc_nfc_ndef_message_insert_record_n(void);
+extern int utc_nfc_ndef_message_remove_record_p(void);
+extern int utc_nfc_ndef_message_remove_record_n(void);
+extern int utc_nfc_ndef_message_get_record_p(void);
+extern int utc_nfc_ndef_message_get_record_n(void);
+extern int utc_nfc_ndef_record_create_p(void);
+extern int utc_nfc_ndef_record_create_n(void);
+extern int utc_nfc_ndef_record_create_text_p(void);
+extern int utc_nfc_ndef_record_create_text_n(void);
+extern int utc_nfc_ndef_record_create_uri_p(void);
+extern int utc_nfc_ndef_record_create_uri_n(void);
+extern int utc_nfc_ndef_record_create_mime_p(void);
+extern int utc_nfc_ndef_record_create_mime_n_1(void);
+extern int utc_nfc_ndef_record_create_mime_n_2(void);
+extern int utc_nfc_ndef_record_create_mime_n_3(void);
+extern int utc_nfc_ndef_record_destroy_p(void);
+extern int utc_nfc_ndef_record_destroy_n(void);
+extern int utc_nfc_ndef_record_set_id_p(void);
+extern int utc_nfc_ndef_record_set_id_n(void);
+extern int utc_nfc_ndef_record_get_id_p(void);
+extern int utc_nfc_ndef_record_get_id_n(void);
+extern int utc_nfc_ndef_record_get_payload_p(void);
+extern int utc_nfc_ndef_record_get_payload_n(void);
+extern int utc_nfc_ndef_record_get_type_p(void);
+extern int utc_nfc_ndef_record_get_type_n(void);
+extern int utc_nfc_ndef_record_get_tnf_p(void);
+extern int utc_nfc_ndef_record_get_tnf_n(void);
+extern int utc_nfc_ndef_record_get_text_p(void);
+extern int utc_nfc_ndef_record_get_text_n(void);
+extern int utc_nfc_ndef_record_get_langcode_p(void);
+extern int utc_nfc_ndef_record_get_langcode_n(void);
+extern int utc_nfc_ndef_record_get_encode_type_p(void);
+extern int utc_nfc_ndef_record_get_encode_type_n(void);
+extern int utc_nfc_ndef_record_get_uri_p(void);
+extern int utc_nfc_ndef_record_get_uri_n(void);
+extern int utc_nfc_ndef_record_get_mime_type_p(void);
+extern int utc_nfc_ndef_record_get_mime_type_n(void);
+extern int utc_nfc_manager_set_hce_event_cb_p(void);
+extern int utc_nfc_manager_set_hce_event_cb_n(void);
+extern int utc_nfc_manager_unset_hce_event_cb_p(void);
+extern int utc_nfc_manager_unset_hce_event_cb_n(void);
+extern int utc_nfc_se_set_default_route_p(void);
+extern int utc_nfc_se_set_default_route_n(void);
+extern int utc_nfc_se_is_activated_handler_for_aid_p(void);
+extern int utc_nfc_se_is_activated_handler_for_aid_n(void);
+extern int utc_nfc_se_is_activated_handler_for_category_p(void);
+extern int utc_nfc_se_is_activated_handler_for_category_n(void);
+extern int utc_nfc_se_register_aid_p(void);
+extern int utc_nfc_se_register_aid_n(void);
+extern int utc_nfc_se_unregister_aid_p(void);
+extern int utc_nfc_se_unregister_aid_n(void);
+extern int utc_nfc_se_foreach_registered_aids_p(void);
+extern int utc_nfc_se_foreach_registered_aids_n(void);
+extern int utc_nfc_hce_send_apdu_response_n(void);
+
+testcase tc_array[] = {
+	{"utc_nfc_manager_is_supported_p",utc_nfc_manager_is_supported_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_initialize_p",utc_nfc_manager_initialize_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_deinitialize_p",utc_nfc_manager_deinitialize_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_activation_changed_cb_p",utc_nfc_manager_set_activation_changed_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_activation_changed_cb_n",utc_nfc_manager_set_activation_changed_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_activation_changed_cb_p",utc_nfc_manager_unset_activation_changed_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_activation_changed_cb_n",utc_nfc_manager_unset_activation_changed_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_tag_discovered_cb_p",utc_nfc_manager_unset_tag_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_tag_discovered_cb_n",utc_nfc_manager_unset_tag_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_ndef_discovered_cb_p",utc_nfc_manager_unset_ndef_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_ndef_discovered_cb_n",utc_nfc_manager_unset_ndef_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_p2p_target_discovered_cb_p",utc_nfc_manager_unset_p2p_target_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_unset_p2p_target_discovered_cb_n",utc_nfc_manager_unset_p2p_target_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_is_activated_p",utc_nfc_manager_is_activated_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_tag_discovered_cb_p",utc_nfc_manager_set_tag_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_tag_discovered_cb_n",utc_nfc_manager_set_tag_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_ndef_discovered_cb_p",utc_nfc_manager_set_ndef_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_ndef_discovered_cb_n",utc_nfc_manager_set_ndef_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_p2p_target_discovered_cb_p",utc_nfc_manager_set_p2p_target_discovered_cb_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_p2p_target_discovered_cb_n",utc_nfc_manager_set_p2p_target_discovered_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_system_handler_enable_p1",utc_nfc_manager_set_system_handler_enable_p1,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_system_handler_enable_p2",utc_nfc_manager_set_system_handler_enable_p2,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_system_handler_enable_n",utc_nfc_manager_set_system_handler_enable_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_se_type_p",utc_nfc_manager_get_se_type_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_se_type_n",utc_nfc_manager_get_se_type_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_se_type_p",utc_nfc_manager_set_se_type_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_se_type_n",utc_nfc_manager_set_se_type_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_cached_message_n",utc_nfc_manager_get_cached_message_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_connected_tag_n",utc_nfc_manager_get_connected_tag_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_connected_target_n",utc_nfc_manager_get_connected_target_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_tag_filter_p",utc_nfc_manager_set_tag_filter_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_set_tag_filter_n",utc_nfc_manager_set_tag_filter_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_tag_filter_p",utc_nfc_manager_get_tag_filter_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_get_tag_filter_n",utc_nfc_manager_get_tag_filter_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_is_system_handler_enabled_p",utc_nfc_manager_is_system_handler_enabled_p,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_manager_is_system_handler_enabled_n",utc_nfc_manager_is_system_handler_enabled_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_get_type_n",utc_nfc_tag_get_type_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_is_support_ndef_n",utc_nfc_tag_is_support_ndef_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_get_maximum_ndef_size_n",utc_nfc_tag_get_maximum_ndef_size_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_get_ndef_size_n",utc_nfc_tag_get_ndef_size_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_foreach_information_n",utc_nfc_tag_foreach_information_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_transceive_n",utc_nfc_tag_transceive_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_read_ndef_n",utc_nfc_tag_read_ndef_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_write_ndef_n",utc_nfc_tag_write_ndef_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_tag_format_ndef_n",utc_nfc_tag_format_ndef_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_authenticate_with_keyA_n",utc_nfc_mifare_authenticate_with_keyA_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_authenticate_with_keyB_n",utc_nfc_mifare_authenticate_with_keyB_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_read_block_n",utc_nfc_mifare_read_block_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_read_page_n",utc_nfc_mifare_read_page_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_write_block_n",utc_nfc_mifare_write_block_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_write_page_n",utc_nfc_mifare_write_page_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_increment_n",utc_nfc_mifare_increment_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_decrement_n",utc_nfc_mifare_decrement_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_transfer_n",utc_nfc_mifare_transfer_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_mifare_restore_n",utc_nfc_mifare_restore_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_p2p_set_data_received_cb_n",utc_nfc_p2p_set_data_received_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_p2p_unset_data_received_cb_n",utc_nfc_p2p_unset_data_received_cb_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_p2p_send_n",utc_nfc_p2p_send_n,utc_nfc_startup,utc_nfc_cleanup},
+	{"utc_nfc_snep_register_server_p",utc_nfc_snep_register_server_p,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_register_server_n1",utc_nfc_snep_register_server_n1,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_register_server_n2",utc_nfc_snep_register_server_n2,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_unregister_server_p",utc_nfc_snep_unregister_server_p,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_unregister_server_n",utc_nfc_snep_unregister_server_n,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_send_client_request_n",utc_nfc_snep_send_client_request_n,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_start_client_n",utc_nfc_snep_start_client_n,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_start_server_n",utc_nfc_snep_start_server_n,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_snep_stop_service_n",utc_nfc_snep_stop_service_n,utc_nfc_snep_startup,utc_nfc_snep_cleanup},
+	{"utc_nfc_se_enable_card_emulation_p",utc_nfc_se_enable_card_emulation_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_enable_card_emulation_n",utc_nfc_se_enable_card_emulation_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_disable_card_emulation_p",utc_nfc_se_disable_card_emulation_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_disable_card_emulation_n",utc_nfc_se_disable_card_emulation_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_get_card_emulation_mode_p",utc_nfc_se_get_card_emulation_mode_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_get_card_emulation_mode_n",utc_nfc_se_get_card_emulation_mode_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_set_preferred_handler_n",utc_nfc_se_set_preferred_handler_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_unset_preferred_handler_p",utc_nfc_se_unset_preferred_handler_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_se_unset_preferred_handler_n",utc_nfc_se_unset_preferred_handler_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_event_cb_p",utc_nfc_manager_set_se_event_cb_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_event_cb_n",utc_nfc_manager_set_se_event_cb_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_unset_se_event_cb_p",utc_nfc_manager_unset_se_event_cb_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_unset_se_event_cb_n",utc_nfc_manager_unset_se_event_cb_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_transaction_event_cb_p1",utc_nfc_manager_set_se_transaction_event_cb_p1,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_transaction_event_cb_p2",utc_nfc_manager_set_se_transaction_event_cb_p2,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_transaction_event_cb_n1",utc_nfc_manager_set_se_transaction_event_cb_n1,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_transaction_event_cb_n2",utc_nfc_manager_set_se_transaction_event_cb_n2,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_set_se_transaction_event_cb_n3",utc_nfc_manager_set_se_transaction_event_cb_n3,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_unset_se_transaction_event_cb_p",utc_nfc_manager_unset_se_transaction_event_cb_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_unset_se_transaction_event_cb_n",utc_nfc_manager_unset_se_transaction_event_cb_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_enable_transaction_fg_dispatch_p",utc_nfc_manager_enable_transaction_fg_dispatch_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_enable_transaction_fg_dispatch_n",utc_nfc_manager_enable_transaction_fg_dispatch_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_disable_transaction_fg_dispatch_p",utc_nfc_manager_disable_transaction_fg_dispatch_p,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_manager_disable_transaction_fg_dispatch_n",utc_nfc_manager_disable_transaction_fg_dispatch_n,utc_ce_startup,utc_ce_cleanup},
+	{"utc_nfc_ndef_message_create_p",utc_nfc_ndef_message_create_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_create_n",utc_nfc_ndef_message_create_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_create_from_rawdata_p",utc_nfc_ndef_message_create_from_rawdata_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_create_from_rawdata_n1",utc_nfc_ndef_message_create_from_rawdata_n1,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_create_from_rawdata_n2",utc_nfc_ndef_message_create_from_rawdata_n2,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_destroy_p",utc_nfc_ndef_message_destroy_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_destroy_n",utc_nfc_ndef_message_destroy_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_record_count_p",utc_nfc_ndef_message_get_record_count_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_record_count_n1",utc_nfc_ndef_message_get_record_count_n1,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_record_count_n2",utc_nfc_ndef_message_get_record_count_n2,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_rawdata_p",utc_nfc_ndef_message_get_rawdata_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_rawdata_n",utc_nfc_ndef_message_get_rawdata_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_append_record_p",utc_nfc_ndef_message_append_record_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_append_record_n",utc_nfc_ndef_message_append_record_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_insert_record_p",utc_nfc_ndef_message_insert_record_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_insert_record_n",utc_nfc_ndef_message_insert_record_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_remove_record_p",utc_nfc_ndef_message_remove_record_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_remove_record_n",utc_nfc_ndef_message_remove_record_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_record_p",utc_nfc_ndef_message_get_record_p,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_message_get_record_n",utc_nfc_ndef_message_get_record_n,utc_nfc_ndef_message_startup,utc_nfc_ndef_message_cleanup},
+	{"utc_nfc_ndef_record_create_p",utc_nfc_ndef_record_create_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_n",utc_nfc_ndef_record_create_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_text_p",utc_nfc_ndef_record_create_text_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_text_n",utc_nfc_ndef_record_create_text_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_uri_p",utc_nfc_ndef_record_create_uri_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_uri_n",utc_nfc_ndef_record_create_uri_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_mime_p",utc_nfc_ndef_record_create_mime_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_mime_n_1",utc_nfc_ndef_record_create_mime_n_1,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_mime_n_2",utc_nfc_ndef_record_create_mime_n_2,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_create_mime_n_3",utc_nfc_ndef_record_create_mime_n_3,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_destroy_p",utc_nfc_ndef_record_destroy_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_destroy_n",utc_nfc_ndef_record_destroy_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_set_id_p",utc_nfc_ndef_record_set_id_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_set_id_n",utc_nfc_ndef_record_set_id_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_id_p",utc_nfc_ndef_record_get_id_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_id_n",utc_nfc_ndef_record_get_id_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_payload_p",utc_nfc_ndef_record_get_payload_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_payload_n",utc_nfc_ndef_record_get_payload_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_type_p",utc_nfc_ndef_record_get_type_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_type_n",utc_nfc_ndef_record_get_type_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_tnf_p",utc_nfc_ndef_record_get_tnf_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_tnf_n",utc_nfc_ndef_record_get_tnf_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_text_p",utc_nfc_ndef_record_get_text_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_text_n",utc_nfc_ndef_record_get_text_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_langcode_p",utc_nfc_ndef_record_get_langcode_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_langcode_n",utc_nfc_ndef_record_get_langcode_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_encode_type_p",utc_nfc_ndef_record_get_encode_type_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_encode_type_n",utc_nfc_ndef_record_get_encode_type_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_uri_p",utc_nfc_ndef_record_get_uri_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_uri_n",utc_nfc_ndef_record_get_uri_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_mime_type_p",utc_nfc_ndef_record_get_mime_type_p,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_ndef_record_get_mime_type_n",utc_nfc_ndef_record_get_mime_type_n,utc_nfc_ndef_record_startup,utc_nfc_ndef_record_cleanup},
+	{"utc_nfc_manager_set_hce_event_cb_p",utc_nfc_manager_set_hce_event_cb_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_manager_set_hce_event_cb_n",utc_nfc_manager_set_hce_event_cb_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_manager_unset_hce_event_cb_p",utc_nfc_manager_unset_hce_event_cb_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_manager_unset_hce_event_cb_n",utc_nfc_manager_unset_hce_event_cb_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_set_default_route_p",utc_nfc_se_set_default_route_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_set_default_route_n",utc_nfc_se_set_default_route_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_is_activated_handler_for_aid_p",utc_nfc_se_is_activated_handler_for_aid_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_is_activated_handler_for_aid_n",utc_nfc_se_is_activated_handler_for_aid_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_is_activated_handler_for_category_p",utc_nfc_se_is_activated_handler_for_category_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_is_activated_handler_for_category_n",utc_nfc_se_is_activated_handler_for_category_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_register_aid_p",utc_nfc_se_register_aid_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_register_aid_n",utc_nfc_se_register_aid_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_unregister_aid_p",utc_nfc_se_unregister_aid_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_unregister_aid_n",utc_nfc_se_unregister_aid_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_foreach_registered_aids_p",utc_nfc_se_foreach_registered_aids_p,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_se_foreach_registered_aids_n",utc_nfc_se_foreach_registered_aids_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{"utc_nfc_hce_send_apdu_response_n",utc_nfc_hce_send_apdu_response_n,utc_nfc_se_hce_startup,utc_nfc_se_hce_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_NFC-NATIVE_H__

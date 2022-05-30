@@ -1,0 +1,334 @@
+SET(PKG_NAME "webkit2")
+
+SET(EXEC_NAME "tct-${PKG_NAME}-core")
+SET(RPM_NAME "core-${PKG_NAME}-tests")
+
+SET(CAPI_LIB "chromium-efl")
+
+IF( DEFINED MOBILE OR DEFINED TIZENIOT OR DEFINED TV)
+SET(TC_SOURCES
+    utc_webkit2_ewk_autofill_profile_data_get_func.c
+    utc_webkit2_ewk_autofill_profile_data_set_func.c
+    utc_webkit2_ewk_autofill_profile_delete_func.c
+    utc_webkit2_ewk_autofill_profile_id_get_func.c
+    utc_webkit2_ewk_autofill_profile_new_func.c
+    utc_webkit2_ewk_back_forward_list_count_func.c
+    utc_webkit2_ewk_back_forward_list_current_item_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_at_index_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_original_url_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_ref_func.c
+    utc_webkit2_ewk_back_forward_list_item_title_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_unref_func.c
+    utc_webkit2_ewk_back_forward_list_item_url_get_func.c
+    utc_webkit2_ewk_back_forward_list_n_back_items_copy_func.c
+    utc_webkit2_ewk_back_forward_list_n_forward_items_copy_func.c
+    utc_webkit2_ewk_back_forward_list_next_item_get_func.c
+    utc_webkit2_ewk_back_forward_list_previous_item_get_func.c
+    utc_webkit2_ewk_context_application_cache_delete_all_func.c
+    utc_webkit2_ewk_context_background_music_get_func.c
+    utc_webkit2_ewk_context_background_music_set_func.c
+    utc_webkit2_ewk_context_block_multimedia_on_call_get_func.c
+    utc_webkit2_ewk_context_block_multimedia_on_call_set_func.c
+    utc_webkit2_ewk_context_cache_model_get_func.c
+    utc_webkit2_ewk_context_cache_model_set_func.c
+    utc_webkit2_ewk_context_cookie_manager_get_func.c
+    utc_webkit2_ewk_context_form_autofill_profile_add_func.c
+    utc_webkit2_ewk_context_form_autofill_profile_get_func.c
+    utc_webkit2_ewk_context_form_autofill_profile_get_all_func.c
+    utc_webkit2_ewk_context_form_autofill_profile_remove_func.c
+    utc_webkit2_ewk_context_form_autofill_profile_set_func.c
+    utc_webkit2_ewk_context_form_candidate_data_delete_all_func.c
+    utc_webkit2_ewk_context_form_password_data_delete_all_func.c
+    utc_webkit2_ewk_context_icon_database_icon_object_add_func.c
+    utc_webkit2_ewk_context_intercept_request_callback_set_func.c
+    utc_webkit2_ewk_context_menu_item_append_as_action_func.c
+    utc_webkit2_ewk_context_menu_item_append_func.c
+    utc_webkit2_ewk_context_menu_item_count_func.c
+    utc_webkit2_ewk_context_menu_item_image_url_get_func.c
+    utc_webkit2_ewk_context_menu_item_link_url_get_func.c
+    utc_webkit2_ewk_context_menu_item_remove_func.c
+    utc_webkit2_ewk_context_menu_item_tag_get_func.c
+    utc_webkit2_ewk_context_menu_nth_item_get_func.c
+    utc_webkit2_ewk_context_resource_cache_clear_func.c
+    utc_webkit2_ewk_context_rotation_lock_get_func.c
+    utc_webkit2_ewk_context_rotation_lock_set_func.c
+    utc_webkit2_ewk_context_sound_overlap_get_func.c
+    utc_webkit2_ewk_context_sound_overlap_set_func.c
+    utc_webkit2_ewk_context_web_indexed_database_delete_all_func.c
+    utc_webkit2_ewk_context_web_storage_delete_all_func.c
+    utc_webkit2_ewk_cookie_manager_accept_policy_async_get_func.c
+    utc_webkit2_ewk_cookie_manager_accept_policy_set_func.c
+    utc_webkit2_ewk_cookie_manager_cookies_clear_func.c
+    utc_webkit2_ewk_cookie_manager_file_scheme_cookies_allow_get_func.c
+    utc_webkit2_ewk_cookie_manager_file_scheme_cookies_allow_set_func.c
+    utc_webkit2_ewk_cookie_manager_persistent_storage_set_func.c
+    utc_webkit2_ewk_error_cancellation_get_func.c
+    utc_webkit2_ewk_error_code_get_func.c
+    utc_webkit2_ewk_error_description_get_func.c
+    utc_webkit2_ewk_error_url_get_func.c
+    utc_webkit2_ewk_geolocation_permission_request_origin_get_func.c
+    utc_webkit2_ewk_init_func.c
+    utc_webkit2_ewk_intercept_request_headers_get_func.c
+    utc_webkit2_ewk_intercept_request_http_method_get_func.c
+    utc_webkit2_ewk_intercept_request_ignore_func.c
+    utc_webkit2_ewk_intercept_request_response_body_set_func.c
+    utc_webkit2_ewk_intercept_request_response_header_add_func.c
+    utc_webkit2_ewk_intercept_request_response_header_map_add_func.c
+    utc_webkit2_ewk_intercept_request_response_set_func.c
+    utc_webkit2_ewk_intercept_request_response_status_set_func.c
+    utc_webkit2_ewk_intercept_request_response_write_chunk_func.c
+    utc_webkit2_ewk_intercept_request_url_get_func.c
+    utc_webkit2_ewk_manifest_background_color_get_func.c
+    utc_webkit2_ewk_manifest_icons_count_get_func.c
+    utc_webkit2_ewk_manifest_icons_height_get_func.c
+    utc_webkit2_ewk_manifest_icons_sizes_count_get_func.c
+    utc_webkit2_ewk_manifest_icons_src_get_func.c
+    utc_webkit2_ewk_manifest_icons_type_get_func.c
+    utc_webkit2_ewk_manifest_icons_width_get_func.c
+    utc_webkit2_ewk_manifest_name_get_func.c
+    utc_webkit2_ewk_manifest_orientation_type_get_func.c
+    utc_webkit2_ewk_manifest_short_name_get_func.c
+    utc_webkit2_ewk_manifest_start_url_get_func.c
+    utc_webkit2_ewk_manifest_theme_color_get_func.c
+    utc_webkit2_ewk_manifest_web_display_mode_get_func.c
+    utc_webkit2_ewk_policy_decision_cookie_get_func.c
+    utc_webkit2_ewk_policy_decision_host_get_func.c
+    utc_webkit2_ewk_policy_decision_http_method_get_func.c
+    utc_webkit2_ewk_policy_decision_ignore_func.c
+    utc_webkit2_ewk_policy_decision_navigation_type_get_func.c
+    utc_webkit2_ewk_policy_decision_response_headers_get_func.c
+    utc_webkit2_ewk_policy_decision_response_mime_get_func.c
+    utc_webkit2_ewk_policy_decision_response_status_code_get_func.c
+    utc_webkit2_ewk_policy_decision_scheme_get_func.c
+    utc_webkit2_ewk_policy_decision_type_get_func.c
+    utc_webkit2_ewk_policy_decision_url_get_func.c
+    utc_webkit2_ewk_policy_decision_use_func.c
+    utc_webkit2_ewk_security_origin_host_get_func.c
+    utc_webkit2_ewk_security_origin_protocol_get_func.c
+    utc_webkit2_ewk_settings_auto_fitting_get_func.c
+    utc_webkit2_ewk_settings_auto_fitting_set_func.c
+    utc_webkit2_ewk_settings_autofill_password_form_enabled_set_func.c
+    utc_webkit2_ewk_settings_default_font_size_get_func.c
+    utc_webkit2_ewk_settings_default_font_size_set_func.c
+    utc_webkit2_ewk_settings_default_text_encoding_name_get_func.c
+    utc_webkit2_ewk_settings_default_text_encoding_name_set_func.c
+    utc_webkit2_ewk_settings_form_candidate_data_enabled_set_func.c
+    utc_webkit2_ewk_settings_form_profile_data_enabled_set_func.c
+    utc_webkit2_ewk_settings_javascript_enabled_get_func.c
+    utc_webkit2_ewk_settings_javascript_enabled_set_func.c
+    utc_webkit2_ewk_settings_loads_images_automatically_get_func.c
+    utc_webkit2_ewk_settings_loads_images_automatically_set_func.c
+    utc_webkit2_ewk_settings_scripts_can_open_windows_get_func.c
+    utc_webkit2_ewk_settings_scripts_can_open_windows_set_func.c
+    utc_webkit2_ewk_shutdown_func.c
+    utc_webkit2_ewk_view_add_func.c
+    utc_webkit2_ewk_view_add_in_incognito_mode_func.c
+    utc_webkit2_ewk_view_back_forward_list_clear_func.c
+    utc_webkit2_ewk_view_back_forward_list_get_func.c
+    utc_webkit2_ewk_view_back_func.c
+    utc_webkit2_ewk_view_back_possible_func.c
+    utc_webkit2_ewk_view_contents_set_func.c
+    utc_webkit2_ewk_view_contents_size_get_func.c
+    utc_webkit2_ewk_view_context_get_func.c
+    utc_webkit2_ewk_view_evaluate_javascript.c
+    utc_webkit2_ewk_view_focus_get_func.c
+    utc_webkit2_ewk_view_focus_set_func.c
+    utc_webkit2_ewk_view_forward_func.c
+    utc_webkit2_ewk_view_forward_possible_func.c
+    utc_webkit2_ewk_view_fullscreen_exit_func.c
+    utc_webkit2_ewk_view_html_string_load_func.c
+    utc_webkit2_ewk_view_javascript_message_handler_add.c
+    utc_webkit2_ewk_view_load_progress_get_func.c
+    utc_webkit2_ewk_view_orientation_send_func.c
+    utc_webkit2_ewk_view_original_url_get_func.c
+    utc_webkit2_ewk_view_reload_func.c
+    utc_webkit2_ewk_view_request_manifest.c
+    utc_webkit2_ewk_view_resume_func.c
+    utc_webkit2_ewk_view_scale_get_func.c
+    utc_webkit2_ewk_view_scale_set_func.c
+    utc_webkit2_ewk_view_script_execute_func.c
+    utc_webkit2_ewk_view_scroll_by_func.c
+    utc_webkit2_ewk_view_scroll_pos_get_func.c
+    utc_webkit2_ewk_view_scroll_set_func.c
+    utc_webkit2_ewk_view_settings_get_func.c
+    utc_webkit2_ewk_view_stop_func.c
+    utc_webkit2_ewk_view_suspend_func.c
+    utc_webkit2_ewk_view_text_find_func.c
+    utc_webkit2_ewk_view_text_selection_clear_func.c
+    utc_webkit2_ewk_view_text_selection_text_get_func.c
+    utc_webkit2_ewk_view_title_get_func.c
+    utc_webkit2_ewk_view_url_get_func.c
+    utc_webkit2_ewk_view_url_request_set_func.c
+    utc_webkit2_ewk_view_url_set_func.c
+    utc_webkit2_ewk_view_user_agent_get_func.c
+    utc_webkit2_ewk_view_user_agent_set_func.c
+    utc_webkit2_ewk_view_visibility_set_func.c
+    tct-autofill-profile.c
+)
+ENDIF()
+
+IF( DEFINED WEARABLE )
+SET(TC_SOURCES
+    utc_webkit2_ewk_back_forward_list_count_func.c
+    utc_webkit2_ewk_back_forward_list_current_item_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_at_index_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_original_url_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_ref_func.c
+    utc_webkit2_ewk_back_forward_list_item_title_get_func.c
+    utc_webkit2_ewk_back_forward_list_item_unref_func.c
+    utc_webkit2_ewk_back_forward_list_item_url_get_func.c
+    utc_webkit2_ewk_back_forward_list_n_back_items_copy_func.c
+    utc_webkit2_ewk_back_forward_list_n_forward_items_copy_func.c
+    utc_webkit2_ewk_back_forward_list_next_item_get_func.c
+    utc_webkit2_ewk_back_forward_list_previous_item_get_func.c
+    utc_webkit2_ewk_context_background_music_get_func.c
+    utc_webkit2_ewk_context_background_music_set_func.c
+    utc_webkit2_ewk_context_block_multimedia_on_call_get_func.c
+    utc_webkit2_ewk_context_block_multimedia_on_call_set_func.c
+    utc_webkit2_ewk_context_cache_model_get_func.c
+    utc_webkit2_ewk_context_cache_model_set_func.c
+    utc_webkit2_ewk_context_cookie_manager_get_func.c
+    utc_webkit2_ewk_context_intercept_request_callback_set_func.c
+    utc_webkit2_ewk_context_menu_item_count_func.c
+    utc_webkit2_ewk_context_menu_item_remove_func.c
+    utc_webkit2_ewk_context_menu_item_tag_get_func.c
+    utc_webkit2_ewk_context_menu_nth_item_get_func.c
+    utc_webkit2_ewk_context_resource_cache_clear_func.c
+    utc_webkit2_ewk_context_rotation_lock_get_func.c
+    utc_webkit2_ewk_context_rotation_lock_set_func.c
+    utc_webkit2_ewk_context_sound_overlap_get_func.c
+    utc_webkit2_ewk_context_sound_overlap_set_func.c
+    utc_webkit2_ewk_cookie_manager_accept_policy_async_get_func.c
+    utc_webkit2_ewk_cookie_manager_accept_policy_set_func.c
+    utc_webkit2_ewk_cookie_manager_cookies_clear_func.c
+    utc_webkit2_ewk_cookie_manager_file_scheme_cookies_allow_get_func.c
+    utc_webkit2_ewk_cookie_manager_file_scheme_cookies_allow_set_func.c
+    utc_webkit2_ewk_geolocation_permission_request_origin_get_func.c
+    utc_webkit2_ewk_init_func.c
+    utc_webkit2_ewk_intercept_request_headers_get_func.c
+    utc_webkit2_ewk_intercept_request_http_method_get_func.c
+    utc_webkit2_ewk_intercept_request_ignore_func.c
+    utc_webkit2_ewk_intercept_request_response_body_set_func.c
+    utc_webkit2_ewk_intercept_request_response_header_add_func.c
+    utc_webkit2_ewk_intercept_request_response_header_map_add_func.c
+    utc_webkit2_ewk_intercept_request_response_set_func.c
+    utc_webkit2_ewk_intercept_request_response_status_set_func.c
+    utc_webkit2_ewk_intercept_request_response_write_chunk_func.c
+    utc_webkit2_ewk_intercept_request_url_get_func.c
+    utc_webkit2_ewk_manifest_background_color_get_func.c
+    utc_webkit2_ewk_manifest_icons_count_get_func.c
+    utc_webkit2_ewk_manifest_icons_height_get_func.c
+    utc_webkit2_ewk_manifest_icons_sizes_count_get_func.c
+    utc_webkit2_ewk_manifest_icons_src_get_func.c
+    utc_webkit2_ewk_manifest_icons_type_get_func.c
+    utc_webkit2_ewk_manifest_icons_width_get_func.c
+    utc_webkit2_ewk_manifest_name_get_func.c
+    utc_webkit2_ewk_manifest_orientation_type_get_func.c
+    utc_webkit2_ewk_manifest_short_name_get_func.c
+    utc_webkit2_ewk_manifest_start_url_get_func.c
+    utc_webkit2_ewk_manifest_theme_color_get_func.c
+    utc_webkit2_ewk_manifest_web_display_mode_get_func.c
+    utc_webkit2_ewk_policy_decision_cookie_get_func.c
+    utc_webkit2_ewk_policy_decision_host_get_func.c
+    utc_webkit2_ewk_policy_decision_http_method_get_func.c
+    utc_webkit2_ewk_policy_decision_ignore_func.c
+    utc_webkit2_ewk_policy_decision_navigation_type_get_func.c
+    utc_webkit2_ewk_policy_decision_response_headers_get_func.c
+    utc_webkit2_ewk_policy_decision_response_mime_get_func.c
+    utc_webkit2_ewk_policy_decision_response_status_code_get_func.c
+    utc_webkit2_ewk_policy_decision_scheme_get_func.c
+    utc_webkit2_ewk_policy_decision_type_get_func.c
+    utc_webkit2_ewk_policy_decision_url_get_func.c
+    utc_webkit2_ewk_policy_decision_use_func.c
+    utc_webkit2_ewk_security_origin_host_get_func.c
+    utc_webkit2_ewk_security_origin_protocol_get_func.c
+    utc_webkit2_ewk_settings_default_font_size_get_func.c
+    utc_webkit2_ewk_settings_default_font_size_set_func.c
+    utc_webkit2_ewk_settings_default_text_encoding_name_get_func.c
+    utc_webkit2_ewk_settings_default_text_encoding_name_set_func.c
+    utc_webkit2_ewk_settings_javascript_enabled_get_func.c
+    utc_webkit2_ewk_settings_javascript_enabled_set_func.c
+    utc_webkit2_ewk_settings_loads_images_automatically_get_func.c
+    utc_webkit2_ewk_settings_loads_images_automatically_set_func.c
+    utc_webkit2_ewk_settings_scripts_can_open_windows_get_func.c
+    utc_webkit2_ewk_settings_scripts_can_open_windows_set_func.c
+    utc_webkit2_ewk_shutdown_func.c
+    utc_webkit2_ewk_view_add_func.c
+    utc_webkit2_ewk_view_add_in_incognito_mode_func.c
+    utc_webkit2_ewk_view_back_forward_list_clear_func.c
+    utc_webkit2_ewk_view_back_forward_list_get_func.c
+    utc_webkit2_ewk_view_back_func.c
+    utc_webkit2_ewk_view_back_possible_func.c
+    utc_webkit2_ewk_view_contents_size_get_func.c
+    utc_webkit2_ewk_view_context_get_func.c
+    utc_webkit2_ewk_view_evaluate_javascript.c
+    utc_webkit2_ewk_view_focus_get_func.c
+    utc_webkit2_ewk_view_focus_set_func.c
+    utc_webkit2_ewk_view_forward_func.c
+    utc_webkit2_ewk_view_forward_possible_func.c
+    utc_webkit2_ewk_view_fullscreen_exit_func.c
+    utc_webkit2_ewk_view_html_string_load_func.c
+    utc_webkit2_ewk_view_javascript_message_handler_add.c
+    utc_webkit2_ewk_view_load_progress_get_func.c
+    utc_webkit2_ewk_view_orientation_send_func.c
+    utc_webkit2_ewk_view_original_url_get_func.c
+    utc_webkit2_ewk_view_reload_func.c
+    utc_webkit2_ewk_view_request_manifest.c
+    utc_webkit2_ewk_view_resume_func.c
+    utc_webkit2_ewk_view_scale_get_func.c
+    utc_webkit2_ewk_view_scale_set_func.c
+    utc_webkit2_ewk_view_script_execute_func.c
+    utc_webkit2_ewk_view_scroll_by_func.c
+    utc_webkit2_ewk_view_scroll_pos_get_func.c
+    utc_webkit2_ewk_view_scroll_set_func.c
+    utc_webkit2_ewk_view_settings_get_func.c
+    utc_webkit2_ewk_view_stop_func.c
+    utc_webkit2_ewk_view_suspend_func.c
+    utc_webkit2_ewk_view_text_find_func.c
+    utc_webkit2_ewk_view_title_get_func.c
+    utc_webkit2_ewk_view_url_get_func.c
+    utc_webkit2_ewk_view_url_request_set_func.c
+    utc_webkit2_ewk_view_url_set_func.c
+    utc_webkit2_ewk_view_user_agent_get_func.c
+    utc_webkit2_ewk_view_user_agent_set_func.c
+    utc_webkit2_ewk_view_visibility_set_func.c
+)
+ENDIF()
+
+PKG_CHECK_MODULES(${CAPI_LIB} REQUIRED
+    ${CAPI_LIB}
+	capi-appfw-application
+	capi-system-info
+    evas
+    ecore-evas
+    ecore
+    edje
+    eina
+    elementary
+    glib-2.0
+    gobject-2.0
+    storage
+	dlog elementary
+)
+
+INCLUDE_DIRECTORIES(
+    ${${CAPI_LIB}_INCLUDE_DIRS}
+)
+
+ADD_EXECUTABLE(${EXEC_NAME} ${EXEC_NAME}.c ${TC_SOURCES} ${COMMON_FILE})
+TARGET_LINK_LIBRARIES(${EXEC_NAME}
+    ${${CAPI_LIB}_LIBRARIES}
+)
+
+INSTALL(PROGRAMS ${EXEC_NAME}
+    DESTINATION ${BIN_DIR}/${RPM_NAME}/bin
+)
+
+IF( DEFINED ASAN )
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -Wall -pie -g -fsanitize=address -fsanitize-recover=address -U_FORTIFY_SOURCE -fno-omit-frame-pointer")
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--as-needed -Wl,--rpath=/usr/lib -Wl,-fsanitize=address")
+ELSE()
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g -fPIE -Wall")
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--as-needed -Wl,--rpath=/usr/lib -pie")
+ENDIF()
+

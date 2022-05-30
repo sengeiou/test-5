@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-nntrainer-itc" version="0.1.0" api-version="6.0">
+    <label>NativeNntrainerTest</label>
+    <author email="test@tizentest.com" href="www.tizen.org">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native.nntrainer-itc" exec="/usr/apps/native-nntrainer-itc/bin/tct-nntrainer-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+	</ui-application>
+</manifest>

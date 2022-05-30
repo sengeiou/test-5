@@ -1,0 +1,8 @@
+thumbnail_util_create
+thumbnail_util_extract
+thumbnail_util_set_path
+thumbnail_util_set_size
+thumbnail_util_cancel
+thumbnail_util_destroy
+thumbnail_util_extract_to_file
+thumbnail_util_extract_to_buffer

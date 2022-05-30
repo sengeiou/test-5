@@ -1,0 +1,92 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_MEDIASTREAMRECORDER-NATIVE_H__
+#define __TCT_MEDIASTREAMRECORDER-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void ITs_mediastreamrecorder_startup(void);
+extern void ITs_mediastreamrecorder_cleanup(void);
+extern void ITs_mediastreamrecorder_callback_startup(void);
+extern void ITs_mediastreamrecorder_callback_cleanup(void);
+
+extern int ITc_streamrecorder_create_destroy_p(void);
+extern int ITc_streamrecorder_prepare_unprepare_p(void);
+extern int ITc_streamrecorder_start_cancel_p(void);
+extern int ITc_streamrecorder_pause_p(void);
+extern int ITc_streamrecorder_commit_p(void);
+extern int ITc_streamrecorder_enable_source_buffer_p(void);
+extern int ITc_streamrecorder_get_state_p(void);
+extern int ITc_streamrecorder_set_get_filename_p(void);
+extern int ITc_streamrecorder_set_get_file_format_p(void);
+extern int ITc_streamrecorder_set_get_audio_encoder_p(void);
+extern int ITc_streamrecorder_set_get_video_resolution_p(void);
+extern int ITc_streamrecorder_set_get_video_encoder_p(void);
+extern int ITc_streamrecorder_set_get_video_source_format_p(void);
+extern int ITc_streamrecorder_set_get_video_framerate_p(void);
+extern int ITc_streamrecorder_set_get_recording_limit_p(void);
+extern int ITc_streamrecorder_set_get_audio_samplerate_p(void);
+extern int ITc_streamrecorder_set_get_audio_encoder_bitrate_p(void);
+extern int ITc_streamrecorder_set_get_video_encoder_bitrate_p(void);
+extern int ITc_streamrecorder_set_get_audio_channel_p(void);
+extern int ITc_streamrecorder_push_stream_buffer_p(void);
+extern int ITc_streamrecorder_foreach_supported_file_format_p(void);
+extern int ITc_streamrecorder_foreach_supported_audio_encoder_p(void);
+extern int ITc_streamrecorder_foreach_supported_video_encoder_p(void);
+extern int ITc_streamrecorder_foreach_supported_video_resolution_p(void);
+extern int ITc_streamrecorder_set_unset_notify_cb_p(void);
+extern int ITc_streamrecorder_set_unset_recording_status_cb_p(void);
+extern int ITc_streamrecorder_set_unset_recording_limit_reached_cb_p(void);
+extern int ITc_streamrecorder_set_unset_error_cb_p(void);
+extern int ITc_streamrecorder_set_unset_buffer_consume_completed_cb_p(void);
+extern int ITc_streamrecorder_set_get_mode_p(void);
+
+testcase tc_array[] = {
+	{"ITc_streamrecorder_create_destroy_p",ITc_streamrecorder_create_destroy_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_prepare_unprepare_p",ITc_streamrecorder_prepare_unprepare_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_start_cancel_p",ITc_streamrecorder_start_cancel_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_pause_p",ITc_streamrecorder_pause_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_commit_p",ITc_streamrecorder_commit_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_enable_source_buffer_p",ITc_streamrecorder_enable_source_buffer_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_get_state_p",ITc_streamrecorder_get_state_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_filename_p",ITc_streamrecorder_set_get_filename_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_file_format_p",ITc_streamrecorder_set_get_file_format_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_audio_encoder_p",ITc_streamrecorder_set_get_audio_encoder_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_video_resolution_p",ITc_streamrecorder_set_get_video_resolution_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_video_encoder_p",ITc_streamrecorder_set_get_video_encoder_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_video_source_format_p",ITc_streamrecorder_set_get_video_source_format_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_video_framerate_p",ITc_streamrecorder_set_get_video_framerate_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_recording_limit_p",ITc_streamrecorder_set_get_recording_limit_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_audio_samplerate_p",ITc_streamrecorder_set_get_audio_samplerate_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_audio_encoder_bitrate_p",ITc_streamrecorder_set_get_audio_encoder_bitrate_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_video_encoder_bitrate_p",ITc_streamrecorder_set_get_video_encoder_bitrate_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_set_get_audio_channel_p",ITc_streamrecorder_set_get_audio_channel_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_push_stream_buffer_p",ITc_streamrecorder_push_stream_buffer_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{"ITc_streamrecorder_foreach_supported_file_format_p",ITc_streamrecorder_foreach_supported_file_format_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_foreach_supported_audio_encoder_p",ITc_streamrecorder_foreach_supported_audio_encoder_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_foreach_supported_video_encoder_p",ITc_streamrecorder_foreach_supported_video_encoder_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_foreach_supported_video_resolution_p",ITc_streamrecorder_foreach_supported_video_resolution_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_unset_notify_cb_p",ITc_streamrecorder_set_unset_notify_cb_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_unset_recording_status_cb_p",ITc_streamrecorder_set_unset_recording_status_cb_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_unset_recording_limit_reached_cb_p",ITc_streamrecorder_set_unset_recording_limit_reached_cb_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_unset_error_cb_p",ITc_streamrecorder_set_unset_error_cb_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_unset_buffer_consume_completed_cb_p",ITc_streamrecorder_set_unset_buffer_consume_completed_cb_p,ITs_mediastreamrecorder_callback_startup,ITs_mediastreamrecorder_callback_cleanup},
+	{"ITc_streamrecorder_set_get_mode_p",ITc_streamrecorder_set_get_mode_p,ITs_mediastreamrecorder_startup,ITs_mediastreamrecorder_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_MEDIASTREAMRECORDER-NATIVE_H__

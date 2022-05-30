@@ -1,0 +1,9 @@
+mobile_armv7l:
+mobile_aarch64:
+mobile_x86:
+mobile_x86_64:
+wearable_armv7l:
+wearable_x86:
+tizeniot_armv7l:
+tizeniot_aarch64:
+tv_armv7l:

@@ -1,0 +1,5 @@
+##### tv #####
+tv:armv7l:utc:base-utils
+tv:aarch64:utc:base-utils
+tv:i586:utc:base-utils
+tv:x86_64:utc:base-utils

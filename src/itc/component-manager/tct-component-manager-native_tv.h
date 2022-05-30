@@ -1,0 +1,82 @@
+//
+// Copyright (c) 2019 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_COMPONENT_MANAGER-NATIVE_H__
+#define __TCT_COMPONENT_MANAGER-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void ITs_component_manager_startup(void);
+extern void ITs_component_manager_cleanup(void);
+extern void ITs_component_manager_info_startup(void);
+extern void ITs_component_manager_info_cleanup(void);
+extern void ITs_component_manager_context_startup(void);
+extern void ITs_component_manager_context_cleanup(void);
+
+
+extern int ITc_component_manager_is_running_p(void);
+extern int ITc_component_manager_get_component_info_p(void);
+extern int ITc_component_manager_get_component_context_p(void);
+extern int ITc_component_manager_resume_component_p(void);
+extern int ITc_component_manager_terminate_bg_component_p(void);
+extern int ITc_component_manager_foreach_component_info_p(void);
+extern int ITc_component_manager_foreach_component_context_p(void);
+extern int ITc_component_manager_create_destroy_p(void);
+extern int ITc_component_manager_info_get_app_id_p(void);
+extern int ITc_component_manager_info_get_component_id_p(void);
+extern int ITc_component_manager_info_get_component_type_p(void);
+extern int ITc_component_manager_info_get_icon_p(void);
+extern int ITc_component_manager_info_get_localized_label_p(void);
+extern int ITc_component_manager_info_clone_p(void);
+extern int ITc_component_manager_info_is_icon_display_p(void);
+extern int ITc_component_manager_info_is_managed_by_task_manager_p(void);
+extern int ITc_component_manager_context_clone_p(void);
+extern int ITc_component_manager_component_context_get_app_id_p(void);
+extern int ITc_component_manager_component_context_get_component_id_p(void);
+extern int ITc_component_manager_component_context_get_component_state_p(void);
+extern int ITc_component_manager_component_context_get_instance_id_p(void);
+extern int ITc_component_manager_component_context_is_terminated_p(void);
+extern int ITc_component_manager_component_context_is_subcomponent_p(void);
+
+
+testcase tc_array[] = {
+	{"ITc_component_manager_is_running_p",ITc_component_manager_is_running_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_get_component_info_p",ITc_component_manager_get_component_info_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_get_component_context_p",ITc_component_manager_get_component_context_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_resume_component_p",ITc_component_manager_resume_component_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_terminate_bg_component_p",ITc_component_manager_terminate_bg_component_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_foreach_component_info_p",ITc_component_manager_foreach_component_info_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_foreach_component_context_p",ITc_component_manager_foreach_component_context_p,ITs_component_manager_startup,ITs_component_manager_cleanup},
+	{"ITc_component_manager_create_destroy_p",ITc_component_manager_create_destroy_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_get_app_id_p",ITc_component_manager_info_get_app_id_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_get_component_id_p",ITc_component_manager_info_get_component_id_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_get_component_type_p",ITc_component_manager_info_get_component_type_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_get_icon_p",ITc_component_manager_info_get_icon_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_get_localized_label_p",ITc_component_manager_info_get_localized_label_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_clone_p",ITc_component_manager_info_clone_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_is_icon_display_p",ITc_component_manager_info_is_icon_display_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_info_is_managed_by_task_manager_p",ITc_component_manager_info_is_managed_by_task_manager_p,ITs_component_manager_info_startup,ITs_component_manager_info_cleanup},
+	{"ITc_component_manager_context_clone_p",ITc_component_manager_context_clone_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_get_app_id_p",ITc_component_manager_component_context_get_app_id_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_get_component_id_p",ITc_component_manager_context_clone_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_get_component_state_p",ITc_component_manager_component_context_get_component_state_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_get_instance_id_p",ITc_component_manager_component_context_get_instance_id_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_is_terminated_p",ITc_component_manager_component_context_is_terminated_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{"ITc_component_manager_component_context_is_subcomponent_p",ITc_component_manager_component_context_is_subcomponent_p,ITs_component_manager_context_startup,ITs_component_manager_context_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_COMPONENT_MANAGER-NATIVE_H__

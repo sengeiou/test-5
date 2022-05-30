@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-capi-network-ua-itc" version="0.1.0" api-version="3.0">
+    <label>NativeCapiNetworkUaTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <ui-application appid="native.capi-network-ua-itc" exec="/usr/apps/native-capi-network-ua-itc/bin/tct-capi-network-ua-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/bluetooth</privilege>
+		<privilege>http://tizen.org/privilege/location</privilege>
+	</privileges>
+</manifest>

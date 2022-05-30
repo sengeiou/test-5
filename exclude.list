@@ -1,0 +1,20 @@
+******************************************************Usage Guide for TC entry****************************************************
+* Please input TC in below mentioned tags [ Example for mobile target: ## mobile ##] in the format:
+*    ## mobile ##
+*    itc:TC name
+*    utc:TC name
+*    ctc:TC name
+*    TC name will be mentioned with itc:/utc:/ctc: prefix.
+* If any TC is to be excluded for all targets (mobile/wearable/tv/tizeniot) then it must be mentioned under '## all ##' tag.
+***************************************************************************************************************************************
+
+## all ##
+
+## mobile ##
+
+## wearable ##
+
+## tv ##
+
+## tizeniot ##
+

@@ -1,0 +1,14 @@
+<ges version='0.1'>
+  <project properties='properties;' metadatas='metadatas, format-version=(string)0.1;'>
+    <encoding-profiles>
+    </encoding-profiles>
+    <ressources>
+    </ressources>
+    <timeline properties='properties;' metadatas='metadatas, duration=(guint64)0;'>
+      <layer priority='0' properties='properties;' metadatas='metadatas, volume=(float)1;'>
+      </layer>
+      <groups>
+      </groups>
+    </timeline>
+  </project>
+</ges>

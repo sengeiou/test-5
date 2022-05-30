@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="native-capi-ui-inputmethod-manager-itc" version="0.1.0" api-version="6.0">
+    <label>CoreInputmethodManagerTest</label>
+    <author email="mymail@tizentest.com" href="www.tizentest.com">test</author>
+    <description>Native API test Application</description>
+    <service-application appid="native.capi-ui-inputmethod-manager-itc" exec="/usr/apps/native-capi-ui-inputmethod-manager-itc/bin/tct-capi-ui-inputmethod-manager-native" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </service-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/ime</privilege>
+		<privilege>http://tizen.org/privilege/imemanager</privilege>
+	</privileges>
+</manifest>

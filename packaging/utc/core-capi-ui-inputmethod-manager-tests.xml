@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="core-capi-ui-inputmethod-manager-tests" version="0.1.0" install-location="internal-only" api-version="6.0">
+    <label>CoreCapiUiInputmethodTest</label>
+    <author email="test@tizen.org" href="www.tizen.org">test</author>
+    <description>Core API test Application</description>
+    <service-application appid="core.capi-ui-inputmethod-manager-tests" exec="/usr/apps/core-capi-ui-inputmethod-manager-tests/bin/tct-capi-ui-inputmethod-manager-core" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </service-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/imemanager</privilege>
+    </privileges>
+</manifest>

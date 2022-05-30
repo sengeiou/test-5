@@ -1,0 +1,130 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_APP-MANAGER-NATIVE_H__
+#define __TCT_APP-MANAGER-NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void ITs_app_manager_startup(void);
+extern void ITs_app_manager_cleanup(void);
+extern void ITs_app_manager_info_startup(void);
+extern void ITs_app_manager_info_cleanup(void);
+extern void ITs_app_manager_context_startup(void);
+extern void ITs_app_manager_context_cleanup(void);
+
+extern int ITc_app_manager_request_terminate_bg_app_p(void);
+extern int ITc_app_manager_set_unset_app_context_event_cb_p(void);
+extern int ITc_app_manager_foreach_app_context_p(void);
+extern int ITc_app_manager_foreach_app_info_p(void);
+extern int ITc_app_manager_get_app_context_p(void);
+extern int ITc_app_manager_get_app_id_p(void);
+extern int ITc_app_manager_get_app_info_p(void);
+extern int ITc_app_manager_is_running_p(void);
+extern int ITc_app_manager_resume_app_p(void);
+extern int ITc_app_manager_get_shared_resource_path_p(void);
+extern int ITc_app_manager_get_shared_trusted_path_p(void);
+extern int ITc_app_manager_get_shared_data_path_p(void);
+extern int ITc_app_manager_get_external_shared_data_path_p(void);
+extern int ITc_app_manager_event_create_destroy_p(void);
+extern int ITc_app_manager_event_set_status_p(void);
+extern int ITc_app_manager_set_unset_event_cb_p(void);
+extern int ITc_app_manager_app_info_metadata_filter_foreach_p(void);
+extern int ITc_app_manager_app_info_foreach_metadata_p(void);
+extern int ITc_app_manager_app_info_filter_foreach_appinfo_p(void);
+extern int ITc_app_manager_app_info_create_clone_destroy_p(void);
+extern int ITc_app_manager_app_info_filter_add_string_bool_count_p(void);
+extern int ITc_app_manager_app_info_filter_create_destroy_p(void);
+extern int ITc_app_manager_app_info_get_app_id_p(void);
+extern int ITc_app_manager_app_info_get_exec_p(void);
+extern int ITc_app_manager_app_info_get_icon_p(void);
+extern int ITc_app_manager_app_info_get_label_p(void);
+extern int ITc_app_manager_app_info_get_package_p(void);
+extern int ITc_app_manager_app_info_get_type_p(void);
+extern int ITc_app_manager_app_info_is_enabled_p(void);
+extern int ITc_app_manager_app_info_is_equal_p(void);
+extern int ITc_app_manager_app_info_is_nodisplay_p(void);
+extern int ITc_app_manager_app_info_is_onboot_p(void);
+extern int ITc_app_manager_app_info_is_preload_p(void);
+extern int ITc_app_manager_app_info_metadata_filter_create_add_destroy_p(void);
+extern int ITc_app_manager_app_info_get_localed_label_p(void);
+extern int ITc_app_manager_app_context_clone_destroy_p(void);
+extern int ITc_app_manager_app_context_get_app_id_p(void);
+extern int ITc_app_manager_app_context_get_package_p(void);
+extern int ITc_app_manager_app_context_get_pid_p(void);
+extern int ITc_app_manager_app_context_is_terminated_p(void);
+extern int ITc_app_manager_app_context_is_equal_p(void);
+extern int ITc_app_manager_foreach_running_app_context_p(void);
+extern int ITc_app_manager_app_context_get_package_id_p(void);
+extern int ITc_app_manager_app_context_get_app_state_p(void);
+extern int ITc_app_manager_app_context_is_sub_app_p(void);
+extern int ITc_app_manager_app_info_get_app_component_type_p(void);
+extern int ITc_app_info_is_support_ambient_p(void);
+extern int ITc_app_info_foreach_res_control_p(void);
+
+testcase tc_array[] = {
+	{"ITc_app_manager_request_terminate_bg_app_p",ITc_app_manager_request_terminate_bg_app_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_set_unset_app_context_event_cb_p",ITc_app_manager_set_unset_app_context_event_cb_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_foreach_app_context_p",ITc_app_manager_foreach_app_context_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_foreach_app_info_p",ITc_app_manager_foreach_app_info_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_app_context_p",ITc_app_manager_get_app_context_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_app_id_p",ITc_app_manager_get_app_id_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_app_info_p",ITc_app_manager_get_app_info_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_is_running_p",ITc_app_manager_is_running_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_resume_app_p",ITc_app_manager_resume_app_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_shared_resource_path_p",ITc_app_manager_get_shared_resource_path_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_shared_trusted_path_p",ITc_app_manager_get_shared_trusted_path_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_shared_data_path_p",ITc_app_manager_get_shared_data_path_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_get_external_shared_data_path_p",ITc_app_manager_get_external_shared_data_path_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_event_create_destroy_p",ITc_app_manager_event_create_destroy_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_event_set_status_p",ITc_app_manager_event_set_status_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_set_unset_event_cb_p",ITc_app_manager_set_unset_event_cb_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_manager_app_info_metadata_filter_foreach_p",ITc_app_manager_app_info_metadata_filter_foreach_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_foreach_metadata_p",ITc_app_manager_app_info_foreach_metadata_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_filter_foreach_appinfo_p",ITc_app_manager_app_info_filter_foreach_appinfo_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_create_clone_destroy_p",ITc_app_manager_app_info_create_clone_destroy_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_filter_add_string_bool_count_p",ITc_app_manager_app_info_filter_add_string_bool_count_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_filter_create_destroy_p",ITc_app_manager_app_info_filter_create_destroy_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_app_id_p",ITc_app_manager_app_info_get_app_id_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_exec_p",ITc_app_manager_app_info_get_exec_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_icon_p",ITc_app_manager_app_info_get_icon_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_label_p",ITc_app_manager_app_info_get_label_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_package_p",ITc_app_manager_app_info_get_package_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_type_p",ITc_app_manager_app_info_get_type_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_is_enabled_p",ITc_app_manager_app_info_is_enabled_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_is_equal_p",ITc_app_manager_app_info_is_equal_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_is_nodisplay_p",ITc_app_manager_app_info_is_nodisplay_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_is_onboot_p",ITc_app_manager_app_info_is_onboot_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_is_preload_p",ITc_app_manager_app_info_is_preload_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_metadata_filter_create_add_destroy_p",ITc_app_manager_app_info_metadata_filter_create_add_destroy_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_info_get_localed_label_p",ITc_app_manager_app_info_get_localed_label_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_manager_app_context_clone_destroy_p",ITc_app_manager_app_context_clone_destroy_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_get_app_id_p",ITc_app_manager_app_context_get_app_id_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_get_package_p",ITc_app_manager_app_context_get_package_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_get_pid_p",ITc_app_manager_app_context_get_pid_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_is_terminated_p",ITc_app_manager_app_context_is_terminated_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_is_equal_p",ITc_app_manager_app_context_is_equal_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_foreach_running_app_context_p",ITc_app_manager_foreach_running_app_context_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_get_package_id_p",ITc_app_manager_app_context_get_package_id_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_get_app_state_p",ITc_app_manager_app_context_get_app_state_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_context_is_sub_app_p",ITc_app_manager_app_context_is_sub_app_p,ITs_app_manager_context_startup,ITs_app_manager_context_cleanup},
+	{"ITc_app_manager_app_info_get_app_component_type_p",ITc_app_manager_app_info_get_app_component_type_p,ITs_app_manager_info_startup,ITs_app_manager_info_cleanup},
+	{"ITc_app_info_is_support_ambient_p",ITc_app_info_is_support_ambient_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{"ITc_app_info_foreach_res_control_p",ITc_app_info_foreach_res_control_p,ITs_app_manager_startup,ITs_app_manager_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_APP-MANAGER-NATIVE_H__

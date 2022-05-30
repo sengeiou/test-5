@@ -1,0 +1,9 @@
+﻿hand_gesture_is_supported_type
+hand_gesture_create
+hand_gesture_destroy
+hand_gesture_set_option
+hand_gesture_start_recognition
+hand_gesture_stop_recognition
+hand_gesture_get_engine_info
+hand_gesture_set_error_cb
+hand_gesture_unset_error_cb

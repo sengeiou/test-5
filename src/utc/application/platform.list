@@ -1,0 +1,8 @@
+app_get_preinitialized_background
+app_get_preinitialized_conformant
+app_get_preinitialized_window
+app_set_reclaiming_system_cache_on_pause
+service_get_window
+service_request_transient_app
+service_set_window
+service_to_bundle

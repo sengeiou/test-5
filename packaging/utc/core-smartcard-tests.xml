@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="core-smartcard-tests" version="0.1.0" api-version="6.0">
+    <label>CoreSmartcardTest</label>
+    <author email="test@samsung.com" href="www.samsung.com">test</author>
+    <description>Core API test Application</description>
+    <ui-application appid="core.smartcard-tests" exec="/usr/apps/core-smartcard-tests/bin/tct-smartcard-core" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+    <background-category value="background-network"/>
+	<background-category value="download"/>
+	<background-category value="iot-communication"/>
+	<background-category value="location"/>
+	<background-category value="media"/>
+	<background-category value="sensor"/>
+    </ui-application>
+    <privileges>
+		<privilege>http://tizen.org/privilege/secureelement</privilege>
+    </privileges>
+</manifest>

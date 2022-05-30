@@ -1,0 +1,388 @@
+//
+// Copyright (c) 2014 Samsung Electronics Co., Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the License);
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+#ifndef __TCT_MEDIATOOL_NATIVE_H__
+#define __TCT_MEDIATOOL_NATIVE_H__
+
+#include "testcase.h"
+#include "tct_common.h"
+
+extern void utc_media_packet_startup(void);
+extern void utc_media_packet_cleanup(void);
+
+extern int utc_media_packet_create_alloc_p(void);
+extern int utc_media_packet_create_alloc_n(void);
+extern int utc_media_packet_create_p(void);
+extern int utc_media_packet_create_n(void);
+extern int utc_media_packet_copy_p(void);
+extern int utc_media_packet_copy_n(void);
+extern int utc_media_packet_set_format_p(void);
+extern int utc_media_packet_set_format_n(void);
+extern int utc_media_packet_alloc_p(void);
+extern int utc_media_packet_alloc_n(void);
+extern int utc_media_packet_set_flags_p(void);
+extern int utc_media_packet_set_flags_n(void);
+extern int utc_media_packet_get_flags_p(void);
+extern int utc_media_packet_get_flags_n(void);
+extern int utc_media_packet_unset_flags_p(void);
+extern int utc_media_packet_unset_flags_n(void);
+extern int utc_media_packet_is_codec_config_p(void);
+extern int utc_media_packet_is_codec_config_n(void);
+extern int utc_media_packet_is_end_of_stream_p(void);
+extern int utc_media_packet_is_end_of_stream_n(void);
+extern int utc_media_packet_is_sync_frame_p(void);
+extern int utc_media_packet_is_sync_frame_n(void);
+extern int utc_media_packet_has_tbm_surface_buffer_p(void);
+extern int utc_media_packet_has_tbm_surface_buffer_n(void);
+extern int utc_media_packet_create_from_tbm_surface_p(void);
+extern int utc_media_packet_create_from_tbm_surface_n(void);
+extern int utc_media_packet_create_from_external_memory_p(void);
+extern int utc_media_packet_create_from_external_memory_n(void);
+extern int utc_media_packet_get_format_p(void);
+extern int utc_media_packet_get_format_n(void);
+extern int utc_media_packet_set_pts_p(void);
+extern int utc_media_packet_set_pts_n(void);
+extern int utc_media_packet_set_dts_p(void);
+extern int utc_media_packet_set_dts_n(void);
+extern int utc_media_packet_set_duration_p(void);
+extern int utc_media_packet_set_duration_n(void);
+extern int utc_media_packet_set_buffer_size_p(void);
+extern int utc_media_packet_set_buffer_size_n(void);
+extern int utc_media_packet_get_pts_p(void);
+extern int utc_media_packet_get_pts_n(void);
+extern int utc_media_packet_get_dts_p(void);
+extern int utc_media_packet_get_dts_n(void);
+extern int utc_media_packet_get_duration_p(void);
+extern int utc_media_packet_get_duration_n(void);
+extern int utc_media_packet_get_buffer_size_p(void);
+extern int utc_media_packet_get_buffer_size_n(void);
+extern int utc_media_packet_get_buffer_data_ptr_p(void);
+extern int utc_media_packet_get_buffer_data_ptr_n(void);
+extern int utc_media_packet_get_tbm_surface_p(void);
+extern int utc_media_packet_get_tbm_surface_n(void);
+extern int utc_media_packet_set_extra_p(void);
+extern int utc_media_packet_set_extra_n(void);
+extern int utc_media_packet_get_extra_p(void);
+extern int utc_media_packet_get_extra_n(void);
+extern int utc_media_packet_is_video_p(void);
+extern int utc_media_packet_is_video_n(void);
+extern int utc_media_packet_is_audio_p(void);
+extern int utc_media_packet_is_audio_n(void);
+extern int utc_media_packet_is_encoded_p(void);
+extern int utc_media_packet_is_encoded_n(void);
+extern int utc_media_packet_is_raw_p(void);
+extern int utc_media_packet_is_raw_n(void);
+extern int utc_media_packet_get_number_of_video_planes_p(void);
+extern int utc_media_packet_get_number_of_video_planes_n(void);
+extern int utc_media_packet_get_video_stride_width_p(void);
+extern int utc_media_packet_get_video_stride_width_n(void);
+extern int utc_media_packet_get_video_stride_height_p(void);
+extern int utc_media_packet_get_video_stride_height_n(void);
+extern int utc_media_packet_get_video_plane_data_ptr_p(void);
+extern int utc_media_packet_get_video_plane_data_ptr_n(void);
+extern int utc_media_packet_get_codec_data_n(void);
+extern int utc_media_packet_destroy_p(void);
+extern int utc_media_packet_destroy_n(void);
+extern int utc_media_format_create_p(void);
+extern int utc_media_format_create_n(void);
+extern int utc_media_format_get_video_info_p(void);
+extern int utc_media_format_get_video_info_n(void);
+extern int utc_media_format_get_audio_info_p(void);
+extern int utc_media_format_get_audio_info_n(void);
+extern int utc_media_format_get_audio_aac_type_p(void);
+extern int utc_media_format_get_audio_aac_type_n(void);
+extern int utc_media_format_set_video_mime_p(void);
+extern int utc_media_format_set_video_mime_n(void);
+extern int utc_media_format_set_video_width_p(void);
+extern int utc_media_format_set_video_width_n(void);
+extern int utc_media_format_set_video_height_p(void);
+extern int utc_media_format_set_video_height_n(void);
+extern int utc_media_format_set_video_avg_bps_p(void);
+extern int utc_media_format_set_video_avg_bps_n(void);
+extern int utc_media_format_set_video_max_bps_p(void);
+extern int utc_media_format_set_video_max_bps_n(void);
+extern int utc_media_format_set_audio_mime_p(void);
+extern int utc_media_format_set_audio_mime_n(void);
+extern int utc_media_format_set_audio_channel_p(void);
+extern int utc_media_format_set_audio_channel_n(void);
+extern int utc_media_format_set_audio_samplerate_p(void);
+extern int utc_media_format_set_audio_samplerate_n(void);
+extern int utc_media_format_set_audio_bit_p(void);
+extern int utc_media_format_set_audio_bit_n(void);
+extern int utc_media_format_set_audio_avg_bps_p(void);
+extern int utc_media_format_set_audio_avg_bps_n(void);
+extern int utc_media_format_set_audio_aac_type_p(void);
+extern int utc_media_format_set_audio_aac_type_n(void);
+extern int utc_media_format_ref_p(void);
+extern int utc_media_format_ref_n(void);
+extern int utc_media_format_unref_p(void);
+extern int utc_media_format_unref_n(void);
+extern int utc_media_format_is_writable_p(void);
+extern int utc_media_format_is_writable_n(void);
+extern int utc_media_format_make_writable_p(void);
+extern int utc_media_format_make_writable_n(void);
+extern int utc_media_format_set_container_mime_p(void);
+extern int utc_media_format_set_container_mime_n(void);
+extern int utc_media_format_get_container_mime_p(void);
+extern int utc_media_format_get_container_mime_n(void);
+extern int utc_media_format_get_type_p(void);
+extern int utc_media_format_get_type_n(void);
+extern int utc_media_format_set_video_frame_rate_p(void);
+extern int utc_media_format_set_video_frame_rate_n(void);
+extern int utc_media_format_get_video_frame_rate_p(void);
+extern int utc_media_format_get_video_frame_rate_n(void);
+extern int utc_media_format_set_text_mime_p(void);
+extern int utc_media_format_set_text_mime_n(void);
+extern int utc_media_format_set_text_type_p(void);
+extern int utc_media_format_set_text_type_n(void);
+extern int utc_media_format_get_text_info_p(void);
+extern int utc_media_format_get_text_info_n(void);
+extern int utc_media_format_set_audio_aac_header_type_p(void);
+extern int utc_media_format_set_audio_aac_header_type_n(void);
+extern int utc_media_format_get_audio_aac_header_type_p(void);
+extern int utc_media_format_get_audio_aac_header_type_n(void);
+extern int utc_media_format_set_extra_p(void);
+extern int utc_media_format_set_extra_n(void);
+extern int utc_media_format_get_extra_p(void);
+extern int utc_media_format_get_extra_n(void);
+extern int utc_media_packet_is_text_p(void);
+extern int utc_media_packet_is_text_n(void);
+extern int utc_media_packet_pool_create_p(void);
+extern int utc_media_packet_pool_create_n(void);
+extern int utc_media_packet_pool_set_media_format_p(void);
+extern int utc_media_packet_pool_set_media_format_n(void);
+extern int utc_media_packet_pool_set_size_p(void);
+extern int utc_media_packet_pool_set_size_n(void);
+extern int utc_media_packet_pool_get_size_p(void);
+extern int utc_media_packet_pool_get_size_n(void);
+extern int utc_media_packet_pool_allocate_p(void);
+extern int utc_media_packet_pool_allocate_n(void);
+extern int utc_media_packet_pool_acquire_packet_p(void);
+extern int utc_media_packet_pool_acquire_packet_n(void);
+extern int utc_media_packet_pool_release_packet_p(void);
+extern int utc_media_packet_pool_release_packet_n(void);
+extern int utc_media_packet_pool_deallocate_p(void);
+extern int utc_media_packet_pool_deallocate_n(void);
+extern int utc_media_packet_pool_destroy_p(void);
+extern int utc_media_packet_pool_destroy_n(void);
+extern int utc_media_packet_set_rotate_method_p(void);
+extern int utc_media_packet_set_rotate_method_n(void);
+extern int utc_media_packet_get_rotate_method_p(void);
+extern int utc_media_packet_get_rotate_method_n(void);
+extern int utc_media_format_channel_positions_to_mask_n(void);
+extern int utc_media_format_channel_positions_to_mask_p(void);
+extern int utc_media_format_get_audio_channel_mask_n(void);
+extern int utc_media_format_get_audio_channel_mask_p(void);
+extern int utc_media_format_is_little_endian_n(void);
+extern int utc_media_format_is_little_endian_p(void);
+extern int utc_media_format_get_audio_bit_depth_n(void);
+extern int utc_media_format_get_audio_bit_depth_p(void);
+extern int utc_media_packet_new_p(void);
+extern int utc_media_packet_new_n(void);
+extern int utc_media_packet_new_alloc_p(void);
+extern int utc_media_packet_new_alloc_n(void);
+extern int utc_media_packet_new_from_tbm_surface_p(void);
+extern int utc_media_packet_new_from_tbm_surface_n(void);
+extern int utc_media_packet_new_from_external_memory_p(void);
+extern int utc_media_packet_new_from_external_memory_n(void);
+extern int utc_media_packet_ref_p(void);
+extern int utc_media_packet_ref_n(void);
+extern int utc_media_packet_unref_p(void);
+extern int utc_media_packet_unref_n(void);
+
+testcase tc_array[] = {
+	{"utc_media_packet_create_alloc_p",utc_media_packet_create_alloc_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_alloc_n",utc_media_packet_create_alloc_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_p",utc_media_packet_create_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_n",utc_media_packet_create_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_copy_p",utc_media_packet_copy_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_copy_n",utc_media_packet_copy_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_format_p",utc_media_packet_set_format_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_format_n",utc_media_packet_set_format_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_alloc_p",utc_media_packet_alloc_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_alloc_n",utc_media_packet_alloc_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_flags_p",utc_media_packet_set_flags_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_flags_n",utc_media_packet_set_flags_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_flags_p",utc_media_packet_get_flags_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_flags_n",utc_media_packet_get_flags_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_unset_flags_p",utc_media_packet_unset_flags_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_unset_flags_n",utc_media_packet_unset_flags_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_codec_config_p",utc_media_packet_is_codec_config_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_codec_config_n",utc_media_packet_is_codec_config_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_end_of_stream_p",utc_media_packet_is_end_of_stream_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_end_of_stream_n",utc_media_packet_is_end_of_stream_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_sync_frame_p",utc_media_packet_is_sync_frame_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_sync_frame_n",utc_media_packet_is_sync_frame_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_has_tbm_surface_buffer_p",utc_media_packet_has_tbm_surface_buffer_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_has_tbm_surface_buffer_n",utc_media_packet_has_tbm_surface_buffer_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_from_tbm_surface_p",utc_media_packet_create_from_tbm_surface_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_from_tbm_surface_n",utc_media_packet_create_from_tbm_surface_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_from_external_memory_p",utc_media_packet_create_from_external_memory_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_create_from_external_memory_n",utc_media_packet_create_from_external_memory_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_format_p",utc_media_packet_get_format_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_format_n",utc_media_packet_get_format_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_pts_p",utc_media_packet_set_pts_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_pts_n",utc_media_packet_set_pts_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_dts_p",utc_media_packet_set_dts_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_dts_n",utc_media_packet_set_dts_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_duration_p",utc_media_packet_set_duration_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_duration_n",utc_media_packet_set_duration_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_buffer_size_p",utc_media_packet_set_buffer_size_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_buffer_size_n",utc_media_packet_set_buffer_size_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_pts_p",utc_media_packet_get_pts_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_pts_n",utc_media_packet_get_pts_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_dts_p",utc_media_packet_get_dts_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_dts_n",utc_media_packet_get_dts_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_duration_p",utc_media_packet_get_duration_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_duration_n",utc_media_packet_get_duration_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_buffer_size_p",utc_media_packet_get_buffer_size_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_buffer_size_n",utc_media_packet_get_buffer_size_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_buffer_data_ptr_p",utc_media_packet_get_buffer_data_ptr_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_buffer_data_ptr_n",utc_media_packet_get_buffer_data_ptr_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_tbm_surface_p",utc_media_packet_get_tbm_surface_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_tbm_surface_n",utc_media_packet_get_tbm_surface_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_extra_p",utc_media_packet_set_extra_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_extra_n",utc_media_packet_set_extra_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_extra_p",utc_media_packet_get_extra_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_extra_n",utc_media_packet_get_extra_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_video_p",utc_media_packet_is_video_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_video_n",utc_media_packet_is_video_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_audio_p",utc_media_packet_is_audio_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_audio_n",utc_media_packet_is_audio_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_encoded_p",utc_media_packet_is_encoded_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_encoded_n",utc_media_packet_is_encoded_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_raw_p",utc_media_packet_is_raw_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_raw_n",utc_media_packet_is_raw_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_number_of_video_planes_p",utc_media_packet_get_number_of_video_planes_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_number_of_video_planes_n",utc_media_packet_get_number_of_video_planes_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_stride_width_p",utc_media_packet_get_video_stride_width_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_stride_width_n",utc_media_packet_get_video_stride_width_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_stride_height_p",utc_media_packet_get_video_stride_height_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_stride_height_n",utc_media_packet_get_video_stride_height_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_plane_data_ptr_p",utc_media_packet_get_video_plane_data_ptr_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_video_plane_data_ptr_n",utc_media_packet_get_video_plane_data_ptr_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_codec_data_n",utc_media_packet_get_codec_data_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_destroy_p",utc_media_packet_destroy_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_destroy_n",utc_media_packet_destroy_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_rotate_method_p",utc_media_packet_get_rotate_method_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_get_rotate_method_n",utc_media_packet_get_rotate_method_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_rotate_method_p",utc_media_packet_set_rotate_method_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_set_rotate_method_n",utc_media_packet_set_rotate_method_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_create_p",utc_media_format_create_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_create_n",utc_media_format_create_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_video_info_p",utc_media_format_get_video_info_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_video_info_n",utc_media_format_get_video_info_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_info_p",utc_media_format_get_audio_info_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_info_n",utc_media_format_get_audio_info_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_aac_type_p",utc_media_format_get_audio_aac_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_aac_type_n",utc_media_format_get_audio_aac_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_mime_p",utc_media_format_set_video_mime_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_mime_n",utc_media_format_set_video_mime_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_width_p",utc_media_format_set_video_width_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_width_n",utc_media_format_set_video_width_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_height_p",utc_media_format_set_video_height_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_height_n",utc_media_format_set_video_height_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_avg_bps_p",utc_media_format_set_video_avg_bps_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_avg_bps_n",utc_media_format_set_video_avg_bps_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_max_bps_p",utc_media_format_set_video_max_bps_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_max_bps_n",utc_media_format_set_video_max_bps_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_mime_p",utc_media_format_set_audio_mime_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_mime_n",utc_media_format_set_audio_mime_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_channel_p",utc_media_format_set_audio_channel_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_channel_n",utc_media_format_set_audio_channel_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_samplerate_p",utc_media_format_set_audio_samplerate_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_samplerate_n",utc_media_format_set_audio_samplerate_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_bit_p",utc_media_format_set_audio_bit_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_bit_n",utc_media_format_set_audio_bit_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_avg_bps_p",utc_media_format_set_audio_avg_bps_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_avg_bps_n",utc_media_format_set_audio_avg_bps_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_aac_type_p",utc_media_format_set_audio_aac_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_aac_type_n",utc_media_format_set_audio_aac_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_ref_p",utc_media_format_ref_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_ref_n",utc_media_format_ref_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_unref_p",utc_media_format_unref_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_unref_n",utc_media_format_unref_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_is_writable_p",utc_media_format_is_writable_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_is_writable_n",utc_media_format_is_writable_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_make_writable_p",utc_media_format_make_writable_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_make_writable_n",utc_media_format_make_writable_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_container_mime_p",utc_media_format_set_container_mime_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_container_mime_n",utc_media_format_set_container_mime_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_container_mime_p",utc_media_format_get_container_mime_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_container_mime_n",utc_media_format_get_container_mime_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_type_p",utc_media_format_get_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_type_n",utc_media_format_get_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_frame_rate_p",utc_media_format_set_video_frame_rate_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_video_frame_rate_n",utc_media_format_set_video_frame_rate_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_video_frame_rate_p",utc_media_format_get_video_frame_rate_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_video_frame_rate_n",utc_media_format_get_video_frame_rate_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_text_mime_p",utc_media_format_set_text_mime_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_text_mime_n",utc_media_format_set_text_mime_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_text_type_p",utc_media_format_set_text_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_text_type_n",utc_media_format_set_text_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_text_info_p",utc_media_format_get_text_info_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_text_info_n",utc_media_format_get_text_info_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_aac_header_type_p",utc_media_format_set_audio_aac_header_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_audio_aac_header_type_n",utc_media_format_set_audio_aac_header_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_aac_header_type_p",utc_media_format_get_audio_aac_header_type_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_aac_header_type_n",utc_media_format_get_audio_aac_header_type_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_extra_p",utc_media_format_set_extra_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_set_extra_n",utc_media_format_set_extra_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_extra_p",utc_media_format_get_extra_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_extra_n",utc_media_format_get_extra_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_text_p",utc_media_packet_is_text_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_is_text_n",utc_media_packet_is_text_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_create_p",utc_media_packet_pool_create_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_create_n",utc_media_packet_pool_create_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_set_media_format_p",utc_media_packet_pool_set_media_format_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_set_media_format_n",utc_media_packet_pool_set_media_format_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_set_size_p",utc_media_packet_pool_set_size_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_set_size_n",utc_media_packet_pool_set_size_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_get_size_p",utc_media_packet_pool_get_size_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_get_size_n",utc_media_packet_pool_get_size_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_allocate_p",utc_media_packet_pool_allocate_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_allocate_n",utc_media_packet_pool_allocate_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_acquire_packet_p",utc_media_packet_pool_acquire_packet_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_acquire_packet_n",utc_media_packet_pool_acquire_packet_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_release_packet_p",utc_media_packet_pool_release_packet_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_release_packet_n",utc_media_packet_pool_release_packet_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_deallocate_p",utc_media_packet_pool_deallocate_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_deallocate_n",utc_media_packet_pool_deallocate_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_destroy_p",utc_media_packet_pool_destroy_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_pool_destroy_n",utc_media_packet_pool_destroy_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_channel_positions_to_mask_n",utc_media_format_channel_positions_to_mask_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_channel_positions_to_mask_p",utc_media_format_channel_positions_to_mask_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_channel_mask_n",utc_media_format_get_audio_channel_mask_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_channel_mask_p",utc_media_format_get_audio_channel_mask_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_is_little_endian_n",utc_media_format_is_little_endian_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_is_little_endian_p",utc_media_format_is_little_endian_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_bit_depth_n",utc_media_format_get_audio_bit_depth_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_format_get_audio_bit_depth_p",utc_media_format_get_audio_bit_depth_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_p",utc_media_packet_new_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_n",utc_media_packet_new_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_alloc_p",utc_media_packet_new_alloc_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_alloc_n",utc_media_packet_new_alloc_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_from_tbm_surface_p",utc_media_packet_new_from_tbm_surface_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_from_tbm_surface_n",utc_media_packet_new_from_tbm_surface_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_from_external_memory_p",utc_media_packet_new_from_external_memory_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_new_from_external_memory_n",utc_media_packet_new_from_external_memory_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_ref_p",utc_media_packet_ref_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_ref_n",utc_media_packet_ref_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_unref_p",utc_media_packet_unref_p,utc_media_packet_startup,utc_media_packet_cleanup},
+	{"utc_media_packet_unref_n",utc_media_packet_unref_n,utc_media_packet_startup,utc_media_packet_cleanup},
+	{NULL, NULL}
+};
+
+#endif // __TCT_MEDIATOOL_NATIVE_H__
